@@ -1,0 +1,59 @@
+.section {
+	border: 1px solid rgb(153, 92, 0);
+	background-color: rgb(0, 143, 194);
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	color: white;
+}
+
+.head_section {
+	text-align: center;
+	background-image: url(image-variant1.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+body {
+	font-family: 'Roboto';
+}
+
+.image_rounded {
+	border-radius: 50%;
+}
+
+a[href^="tel"] {
+	border: 1px solid black;
+	text-decoration: none;
+	background-color: #009688;
+	display: inline-block;
+	padding: 4px;
+	margin: 2px;
+	border-radius: 5px;
+	color: whitesmoke;
+}
+
+a[href^="mailto"] {
+	border: 1px solid rgb(127, 192, 170);
+	text-decoration: aqua;
+	background-color: cadetblue;
+	border-radius: 4px;
+	color: white;
+	padding: 4px;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+a[href^="tel"]:hover {
+	opacity: 40%;
+}
+
+a[href^="mailto"]:hover {
+	background-color: rgba( 28, 156, 28, 0.8);
+}
+
+a[href^="http"]:hover {
+	opacity: 80%;
+}

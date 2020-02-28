@@ -33,3 +33,40 @@ body {
 p {
 	margin: 0px;
 }
+.underlinetext-container {
+	display: inline-block;
+	text-align: left;
+	width: 20%;
+	text-decoration: underline;
+	background: #7d0909;
+	color: #e95111;
+	height: 500px;
+	max-width: 100%;
+}
+ .text-container {
+	display: inline-block;
+	text-align: left;
+	width: 60%;	 
+	color: white;
+	height: 500px;
+	max-width: 100%;
+ }
+ .articles-container {
+	display: inline-block;
+	text-align: left;
+	background: white;
+	width: 20%;
+	height: 500px;
+	max-width: 100%;
+ }
+
+ .elements-block {
+	display: flex;
+	justify-content: center;
+ }
+
+ .article-title {
+	 background: #aaa4a1;
+	 text-align: center;
+
+ }

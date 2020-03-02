@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+footer, h1, h2 {
+    text-align: center;
+}
+h1{
+    color: #0ec8cb;
+}
+
+.container_namaste {
+    width: 70%;
+    height: 420px;
+    background: #f7f7f7;
+    font-size: 0px;
+    margin: auto;
+    padding: 5px;
+}
+.container_namaste div {
+    width: 25%;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.container_namaste div:hover {
+    background: #0ec8cb;
+    color: white;
+}
+
+.container_services {
+    width: 70%;
+    height: 240px;
+    background: aqua;
+    margin-top: 50px;
+    padding: 5px;
+}
+
+.
+.container_services div {
+    width: 33%;
+    display: inline-block;
+    
+}
+

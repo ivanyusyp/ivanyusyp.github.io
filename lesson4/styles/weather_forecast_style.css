@@ -1,0 +1,106 @@
+* {
+	box-sizing: border-box;
+	font-family:  Arial, Helvetica, sans-serif;
+}
+
+body {
+    background:#5452e4;
+    color: white;
+    font-family: sans-serif;
+}
+
+div.contaiter {
+    display: inline-block;
+    background:#3399cc;
+}
+
+ul.cities li span {
+    vertical-align: middle;
+}
+
+.head {
+    display: inline-block;
+    font-size: 40px;
+}
+
+.footer {
+    display: inline-block;
+    font-size: 30px;
+}
+
+.cities {
+    text-align: center;
+    padding: 5px;
+    list-style: none;
+    font-size: 0px;
+    background: whitesmoke;
+    margin: auto;
+    display: inline-block;
+}
+
+.cities li {
+    display: inline-block;
+    font-size: 40px;
+    height: 200px;
+    border: 4px solid whitesmoke;
+    vertical-align: middle;
+}
+
+.cities:hover {
+    opacity: 0.9;
+}
+
+.lisbon {
+    width: 50%;
+    background:#3399cc;
+}
+
+.paris {
+    width: 25%;
+    background: #33cccc;
+}
+
+.belgrade {
+    width: 25%;
+    background: #996699;
+}
+
+.moscow {
+    width: 25%;
+    background: #c24747;
+}
+
+.telaviv {
+    width: 25%;
+    background: #e2674a;
+}
+
+.cair {
+    width: 25%;
+    background: #ffcc66;
+}
+
+.newyork {
+    width: 25%;
+    background: #99cc99;
+}
+
+.newdelhi {
+    width: 25%;
+    background: #669999;
+}
+
+.sanfrancisco {
+    width: 50%;
+    background: #cc6699;
+}
+
+.tokyo {
+    width: 25%;
+    background: #339966;
+}
+
+.sidney {
+    width: 100%;
+    background: #666699;
+}

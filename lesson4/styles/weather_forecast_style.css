@@ -22,13 +22,11 @@ ul.cities li span {
 }
 
 .head {
-    display: inline-block;
     font-size: 40px;
 
 }
 
 .footer {
-    display: inline-block;
     font-size: 30px;
 }
 
@@ -40,6 +38,7 @@ ul.cities li span {
     background: whitesmoke;
     margin: auto;
     display: inline-block;
+    width: 70%;
 }
 
 .cities li {

@@ -37,7 +37,7 @@ div div.web-design-image {
 }
 
 .container_namaste div:hover div.web-design-image {
-    background-image: url(/lesson4/namaste-green/white.svg);
+    color: white;
 }
 
 .container_namaste {

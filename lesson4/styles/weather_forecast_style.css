@@ -55,6 +55,12 @@ ul.cities li span {
     background:#3399cc;
 }
 
+.lisbon :hover{
+    width: 50%;
+    background:#3399cc;
+    opacity: 0.1;
+}
+
 .paris {
     width: 25%;
     background: #33cccc;

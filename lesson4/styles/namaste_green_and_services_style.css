@@ -1,88 +1,101 @@
 * {
-    box-sizing: border-box;
-    font-family: Montserrat;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+	box-sizing: border-box;
+	font-family: Montserrat;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
 }
 
-footer, h1, h2{
-    text-align: center;
+footer, h1, h2 {
+	text-align: center;
 }
-
 
 h1 {
-    color: #0ec8cb;
+	color: #0ec8cb;
 }
 
 span {
-    margin: 20px 0px;
-    display: inline-block;
-}
-
-img {
-    width: 65px;
-    height: 50px;
-}
-
-div div.web-design-image {
-    display: inline-block;
-    width: 65px;
-    height: 55px;
-    background-image: url(/lesson4/namaste-green/Anchor.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 0px;
-    margin: auto;
+	margin: 20px 10px;
+	display: inline-block;
 }
 
 .container_namaste div:hover div.web-design-image {
-    background-image: url(/lesson4/namaste-green/white.svg);
+	color: white;
 }
 
 .container_namaste {
-    width: 50%;
-    height: 420px;
-    background: #f7f7f7;
-    font-size: 0px;
-    margin: auto;
+	width: 60%;
+	background: #f7f7f7;
+	font-size: 0px;
+	margin: auto;
+	height: 100%;
 }
 
 .container_namaste div {
-    width: 25%;
-    display: inline-block;
-    font-size: 20px;
-    text-align: center;
-    height: 100%;
-    padding: 40px;
-    vertical-align: middle;
+	width: 25%;
+	display: inline-block;
+	font-size: 20px;
+	text-align: center;
+	height: 100%;
+	padding: 40px;
+	vertical-align: middle;
 }
 
 .container_namaste div:hover {
-    background: #0ec8cb;
-    color: white;
-
+	background: #0ec8cb;
+	color: white;
 }
 
 div.container_services {
-    height: 300px;
-    width: 60%;
-    margin: auto;
-    padding: 40px;
+	height: 300px;
+	width: 60%;
+	margin: auto;
+	padding: 40px;
 }
 
 .responsive_design:hover {
-    list-style: decimal;
+	list-style: decimal;
 }
 
 .responsive_design, .easy_customize, .fast_and_reliable {
-    display: inline-block;
-    width: 33%;
-    text-align: center;
-    height: 100%;
-    font-size: 20px;
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+	height: 100%;
+	font-size: 20px;
 }
 
 .devide {
-    height: 300px;
+	height: 300px;
+}
+
+.container_namaste div:hover .image-services {
+	fill: white;
+}
+
+.image-services {
+
+}
+
+.advantage-image {
+	fill: #1275b9;
+}
+
+.advantage {
+	border-radius: 50%;
+	width: 65px;
+	height: 65px;
+	display: inline-block;
+	vertical-align: middle;
+	background: white;
+	border:1px solid #1275b9;
+	padding: 20px;
+}
+
+.container_services div:hover .advantage {
+	background: #1275b9;
+}
+
+.container_services div:hover .advantage svg {
+	fill: white;
 }

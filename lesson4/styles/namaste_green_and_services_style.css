@@ -15,24 +15,8 @@ h1 {
 }
 
 span {
-	margin: 20px 0px;
+	margin: 20px 10px;
 	display: inline-block;
-}
-
-img {
-	width: 65px;
-	height: 50px;
-}
-
-div div.web-design-image {
-	display: inline-block;
-	width: 65px;
-	height: 55px;
-	background-image: url(/lesson4/namaste-green/Anchor.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	padding: 0px;
-	margin: auto;
 }
 
 .container_namaste div:hover div.web-design-image {
@@ -40,8 +24,7 @@ div div.web-design-image {
 }
 
 .container_namaste {
-	width: 50%;
-	height: 420px;
+	width: 60%;
 	background: #f7f7f7;
 	font-size: 0px;
 	margin: auto;
@@ -54,7 +37,7 @@ div div.web-design-image {
 	font-size: 20px;
 	text-align: center;
 	height: 100%;
-	padding: 60px;
+	padding: 40px;
 	vertical-align: middle;
 }
 

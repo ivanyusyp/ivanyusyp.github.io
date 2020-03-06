@@ -6,63 +6,99 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
+.container1 {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 80%;
+  flex-wrap: nowrap;
+  width: 40%;
   margin: 10px auto;
   justify-content: space-between;
-  max-height: 200px;
+  max-height: 300px;
 }
 
-.container div {
+.container2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 40%;
+  margin: 10px auto;
+  justify-content: center;
+  max-height: 300px;
+}
+
+.container1 div {
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(243, 232, 232);
   margin: 2px;
 }
 
-.container div.red-car {
+.container2 div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(243, 232, 232);
+  margin: 2px;
+}
+
+.container1 div.red-car {
   background-image: url(/lesson7/images/red-car.png);
   background-repeat: no-repeat;
   background-size: cover;
   flex: 4 1 160px;
-  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  
 }
 
 .girl-in-sunglasses {
   flex: 0 80px;
-  align-items: stretch;
 }
 
 .girls-with-camera {
   flex: 0 1 80px;
-  align-items: stretch;
 }
 
 .boots {
   flex: 0 1 80px;
-  align-items: stretch;
 }
  .white-car {
    flex: 0 1 80px;
-   align-items: stretch;
  }
 
  .big-white-text {
    color: white;
-   font-size: 20px;
+   font-size: 14px;
+   padding: 0px;
+   margin: 0px;
+
  }
 
  span {
    color: gray;
-   font-size: 14px;
+   font-size: 10px;
    display: flex;
+   text-transform: uppercase;
+   margin: 10px;
+   align-self: center;
+   
  }
 
  p {
-   font-size: 16px;
+   font-size: 12px;
    text-transform: uppercase;
    display: flex;
+   margin: 2px 2px 5px 2px;
+   align-self: center;
+   font-weight: bold;
+ }
+
+ body {
+   background: #e2e7ec;
+ }
+
+
+ img {
+   width: 200px;
+   height: 200px;
  }

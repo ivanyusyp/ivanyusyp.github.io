@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: #454f53;
+  position: relative;
+}
+
+.material-icons.white {
+  color: #fffefb;
+}
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.page {
+  margin: 0px auto 0px auto;
+  box-shadow: 5px 5px 5px 5px gray;
+  padding: 200px 130px 10px 130px;
+  background: white;
+  width: 66%;
+}
+
+.option {
+  width: 34.75%;
+  height: 20%;
+  display: inline-block;
+  font-size: 50px;
+  text-align: left;
+  position: relative;
+  top: 161px;
+  left: 50%;
+  padding-left: 40px;
+}
+
+.author {
+  font-size: 20px;
+  color: gray;
+}
+
+.title {
+  bottom: 1px solid black;
+  background: #000;
+  color: white;
+  padding: 10px 0px 65px 50px;
+  height: 20%;
+  width: 40%;
+  position: absolute;
+  top: 20px;
+  left: 44.785%;
+}
+
+.title-text {
+  font-size: 48px;
+}
+
+.option {
+  background: yellow;
+  border: 1px solid greenyellow;
+}
+
+.questions {
+  color: gray;
+  font-style: italic;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.header {
+  font-size: 78px;
+  text-transform: uppercase;
+}
+
+.title-gray {
+  font-size: 15px;
+  color: gray;
+}
+
+.article-text {
+  font-size: 27px;
+  padding: 20px 0px 20px 0px;
+}

@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+background: #ffffff;
+}
+
+.first-letter{
+font-size: 3.3125rem;  
+display: inline-block;
+float: left;
+padding: 0 0.3125rempx 0 0;
+}
+
+.article {
+  box-shadow: 0.625rem 0.625rem 0.625rem 0.625rem rgb(241, 239, 239);
+  padding:7.5rem;
+  margin: 8.125rem auto;
+  width: 80%;
+  height: 60%;
+}
+
+
+.article-text {
+  color: #7a7a7a;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.quote-text {
+  color: #5c5c5c;
+  font-size: 1.5rem;
+  font-style: oblique;
+}
+
+button {
+  font-size: 1.125rem;
+  color: #eaa258;
+  border: 0.0625rem solid #eaa258;
+  width: 16.5rem;
+  height: 4.25rem;
+}

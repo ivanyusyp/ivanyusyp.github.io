@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  /* padding: 0; */
+  /* margin: 0; */
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800&display=swap&subset=cyrillic,cyrillic-ext');
+
+body {
+  background: #807cf7;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-article {
+  text-align: center;
+}
+
+.header {
+  font-size: 90px;
+  text-align: center;
+}
+
+.header, p {
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: center;
+  align-content: space-between;
+  margin: 20px auto;
+}
+
+.article1 {
+  background-image: url(/lesson9/images/smoothies.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/lesson9/images/gradient.png) no-repeat;
+  width: 370px;
+  height: 310px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.article2 {
+  background-image: url(/lesson9/images/growing-food.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 370px;
+  height: 310px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.article3 {
+  background-image: url(/lesson9/images/raspberry.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 370px;
+  height: 310px;
+  padding: 20px;
+  margin: 10px;
+}
+
+button {
+  background: #f72b3b;
+  color: white;
+  box-shadow: 2px solid gray;
+  border: gray;
+  font-size: 20px;
+  width: 200px;
+  height: 55px;
+  text-transform: uppercase;
+  margin: 50px auto;
+  position: relative;
+  left:42%;
+}
+
+.article-head {
+  font-size: 20px;
+}
+
+.author {
+  font-size: 13px;
+}
+
+.date {
+  border: 0px solid #000000;
+  border-radius: 10px 10px 10px 10px;
+  padding: 2px;
+  display: inline-block;
+  background-image: url(/lesson9/images/gradient.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+}

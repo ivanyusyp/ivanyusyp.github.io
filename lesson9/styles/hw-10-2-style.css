@@ -17,7 +17,7 @@ body {
 
 .container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   margin: 100px auto;
   width: 80%;
@@ -52,11 +52,6 @@ body {
   padding-top: 5px;
 }
 
-.contain-item:hover {
-  background-image: url(/lesson9/images/Social.png);
-}
-
 .contain-item:hover img {
-  opacity: 0;
-  background-image: url(/lesson9/images/Social.png);
+  content: url(/lesson9/images/Social.png);
 }

@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800&display=swap&subset=cyrillic,cyrillic-ext');
 
 body {
-  background: #807cf7;
+  background-image: url(/lesson9/images/bg.png);
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -83,10 +83,12 @@ button {
 
 .article-head {
   font-size: 20px;
+  padding-top: 100px;
 }
 
 .author {
   font-size: 13px;
+  padding-top: 5px;
 }
 
 .date {

@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  /* padding: 0; */
-  /* margin: 0; */
+  padding: 0;
+  margin: 0;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800&display=swap&subset=cyrillic,cyrillic-ext');
@@ -30,6 +30,7 @@ body {
   justify-content: center;
   align-content: space-between;
   margin: 20px auto;
+
 }
 
 .article1 {

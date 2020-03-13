@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800&display=swap&subset=cyrillic,cyrillic-ext');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.container-images {
+  width: 269px;
+  height: 268px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 100px auto;
+  width: 80%;
+}
+
+.header {
+  font-size: 34px;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin: 100px auto;
+}
+
+.describe {
+  font-size: 16px;
+  text-align: center;
+}
+
+.contain-item {
+  padding: 10px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bolder;
+  padding-top: 10px;
+}
+
+.position {
+  font-size: 14px;
+  color: gray;
+  padding-top: 5px;
+}
+
+.contain-item:hover {
+  background-image: url(/lesson9/images/Social.png);
+}
+
+.contain-item:hover img {
+  opacity: 0;
+  background-image: url(/lesson9/images/Social.png);
+}

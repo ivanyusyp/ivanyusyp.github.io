@@ -33,11 +33,10 @@ body {
 }
 
 .article1 {
-  background-image: url(/lesson9/images/smoothies.png);
+  background-image: url(/lesson9/images/smoothiegr.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(/lesson9/images/gradient.png) no-repeat;
   width: 370px;
   height: 310px;
   padding: 20px;
@@ -45,7 +44,7 @@ body {
 }
 
 .article2 {
-  background-image: url(/lesson9/images/growing-food.png);
+  background-image: url(/lesson9/images/growingfoodgr.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -56,7 +55,7 @@ body {
 }
 
 .article3 {
-  background-image: url(/lesson9/images/raspberry.png);
+  background-image: url(/lesson9/images/raspberrygr.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

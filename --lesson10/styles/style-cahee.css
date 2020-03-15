@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.nav li {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  border-top: 3px solid transparent;
+}
+
+.nav li:hover {
+  border-top: 3px solid orangered;
+}
+
+.container-1__logo p {
+  font-size: 50px;
+  font-style: italic;
+  position: absolute;
+}
+
+.container-1 {
+  background-image: url(/--lesson10/images/cahee/bg-container-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  padding: 100px;
+}
+
+.conteiner-1__text .header {
+  position: absolute;
+  top: 40%;
+}
+
+.conteiner-1__text .describe {
+  position: absolute;
+  top: 50%;
+}
+
+.container-1__scroll-image {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.conteiner-1__text .header {
+  font-size: 60px;
+}
+
+.conteiner-1__text .describe {
+  font-size: 17px;
+  width: 20%;
+}
+
+.container-1__button {
+  text-transform: uppercase;
+  background-color: rgb(190, 108, 78);
+  color: white;
+  font-size: 20px;
+  width: 200px;
+  height: 55px;
+  display: inline-block;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 3px 3px 0px gray;
+  position: absolute;
+  top: 60%;
+}
+
+.container-2 {
+  background-image: url(/--lesson10/images/cahee/bg-container-2.png);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 700px;
+  align-items: center;
+  text-align: center;
+  padding: 160px;
+}
+
+.container-2__image {
+  width: 50%;
+}
+
+.container-2__text {
+  width: 50%;
+}
+
+.container-2__text .header {
+  font-size: 90px;
+  color: white;
+  text-align: left;
+}
+
+.container-2__text .describe {
+  font-size: 17px;
+  color: white;
+  text-align: left;
+}
+

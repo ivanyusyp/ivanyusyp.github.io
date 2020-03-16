@@ -2,14 +2,17 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
-
 .nav {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
   flex-wrap: nowrap;
+  position: absolute;
+  top: 15%;
+  right: 0%;
 }
 
 .nav li {
@@ -25,8 +28,8 @@
 
 .container-1__logo p {
   font-size: 50px;
-  font-style: italic;
-  position: absolute;
+  font-family: 'Pacifico', cursive;
+  display: block;
 }
 
 .container-1 {
@@ -38,13 +41,14 @@
 }
 
 .conteiner-1__text .header {
-  position: absolute;
-  top: 40%;
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 200px;
 }
 
 .conteiner-1__text .describe {
-  position: absolute;
-  top: 50%;
+  font-size: 17px;
+  width: 20%;
 }
 
 .container-1__scroll-image {
@@ -53,18 +57,10 @@
   left: 50%;
 }
 
-.conteiner-1__text .header {
-  font-size: 60px;
-}
-
-.conteiner-1__text .describe {
-  font-size: 17px;
-  width: 20%;
-}
 
 .container-1__button {
   text-transform: uppercase;
-  background-color: rgb(190, 108, 78);
+  background-color: rgb(230, 101, 54);
   color: white;
   font-size: 20px;
   width: 200px;
@@ -73,8 +69,8 @@
   padding: 15px;
   text-align: center;
   box-shadow: 0px 3px 3px 0px gray;
-  position: absolute;
-  top: 60%;
+  border: 0px;
+  margin-top: 50px;
 }
 
 .container-2 {

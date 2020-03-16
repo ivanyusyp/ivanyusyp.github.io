@@ -9,7 +9,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext');
 
 .container {
   background: rgb(21, 35, 53);
@@ -19,8 +22,8 @@ body {
   border: 1px solid transparent;
   border-radius: 3%;
   position: absolute;
-  top: 25%;
-  left: 25%;
+  top: 30%;
+  left: 30%;
 }
 
 .logo {
@@ -48,13 +51,16 @@ body {
 }
 
 .circles-item:hover {
-  border: 1px solid gray;
+  border: 2px solid gray;
   border-radius: 50%;
 }
 
 .circles-item {
   border: 1px solid transparent;
   border-radius: 50%;
+  margin: 5px 5px 5px 5px;
+  position: relative;
+  top: 400%;
 }
 
 .container__choose {
@@ -63,6 +69,7 @@ body {
   flex-direction: column;
   align-self: ;
   margin: 0px auto;
+  width: 30%;
 }
 
 .add-button {
@@ -70,20 +77,19 @@ body {
   height: 40px;
   border: 1px solid rgb(134, 131, 131);
   text-align: center;
-  background-color:  rgb(21, 35, 53);
+  background-color: rgb(21, 35, 53);
   color: gray;
 }
 
 .add-button:hover {
-  background-color: 	rgb(93, 100, 108);
+  background-color: rgb(93, 100, 108);
 }
+
 .container__choose-color {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0px 0px;
-  
-
 }
 
 .circles {
@@ -91,10 +97,11 @@ body {
   flex-direction: row;
   align-self: center;
 }
+
 .select {
   color: gray;
   font-size: 17px;
-  background-color:  rgb(21, 35, 53);
+  background-color: rgb(21, 35, 53);
   border: 1px solid gray;
   text-align: center;
   width: 80px;
@@ -103,4 +110,14 @@ body {
 
 .click-down {
   font-size: 12px;
+  margin-left: 15px;
+}
+
+.container__choose .name {
+  font-size: 24px;
+}
+
+.container__choose .describe {
+  font-size: 14px;
+  color: rgb(93, 100, 108);
 }

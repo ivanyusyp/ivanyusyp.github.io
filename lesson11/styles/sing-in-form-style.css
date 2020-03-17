@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
+  letter-spacing: 1px;
 }
 
 .sign-in-form__body {
@@ -45,10 +46,14 @@ body {
 .sign-in-form__item {
 width: 261px;
 height: 42px;
-border: 2px solid rgba(191, 185, 204, 0.54);
 background-color: #e5eeee;
-opacity: 0.1;
-margin: 10px 0px;
+margin: 0px 0px;
+opacity: 0;
+}
+
+.wrapper {
+  border: 2px solid rgb(191, 185, 204);
+  margin: 10px 0px;
 }
 
 .sign-in-form__text-item {
@@ -56,6 +61,7 @@ margin: 10px 0px;
   font-family: Quicksand;
   font-size: 16px;
   font-weight: 700;
+
 }
 
 .sign-in-form__check {

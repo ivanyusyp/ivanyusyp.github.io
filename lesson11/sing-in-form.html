@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sing-in-form</title>
+  <link rel="stylesheet" href="./styles/sing-in-form-style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="sign-in-form">
+    <div class="sign-in-form__body">
+      <div class="sign-in-form__header">
+        <div class="sing-in-form__tab sing-in-form__tab_active">
+          Sign in
+        </div>
+        <div class="sing-in-form__tab">
+          Join us
+        </div>
+      </div>
+      <div class="sign-in-form__data">
+        <label class="sign-in-form__text-item" for="username">
+          Username
+          <input maxlength="25" required="required" class="sign-in-form__item" type="text" name="" id="username">
+        </label>
+        <label class="sign-in-form__text-item" for="password">
+          Password
+          <input maxlength="25" required="required" class="sign-in-form__item" type="password" name="" id="password">
+        </label>
+      </div>
+      <div class="sign-in-form__check">
+        <label class="container" for="check">
+          <input checked="checked" required="required" type="checkbox" name="" id="check">
+          <span class="checkmark"></span>
+        </label>
+        <span class="check-text">Keep me signed in</span> 
+      </div>
+      <button class="sign-in-form__submit-button" type="submit">Sign in</button>
+      <div class="sign-in-form__footer">
+        <div class="sign-in-form__action">
+          Forgot password
+        </div>
+        <div class="sign-in-form__action">
+          Create an account
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

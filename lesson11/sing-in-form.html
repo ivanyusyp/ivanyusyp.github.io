@@ -22,18 +22,18 @@
         </div>
       </div>
       <div class="sign-in-form__data">
-        <label class="sign-in-form__text-item" for="username">Username</label>
-        <div class="wrapper">
-          <input class="sign-in-form__item" type="text" name="" id="username">
-        </div>
-        <label class="sign-in-form__text-item" for="password">Password</label>
-        <div class="wrapper">
-          <input class="sign-in-form__item" type="password" name="" id="password">
-        </div>
+        <label class="sign-in-form__text-item" for="username">
+          Username
+          <input maxlength="25" required="required" class="sign-in-form__item" type="text" name="" id="username">
+        </label>
+        <label class="sign-in-form__text-item" for="password">
+          Password
+          <input maxlength="25" required="required" class="sign-in-form__item" type="password" name="" id="password">
+        </label>
       </div>
       <div class="sign-in-form__check">
         <label class="container" for="check">
-          <input checked="checked" type="checkbox" name="" id="check">
+          <input checked="checked" required="required" type="checkbox" name="" id="check">
           <span class="checkmark"></span>
         </label>
         <span class="check-text">Keep me signed in</span> 

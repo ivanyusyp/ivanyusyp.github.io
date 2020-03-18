@@ -47,14 +47,11 @@ body {
 width: 261px;
 height: 42px;
 background-color: #e5eeee;
-margin: 0px 0px;
-opacity: 0;
+border: 2px solid rgb(191, 185, 204);
+margin: 10px 0px;
+opacity: 0.1;
 }
 
-.wrapper {
-  border: 2px solid rgb(191, 185, 204);
-  margin: 10px 0px;
-}
 
 .sign-in-form__text-item {
   color: #fbf6e4;

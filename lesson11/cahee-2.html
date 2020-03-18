@@ -7,6 +7,14 @@
   <title>cahee-2</title>
   <link rel="stylesheet" href="./styles/cahee-2-style.css">
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,400,700&display=swap" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="./script/jquery.mask.min.js"></script>
+  <script>
+    $(document).ready(function(){
+   $('.contact__item_phone').mask('(000) 000-0000')});</script>
 </head>
 
 <body>
@@ -24,7 +32,7 @@
       <div class="contact__forms">
         <form autocomplete="on" ><label for="name"><input id="name" required="required" maxlength="30" type="text" class="contact__item" placeholder="Your name..."></label></form>
         <form autocomplete="on" ><label for="email"><input id="email" required="required" maxlength="30" type="email" class="contact__item" placeholder="Your email..."></label></form>
-        <form autocomplete="on" ><label for="phone"><input id="phone" required="required" maxlength="30" type="tel" class="contact__item" placeholder="Your phone number..."></label></form>
+        <form autocomplete="on" ><label for="phone"><input id="phone" required="required" maxlength="30" type="tel" class="contact__item contact__item_phone " placeholder="Your phone number..."></label></form>
         <textarea class="contact__item contact__item_bigger" placeholder="Your messge..." id="" cols="30" rows="10">
 
         </textarea>

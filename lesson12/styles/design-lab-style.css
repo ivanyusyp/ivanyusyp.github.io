@@ -1,0 +1,303 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.introducing {
+    background-image: url(/lesson12/images/design-lab/introducing-bg.png);
+    background-repeat: no-repeat;
+    max-width: 1920px;
+    height: 1072px;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
+
+.introducing__body {
+    max-width: 680px;
+    text-align: center;
+    margin: 0px auto;
+    padding-top: 285px;
+}
+
+.introducing__title {
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 54px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8.62px;
+    padding: 90px 0px 50px 0px;
+}
+
+.introducing__subtitle {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 29px;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+}
+
+.scroll {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.about-us {
+    max-width: 1920px;
+    height: 630px;
+    position: relative;
+}
+
+.about-us__body {
+    max-width: 932px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.about-us__title {
+    color: #3c3c3c;
+    padding-bottom: 65px;
+}
+
+.title {
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8.95px;
+    text-align: center;
+}
+
+.subtitle-body {
+    max-width: 560px;
+    text-align: center;
+    margin: auto;
+}
+
+.subtitle-body__item {
+    color: #3c3c3c;
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.about-us__box {
+    position: absolute;
+    left: 27%;
+    top: 18%;
+}
+
+
+.services {
+    max-width: 1920px;
+    height: 488px;
+    position: relative;
+    background-image: url(../images/design-lab/services-bg.jpg.png);
+    background-repeat: no-repeat;
+}
+
+.services__body {
+    max-width: 932px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.services__subtitle-body {
+    max-width: 560px;
+    text-align: center;
+    margin: auto;
+}
+
+.services__title {
+    color: #ffffff;
+    padding-bottom: 65px;
+}
+
+.services__subtitle {
+    color: #ffffff;
+}
+
+.services__box {
+    position: absolute;
+    top: 20%;
+    right: 26%;
+}
+
+.what-we-do {
+    max-width: 1920px;
+    height: 1415px;
+    position: relative;
+}
+
+.what-we-do__body {
+    max-width: 560px;
+    text-align: center;
+    margin: auto;
+}
+
+.what-we-do__box {
+    position: absolute;
+    top: 0%;
+}
+
+.what-we-do__header {
+    margin-top: 100px;
+}
+
+.what-we-do__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-what-we-do {
+    align-self: space-around;
+    padding: 90px 0px;
+}
+
+.item-what-we-do__icon {
+    padding: 10px;
+}
+
+.item-what-we-do__title {
+    padding: 10px;
+    color: #3c3c3c;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5.26px;
+}
+
+.item-what-we-do__subtitle {
+    padding: 10px;
+    color: #3c3c3c;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25.89px;
+}
+
+.our-works {
+    width: 1920px;
+    height: 484px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item-our-work {
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8.95px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 49px;
+    padding-bottom: 43px;
+}
+
+.our-works__topworkz {
+    background-image: url(../images/design-lab/topworkz.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 548px;
+    height: 237px;
+}
+
+.our-works__joint {
+    background-image: url(../images/design-lab/joint.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 802px;
+    height: 237px;
+}
+
+.our-works__market {
+    background-image: url(../images/design-lab/market.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 548px;
+    height: 237px;
+}
+
+.our-works__worktop {
+    background-image: url(../images/design-lab/worktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 548px;
+    height: 237px;
+}
+
+.our-works__lable {
+    background-image: url(../images/design-lab/lable.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 802px;
+    height: 237px;
+}
+
+.our-works__kyiv {
+    background-image: url(../images/design-lab/kyiv.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 548px;
+    height: 237px;
+}
+
+.contact-us {
+    width: 1920px;
+    height: 600px;
+    padding-bottom: -135px;
+    position: relative;
+}
+
+.contact-us__body {
+    max-width: 543px;
+    text-align: center;
+    margin: 135px auto 0px auto;
+}
+
+.contact-us__subtitle {
+    padding: 60px 0px 40px 0px;
+}
+
+.contact-us__button {
+    width: 398px;
+    height: 62px;
+    border: 2px solid #3c3c3c;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.54px;
+}
+
+.footer-text {
+    color: #3c3c3c;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.contact-us__box {
+    position: absolute;
+    top: 50%;
+}
+

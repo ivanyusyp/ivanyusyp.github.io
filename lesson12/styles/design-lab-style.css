@@ -289,12 +289,21 @@
     letter-spacing: 2.54px;
 }
 
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .footer-text {
     color: #3c3c3c;
     font-size: 14px;
     font-weight: 400;
-    text-align: center;
-    padding-top: 100px;
+    padding-left: 20px;
 }
 
 .contact-us__box {

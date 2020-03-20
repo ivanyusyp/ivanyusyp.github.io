@@ -93,7 +93,7 @@
 
 .about-us__box {
     position: absolute;
-    left: 27%;
+    left: 26%;
     top: 18%;
 }
 
@@ -134,7 +134,7 @@
 .services__box {
     position: absolute;
     top: 20%;
-    right: 26%;
+    left: 26%;
 }
 
 .what-we-do {
@@ -151,7 +151,8 @@
 
 .what-we-do__box {
     position: absolute;
-    top: 0%;
+    top: 1%;
+    left: 26%;
 }
 
 .what-we-do__header {
@@ -166,7 +167,7 @@
 
 .item-what-we-do {
     align-self: space-around;
-    padding: 90px 0px;
+    padding: 80px 0px;
 }
 
 .item-what-we-do__icon {
@@ -288,16 +289,26 @@
     letter-spacing: 2.54px;
 }
 
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .footer-text {
     color: #3c3c3c;
     font-size: 14px;
     font-weight: 400;
-    text-align: center;
-    padding-top: 100px;
+    padding-left: 20px;
 }
 
 .contact-us__box {
     position: absolute;
-    top: 50%;
+    top: 3%;
+    left: 26%;
 }
 

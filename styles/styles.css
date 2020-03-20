@@ -1,25 +1,24 @@
-body {
+* {
     padding: 0;
     margin: 0;
     line-height: 1;
-    background: antiquewhite;
-    font-family: Arial, 'sans-serif';
     box-sizing: border-box;
 }
 
-h1, a {
-color: #8f0f1c;
-}
-
 .container {
-    width: 70%;
+    width: 100%;
     max-width: 700px;
     margin: 0 auto;
 }
 
+.container__header{
+    text-align: center;
+    padding: 20px;
+}
+
 .title {
     font-weight: normal;
-    color: #8f0f1c;;
+    color: #8f0f1c;
     text-align: center;
     border-bottom: 2px solid white;
     padding: 5px;
@@ -29,10 +28,101 @@ color: #8f0f1c;
     width: 100%;
 }
 
-.lessons_list {
-    border: 1px solid darkgray;
-    list-style-type: none;
-    padding: 0px;
+li {
+    list-style: none;
+}
+
+/*  start card-transition */
+
+.transition {
+    transition: .3s cubic-bezier(.3, 0, 0, 1.3)
+}
+
+.lesson-list__card {
+    background-color: #fff;
+    height: 400px;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 20px;
+    position: relative;
+}
+
+.lesson-list__card:hover {
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card_circle {
+    height: 100%;
+    width: 100%;
+    background: url(http://widewallpaper.info/wp-content/uploads/2015/11/Nature-HD-Wallpaper-1080p.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: -75px;
+    margin-top: -270px;
+    z-index: -1;
+}
+
+.lesson-list__card:hover .card_circle {
+    border-radius: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 190px;
+    z-index: 9999;
+    font-size: 26px;
+    color: #8f0f1c;
+    width: 100%;
+    font-family: 'Noto Sans', serif;
+}
+
+h2 small {
+    font-weight: normal;
+    font-size: 65%;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.lesson-list__card:hover h2 {
+    margin-top: 100px;
+    color: #fff;
+}
+
+.lesson-list__card:hover h2 small {
+    color: #fff;
+}
+
+.lesson-list__link-container {
+    text-align: center;
+    margin-top: 50px;
+    z-index: 9999;
+    width: 100%;
+    font-family: 'Noto Sans', serif;
+}
+
+.lesson-list__link {
+    color: #fff;
+    border: 2px solid #8f0f1c;;
+    background-color: #8f0f1c;;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lesson-list__card:hover .lesson-list__link-container {
+    /* margin-top: 320px; */
+}
+
+/*  end card-transition */
+
+.lessons-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .lessons_list .list_item {
@@ -49,50 +139,116 @@ color: #8f0f1c;
     font-size: 30px;
 }
 
-.basic_info p {
-    float: left;
-    width: 50%;
-    border: 1px solid gray;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
-    color: gray;
-    background: rgba(226, 226, 226, 1);
-    background: -moz-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(226, 226, 226, 1)), color-stop(50%, rgba(219, 219, 219, 1)), color-stop(51%, rgba(209, 209, 209, 1)), color-stop(100%, rgba(254, 254, 254, 1)));
-    background: -webkit-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    background: -o-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    background: linear-gradient(to right, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1);
-}
-
-.basic_info p:hover {
-    color: white;
-    background: rgba(226, 226, 226, 1);
-    background: -moz-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(226, 226, 226, 1)), color-stop(50%, rgba(219, 219, 219, 1)), color-stop(51%, rgba(209, 209, 209, 1)), color-stop(100%, rgba(254, 254, 254, 1)));
-    background: -webkit-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    background: -o-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    background: linear-gradient(to right, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1);
-}
-
-.basic_info p:hover a {
-    color: white;
-}
-
-.basic_info p a {
-color: rgb(134, 57, 57);
-font-size: 20px;
-text-decoration: none;
-
-}
-.basic_info p::first-letter {
-    text-transform: uppercase;
+.basic_info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .list_container {
     clear: both;
 }
+
+/*  start styles for button */
+
+.pure-material-button-outlined {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid 1px;
+    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.24);
+    border-radius: 4px;
+    padding: 16px;
+    min-width: 64px;
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: #8f0f1c;
+    background-color: transparent;
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 34px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    /* flex-basis: 45%; */
+    margin: 20px;
+}
+
+.pure-material-button-outlined::-moz-focus-inner {
+    border: none;
+}
+
+/* Overlay */
+
+.pure-material-button-outlined::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: currentColor;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Ripple */
+
+.pure-material-button-outlined::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: currentColor;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 1s, transform 0.5s;
+}
+
+/* Hover, Focus */
+
+.pure-material-button-outlined:hover::before {
+    opacity: 0.04;
+}
+
+.pure-material-button-outlined:focus::before {
+    opacity: 0.12;
+}
+
+.pure-material-button-outlined:hover:focus::before {
+    opacity: 0.16;
+}
+
+/* Active */
+
+.pure-material-button-outlined:active::after {
+    opacity: 0.16;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0s;
+}
+
+/* Disabled */
+
+.pure-material-button-outlined:disabled {
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+    background-color: transparent;
+    cursor: initial;
+}
+
+.pure-material-button-outlined:disabled::before {
+    opacity: 0;
+}
+
+.pure-material-button-outlined:disabled::after {
+    opacity: 0;
+}
+
+/*  end styles for button */

@@ -93,7 +93,7 @@
 
 .about-us__box {
     position: absolute;
-    left: 27%;
+    left: 26%;
     top: 18%;
 }
 
@@ -134,7 +134,7 @@
 .services__box {
     position: absolute;
     top: 20%;
-    right: 26%;
+    left: 26%;
 }
 
 .what-we-do {
@@ -151,7 +151,8 @@
 
 .what-we-do__box {
     position: absolute;
-    top: 0%;
+    top: 1%;
+    left: 26%;
 }
 
 .what-we-do__header {
@@ -166,7 +167,7 @@
 
 .item-what-we-do {
     align-self: space-around;
-    padding: 90px 0px;
+    padding: 80px 0px;
 }
 
 .item-what-we-do__icon {
@@ -298,6 +299,7 @@
 
 .contact-us__box {
     position: absolute;
-    top: 50%;
+    top: 3%;
+    left: 26%;
 }
 

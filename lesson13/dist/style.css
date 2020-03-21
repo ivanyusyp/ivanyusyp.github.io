@@ -1,8 +1,104 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,400i,700&display=swap");
 * {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header-section {
+  background-image: url("./images/bg-container-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  padding: 100px;
+  font-family: "Roboto", sans-serif;
+}
+.header-section .nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 15%;
+  right: 0%;
+}
+.header-section .nav li {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  border-top: 3px solid transparent;
+}
+.header-section .nav li:hover {
+  border-top: 3px solid orangered;
+}
+.header-section__logo p {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+  display: block;
+}
+.header-section__text .header {
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 200px;
+}
+.header-section__text .describe {
+  font-size: 17px;
+  width: 20%;
+}
+.header-section__scroll-image {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+.header-section__button {
+  text-transform: uppercase;
+  background-color: #e66536;
+  color: white;
+  font-size: 20px;
+  width: 200px;
+  height: 55px;
+  display: inline-block;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 3px 3px 0px gray;
+  border: 0px;
+  margin-top: 50px;
+}
+
+.about-us-section {
+  background: #00bcbc;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 700px;
+  align-items: center;
+  text-align: center;
+  padding: 160px;
+}
+.about-us-section__image {
+  width: 50%;
+}
+.about-us-section__text {
+  width: 50%;
+}
+.about-us-section__text .header {
+  font-size: 90px;
+  color: white;
+  text-align: left;
+}
+.about-us-section__text .describe {
+  font-size: 17px;
+  color: white;
+  text-align: left;
 }
 
 .contact-section .contact {

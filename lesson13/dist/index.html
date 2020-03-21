@@ -7,17 +7,68 @@
   <title>cahee-2</title>
   <link rel="stylesheet" href="./style.css">
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,400,700&display=swap" rel="stylesheet">
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   <script src="./script/jquery.mask.min.js"></script>
   <script>
-    $(document).ready(function(){
-   $('.contact__item_phone').mask('(000) 000-0000')});</script>
+    $(document).ready(function () {
+      $('.contact__item_phone').mask('(000) 000-0000')
+    });</script>
 </head>
 
 <body>
+  <!-- 1-st section start -->
+  <div class="header-section">
+    <div class="header-section__nav">
+      <div class="header-section__logo">
+        <p>Cahee</p>
+      </div>
+      <ul class="nav">
+        <li class="nav-item"><a href="#home"></a>Home</li>
+        <li class="nav-item"><a href="#about"></a>About</li>
+        <li class="nav-item"><a href="#services"></a>Services</li>
+        <li class="nav-item"><a href="#gallery"></a>Gallery</li>
+        <li class="nav-item"><a href="#blog"></a>Blog</li>
+        <li class="nav-item"><a href="#contact"></a>Contact</li>
+      </ul>
+    </div>
+    <div class="header-section__text">
+      <p class="header">
+        Fresh Life
+      </p>
+      <p class="describe">
+        Sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco.
+      </p>
+    </div>
+    <div class="header-section__scroll-image">
+      <img src="./images/scroll.png" alt="scroll">
+    </div>
+    <button class="header-section__button">
+      get free now
+    </button>
+  </div>
+  <div class="about-us-section">
+    <div class="about-us-section__image">
+      <img src="./images/img-cotnainer-2.png" alt="Strawberry">
+    </div>
+    <div class="about-us-section__text">
+      <p class="header">
+        About Us
+      </p>
+      <p class="describe">
+        Abore Cahee magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum.
+        Nim id est laborum. Sed ut perspiciatis unde omnis iste natus
+        error sit voluptatem accusantium doloremque laudantium, totam
+        rem aperiam, eaque ipsa quae ab illo inventore.
+      </p>
+    </div>
+  </div>
+  <!-- 1-st section end -->
   <div class="contact-section">
     <div class="contact">
       <div class="contact__header">
@@ -31,9 +82,12 @@
       </div>
       <div class="contact__column">
         <div class="contact__forms">
-          <form autocomplete="on" ><label for="name"><input id="name" required="required" maxlength="30" type="text" class="contact__item" placeholder="Your name..."></label></form>
-          <form autocomplete="on" ><label for="email"><input id="email" required="required" maxlength="30" type="email" class="contact__item" placeholder="Your email..."></label></form>
-          <form autocomplete="on" ><label for="phone"><input id="phone" required="required" maxlength="30" type="tel" class="contact__item contact__item_phone " placeholder="Your phone number..."></label></form>
+          <form autocomplete="on"><label for="name"><input id="name" required="required" maxlength="30" type="text"
+                class="contact__item" placeholder="Your name..."></label></form>
+          <form autocomplete="on"><label for="email"><input id="email" required="required" maxlength="30" type="email"
+                class="contact__item" placeholder="Your email..."></label></form>
+          <form autocomplete="on"><label for="phone"><input id="phone" required="required" maxlength="30" type="tel"
+                class="contact__item contact__item_phone " placeholder="Your phone number..."></label></form>
           <textarea class="contact__item contact__item_bigger" placeholder="Your messge..." id="" cols="30" rows="10">
           </textarea>
         </div>
@@ -71,7 +125,6 @@
       </div>
     </footer>
   </div>
-
 </body>
 
 </html>

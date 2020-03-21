@@ -1,11 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:400,400i,700&display=swap");
 * {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-}
-
-body {
-  font-family: "Raleway", sans-serif;
 }
 
 .contact {
@@ -13,7 +10,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .contact__header {
   max-width: 350px;
   margin: 0px auto;
@@ -21,31 +17,29 @@ body {
   padding-top: 100px;
   padding-bottom: 40px;
 }
-
 .contact__title {
   color: #262626;
   font-size: 90px;
   font-weight: 700;
+  font-family: "Raleway", sans-serif;
 }
-
 .contact__subtitle {
   color: #262626;
   font-size: 17px;
   font-weight: 300;
+  font-family: "Raleway", sans-serif;
 }
-
 .contact__column {
   display: flex;
   justify-content: space-around;
   padding-bottom: 120px;
   padding-top: 40px;
+  font-family: "Raleway", sans-serif;
 }
-
 .contact__forms {
   display: flex;
   flex-direction: column;
 }
-
 .contact__item {
   width: 500px;
   height: 50px;
@@ -59,6 +53,58 @@ body {
   font-weight: 300;
   line-height: 25px;
 }
+.contact__item:hover {
+  background-color: #00c4c4;
+  border-left: 5px solid #355b82;
+}
+.contact__item_bigger {
+  width: 500px;
+  height: 250px;
+}
+.contact__contact-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+.contact__contact-information {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.footer-container {
+  background-color: #262626;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 90px;
+  align-items: center;
+}
+.footer-container__year-of-foundation {
+  color: #b9b9b9;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  font-family: "Raleway", sans-serif;
+}
+.footer-container__company-name {
+  color: #b9b9b9;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 25px;
+  font-family: "Pacifico", cursive;
+}
+.footer-container__who-made {
+  color: #b9b9b9;
+  font-family: Raleway;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+  font-family: "Raleway", sans-serif;
+}
+.footer-container__who-made_red-text {
+  color: #ff2b58;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
 
 ::placeholder {
   color: #ffffff;
@@ -69,63 +115,5 @@ body {
 
 textarea {
   resize: none;
-}
-
-.contact__item:hover {
-  background-color: #00c4c4;
-  border-left: 5px solid #355b82;
-}
-
-.contact__item_bigger {
-  width: 500px;
-  height: 250px;
-}
-
-.contact__contact-name {
-  font-size: 17px;
-  font-weight: 700;
-}
-
-.contact__contact-information {
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-.footer-container {
-  background-color: #262626;
-  display: flex;
-  color: aliceblue;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 90px;
-  align-items: center;
-}
-
-.footer-container__year-of-foundation {
-  color: #b9b9b9;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 25px;
-}
-
-.footer-container__company-name {
-  color: #b9b9b9;
-  font-family: Pacifico;
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 25px;
-}
-
-.footer-container__who-made {
-  color: #b9b9b9;
-  font-family: Raleway;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 25px;
-}
-
-.footer-container__who-made_red-text {
-  color: #ff2b58;
-  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

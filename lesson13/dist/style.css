@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,400i,700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header-section {
+  background-image: url("./images/bg-container-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  padding: 100px;
+  font-family: "Roboto", sans-serif;
+}
+.header-section .nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 15%;
+  right: 0%;
+}
+.header-section .nav li {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  border-top: 3px solid transparent;
+}
+.header-section .nav li:hover {
+  border-top: 3px solid orangered;
+}
+.header-section__logo p {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+  display: block;
+}
+.header-section__text .header {
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 200px;
+}
+.header-section__text .describe {
+  font-size: 17px;
+  width: 20%;
+}
+.header-section__scroll-image {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+.header-section__button {
+  text-transform: uppercase;
+  background-color: #e66536;
+  color: white;
+  font-size: 20px;
+  width: 200px;
+  height: 55px;
+  display: inline-block;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 3px 3px 0px gray;
+  border: 0px;
+  margin-top: 50px;
+}
+
+.about-us-section {
+  background: #00bcbc;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 700px;
+  align-items: center;
+  text-align: center;
+  padding: 160px;
+}
+.about-us-section__image {
+  width: 50%;
+}
+.about-us-section__text {
+  width: 50%;
+}
+.about-us-section__text .header {
+  font-size: 90px;
+  color: white;
+  text-align: left;
+}
+.about-us-section__text .describe {
+  font-size: 17px;
+  color: white;
+  text-align: left;
+}
+
+.contact-section .contact {
+  background-image: url(./images/img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-section .contact__header {
+  max-width: 350px;
+  margin: 0px auto;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+.contact-section .contact__title {
+  color: #262626;
+  font-size: 90px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+.contact-section .contact__subtitle {
+  color: #262626;
+  font-size: 17px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+}
+.contact-section .contact__column {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 120px;
+  padding-top: 40px;
+  font-family: "Raleway", sans-serif;
+}
+.contact-section .contact__forms {
+  display: flex;
+  flex-direction: column;
+}
+.contact-section .contact__item {
+  width: 500px;
+  height: 50px;
+  background-color: rgba(0, 196, 196, 0.5);
+  margin: 7px 0px;
+  border: 0px solid transparent;
+  border-left: 5px solid transparent;
+  padding-left: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+}
+.contact-section .contact__item:hover {
+  background-color: #00c4c4;
+  border-left: 5px solid #355b82;
+}
+.contact-section .contact__item_bigger {
+  width: 500px;
+  height: 250px;
+}
+.contact-section .contact__contact-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+.contact-section .contact__contact-information {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.contact-section .footer-container {
+  background-color: #262626;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 90px;
+  align-items: center;
+}
+.contact-section .footer-container__year-of-foundation {
+  color: #b9b9b9;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  font-family: "Raleway", sans-serif;
+}
+.contact-section .footer-container__company-name {
+  color: #b9b9b9;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 25px;
+  font-family: "Pacifico", cursive;
+}
+.contact-section .footer-container__who-made {
+  color: #b9b9b9;
+  font-family: Raleway;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+  font-family: "Raleway", sans-serif;
+}
+.contact-section .footer-container__who-made_red-text {
+  color: #ff2b58;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+.contact-section ::placeholder {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+}
+.contact-section textarea {
+  resize: none;
+}
+/*# sourceMappingURL=style.css.map */

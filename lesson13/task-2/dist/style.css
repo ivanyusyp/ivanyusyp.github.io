@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Raleway:400,400i,700|Roboto:400,400i,700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.our-team__body {
+  text-align: center;
+  margin: 0px auto;
+  min-width: 850px;
+  padding-top: 100px;
+}
+.our-team__header {
+  text-align: center;
+}
+.our-team__header_gray-text {
+  color: #898f8f;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.36px;
+}
+.our-team__header_gold-big-text {
+  color: #ffcc00;
+  font-family: "Roboto - Black", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 66px;
+  text-transform: uppercase;
+}
+
+.photo-team-members {
+  position: relative;
+  flex-basis: 410px;
+}
+.photo-team-members__image {
+  border: 2px solid #ffcc00;
+  width: 388px;
+  height: 388px;
+}
+.photo-team-members__span::after {
+  content: url("../../dist/images/describe-line-main.png");
+  position: absolute;
+  left: 410px;
+  top: -100px;
+}
+.photo-team-members__span::before {
+  content: url("../../dist/images/angle_left_icon.png");
+  position: absolute;
+  top: 45%;
+  left: -50px;
+}
+
+.desc-team {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  max-width: 880px;
+  margin: 100px auto;
+}
+
+.desc-team-member {
+  flex-basis: 410px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+.desc-team-member__name {
+  color: #333333;
+  font-family: "Roboto - Black", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.72px;
+}
+.desc-team-member__line {
+  padding: 10px;
+}
+.desc-team-member__position {
+  color: #666666;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.desc-team-member__social-media {
+  padding: 10px;
+}
+.desc-team-member__about-text {
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  max-width: 350px;
+  padding: 10px;
+}
+.desc-team-member__line-dashed {
+  padding: 10px;
+}
+.desc-team-member__view-profile {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  border: 1px solid #ffcc00;
+  width: 150px;
+  margin: 0px auto;
+}
+.desc-team-member__view-profile::after {
+  content: url("../../dist/images/angle_right_icon.png");
+  position: absolute;
+  top: 51%;
+  right: 20%;
+}
+.desc-team-member__view-profile::before {
+  content: url("../../dist/images/circles.png");
+  position: absolute;
+  top: 83%;
+  right: 48.5%;
+}
+/*# sourceMappingURL=style.css.map */

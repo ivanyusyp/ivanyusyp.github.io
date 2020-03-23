@@ -1,0 +1,128 @@
+@import "./_variables";
+@import "./_main";
+@import "./_normalize";
+@import "./_grid";
+
+.our-team {
+  &__body {
+    text-align: center;
+    margin: 0px auto;
+    min-width: 850px;
+    padding-top: 100px;
+  }
+  &__header {
+    text-align: center;
+  }
+  &__header_gray-text {
+    color: $color-text-the-genius;
+    font-family: $font-secondary;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.36px;
+  }
+  &__header_gold-big-text {
+    color: $color-gold;
+    font-family: $font-primary;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 66px;
+    text-transform: uppercase;
+  }
+}
+
+.photo-team-members {
+  position: relative;
+  flex-basis: 410px;
+  &__image {
+    border: 2px solid $color-gold;
+    width: 388px;
+    height: 388px;
+  }
+  &__span {
+    &::after {
+      content: url("../../dist/images/describe-line-main.png");
+      position: absolute;
+      left: 410px;
+      top: -100px;
+    }
+    &::before {
+      content:url("../../dist/images/angle_left_icon.png");
+      position: absolute;
+      top: 45%;
+      left: -50px;
+    }
+  }
+}
+
+.desc-team {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  max-width: 880px;
+  margin: 100px auto;
+}
+.desc-team-member {
+  flex-basis: 410px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+
+  &__name {
+    color: $color-desc-text-black;
+    font-family: $font-primary;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.72px;
+  }
+  &__line {
+    padding: 10px;
+  }
+  &__position {
+    color: $color-dark-grey-text;
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+  &__social-media {
+    padding: 10px;
+  }
+  &__about-text {
+    color: $color-desc-text-black;
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    max-width: 350px;
+    padding: 10px;
+  }
+  &__line-dashed {
+    padding: 10px;
+  }
+  &__view-profile {
+    font-family: $font-for-view-profile;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border: 1px solid $color-gold;
+    width: 150px;
+    margin: 0px auto;
+    &::after {
+      content: url("../../dist/images/angle_right_icon.png");
+      position: absolute;
+      top: 51%;
+      right: 20%;
+    }
+    &::before {
+      content: url("../../dist/images/circles.png");
+      position: absolute;
+      top: 83%;
+      right: 48.5%;
+    }
+  }
+}

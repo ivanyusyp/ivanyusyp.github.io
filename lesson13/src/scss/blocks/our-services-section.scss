@@ -4,16 +4,12 @@
 @import "../main";
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700&display=swap");
 
-.our-services-section {
-  
+#our-services-section {
+
+  .our-services {
   background-color: #70bfff;
   width: 100%;
   height: 790px;
-
-  .fz-icon {
-    font-size: 50px;
-  }
-
   &__body {
     display: flex;
     flex-direction: row;
@@ -67,7 +63,7 @@
   }
 
   &__image {
-    background-image: url("/lesson12/images/cahee-full/bg-our-services.png");
+    background-image: url("../../../dist/images/cahee-full/bg-our-services.png");
     background-repeat: no-repeat;
     width: 540px;
     height: 527px;
@@ -83,4 +79,9 @@
   &__image_white-text-in-box {
     text-align-last: left;
   }
+
+  .fz-icon {
+    font-size: 50px;
+  }
+}
 }

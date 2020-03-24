@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+#subscribe-to-us .subscribe {
+  width: 100%;
+  width: 1920px;
+  background-image: url(../../../dist/images/subscribe/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

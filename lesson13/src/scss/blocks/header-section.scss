@@ -4,6 +4,7 @@
 @import "../main";
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,400i,700&display=swap");
 
+#header-section {
 .header-section {
   background-image: url("./images/bg-container-1.png");
   background-repeat: no-repeat;
@@ -101,4 +102,5 @@
     color: white;
     text-align: left;
   }
+}
 }

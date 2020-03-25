@@ -15,6 +15,7 @@
     background-image: url(./images/img.png);
     background-repeat: no-repeat;
     background-size: cover;
+    
 
     &__header {
       max-width: 350px;
@@ -44,6 +45,7 @@
       padding-bottom: 120px;
       padding-top: 40px;
       font-family: $font-primary;
+      flex-wrap: wrap;
     }
 
     &__forms {
@@ -135,5 +137,137 @@
 
   textarea {
     resize: none;
+  }
+}
+
+@media screen and (min-width:$xlg) {
+  #contact-section {
+
+    .contact {
+      background-image: url(./images/img.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+  
+      &__header {
+        max-width: 350px;
+        margin: 0px auto;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 40px;
+      }
+  
+      &__title {
+        color: $color-black;
+        font-size: 90px;
+        font-weight: 700;
+        font-family: $font-primary;
+      }
+  
+      &__subtitle {
+        color: $color-black;
+        font-size: 17px;
+        font-weight: 300;
+        font-family: $font-primary;
+      }
+  
+      &__column {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 120px;
+        padding-top: 40px;
+        font-family: $font-primary;
+        flex-wrap: wrap;
+      }
+  
+      &__forms {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      &__item {
+        width: 500px;
+        height: 50px;
+        background-color: $color-blue-alfa-0-5;
+        margin: 7px 0px;
+        border: 0px solid transparent;
+        border-left: 5px solid transparent;
+        padding-left: 10px;
+        color: $color-white;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 25px;
+  
+        &:hover {
+          background-color: $color-blue-alfa-0;
+          border-left: 5px solid #355b82;
+        }
+      }
+  
+      &__item_bigger {
+        width: 500px;
+        height: 250px;
+      }
+  
+      &__contact-name {
+        font-size: 17px;
+        font-weight: 700;
+      }
+  
+      &__contact-information {
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+    }
+  
+    .footer-container {
+      background-color: #262626;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      height: 90px;
+      align-items: center;
+  
+      &__year-of-foundation {
+        color: #b9b9b9;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        font-family: $font-primary;
+      }
+  
+      &__company-name {
+        color: #b9b9b9;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 25px;
+        font-family: $font-secondary;
+      }
+  
+      &__who-made {
+        color: #b9b9b9;
+        font-family: Raleway;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 25px;
+        font-family: $font-primary;
+      }
+  
+      &__who-made_red-text {
+        color: $color-red;
+        font-weight: 700;
+        font-family: $font-primary;
+      }
+    }
+  
+    ::placeholder {
+      color: $color-white;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 25px;
+    }
+  
+    textarea {
+      resize: none;
+    }
   }
 }

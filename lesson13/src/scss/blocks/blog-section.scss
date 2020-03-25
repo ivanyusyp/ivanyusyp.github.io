@@ -21,7 +21,7 @@
   
   .container {
     display: flex;
-    flex-flow: row no-wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-content: space-between;
     margin: 20px auto;
@@ -59,6 +59,11 @@
     padding: 20px;
     margin: 10px;
   }
+
+  .blog-button {
+    text-align: center;
+    padding-bottom: 30px;
+  }
   
   button {
     background: #f72b3b;
@@ -69,9 +74,13 @@
     width: 200px;
     height: 55px;
     text-transform: uppercase;
-    margin: 50px auto;
     position: relative;
-    left: 42%;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(1.2);
+    }
   }
   
   .article-head {
@@ -87,15 +96,61 @@
   .date {
     border: 0px solid #000000;
     border-radius: 10px 10px 10px 10px;
-    padding: 2px;
+    padding: 5px;
     display: inline-block;
     background-image: url(../../../dist/images/blog/images/gradient.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.8;
-    font-size: 32px;
+    opacity: 0.6;
+    font-size: 25px;
     text-transform: uppercase;
     text-align: center;
 }
+}
+
+@media screen and (min-width:$xlg) {
+  #blog-section {
+    .container {
+      display: flex;
+      flex-flow: row no-wrap;
+      justify-content: center;
+      align-content: space-between;
+      margin: 20px auto;
+    }
+    
+    .article1 {
+      background-image: url(../../../dist/images/blog/images/smoothiegr.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 370px;
+      height: 310px;
+      padding: 20px;
+      margin: 10px;
+    }
+    
+    .article2 {
+      background-image: url(../../../dist/images/blog/images/growingfoodgr.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 370px;
+      height: 310px;
+      padding: 20px;
+      margin: 10px;
+    }
+    
+    .article3 {
+      background-image: url(../../../dist/images/blog/images/raspberrygr.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 370px;
+      height: 310px;
+      padding: 20px;
+      margin: 10px;
+    }
+    
+  }
 }

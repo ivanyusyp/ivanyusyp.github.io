@@ -17,7 +17,12 @@
       line-height: 27px;
       text-align: center;
       padding-top: 8%;
+      @media screen and (max-width:480px) {
+        font-size: 70px;
+      }
     }
+
+
     &__desc-text {
       color: #262626;
       font-family: Raleway;
@@ -164,4 +169,9 @@
 
 }
 }
+}
+
+@media screen and (max-width:480px) {
+
+
 }

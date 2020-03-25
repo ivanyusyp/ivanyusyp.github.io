@@ -5,114 +5,146 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,400i,700&display=swap");
 
 #header-section {
-.header-section {
-  background-image: url("./images/bg-container-1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: auto;
-  font-family: 'Roboto', sans-serif;
-  .nav {
-    list-style-type: none;
+  .header-section {
+    background: url("./images/bg-container-1.png") no-repeat bottom center;
+    // background-image: url("./images/bg-container-1.png");
+    // background-repeat: no-repeat;
+    background-size: cover;
+    // background-position: center right;
+    background-attachment: local;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid red;
+
+
+    
+    .nav {
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .nav li {
+      text-transform: uppercase;
+      border-top: 3px solid transparent;
+      padding: 10px;
+    }
+
+    .nav li:hover {
+      border-top: 3px solid orangered;
+    }
+    &__container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: start;
+    }
+
+    &__logo {
+      font-size: 50px;
+      font-family: "Pacifico", cursive;
+    }
+
+    &__text .header {
+      font-weight: bold;
+      font-size: 60px;
+      @media screen and (max-width: 480px) {
+        text-align: center;
+      }
+    }
+
+    &__text .describe {
+      font-size: 17px;
+      word-wrap: break-word;
+      padding: 10px;
+      @media screen and (max-width: 480px) {
+        text-align: center;
+      }
+    }
+
+    &__scroll-image {
+      position: absolute;
+      left: 50%;
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
+
+    }
+
+    &__button {
+      text-transform: uppercase;
+      background-color: rgb(230, 101, 54);
+      color: white;
+      font-size: 20px;
+      width: 100%;
+      max-width: 200px;
+      min-width: 44px;
+      height: auto;
+      max-height: 55px;
+      min-height: 44px;
+      display: block;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0px 3px 3px 0px gray;
+      border: 0px;
+      margin: 10px;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:active {
+        transform: scale(1.2);
+      }
+      @media screen and (max-width: 480px) {
+        margin: 10px auto;
+      }
+    }
+  }
+
+  .about-us-section {
+    background: #00bcbc;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .nav li {
-    text-transform: uppercase;
-    border-top: 3px solid transparent;
-    padding: 10px;
-  }
-
-  .nav li:hover {
-    border-top: 3px solid orangered;
-  }
-  &__container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: start;
-  }
-
-  &__logo {
-    font-size: 50px;
-    font-family: "Pacifico", cursive;
-  }
-
-  &__text .header {
-    font-weight: bold;
-    font-size: 60px;
-  }
-
-  &__text .describe {
-    font-size: 17px;
-    word-wrap: break-word;
-    padding: 10px;
-  }
-
-  &__scroll-image {
-    position: absolute;
-    left: 50%;
-  }
-
-  &__button {
-    text-transform: uppercase;
-    background-color: rgb(230, 101, 54);
-    color: white;
-    font-size: 20px;
-    width: 100%;
-    max-width: 200px;
-    min-width: 44px;
-    height: auto;
-    max-height: 55px;
-    min-height: 44px;
-    display: inline-block;
-    padding: 15px;
+    align-items: center;
     text-align: center;
-    box-shadow: 0px 3px 3px 0px gray;
-    border: 0px;
-    margin: 10px;
-    &:hover {
-      transform: scale(1.1);
+    padding: 10px;
+    @media screen and (max-width: 480px) {
+      padding: 20px;
     }
-    &:active {
-      transform: scale(1.2);
+    
+
+    &__image {
+      width: 50%;
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+
+    &__text {
+      width: 50%;
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+    }
+
+    &__text .header {
+      font-size: 90px;
+      color: white;
+      text-align: left;
+      @media screen and (max-width: 480px) {
+        text-align: center;
+      }
+    }
+
+    &__text .describe {
+      font-size: 17px;
+      color: white;
+      text-align: left;
     }
   }
 }
 
-.about-us-section {
-  background: #00bcbc;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-
-  &__image {
-    width: 50%;
-  }
-
-  &__text {
-    width: 50%;
-  }
-
-  &__text .header {
-    font-size: 90px;
-    color: white;
-    text-align: left;
-  }
-
-  &__text .describe {
-    font-size: 17px;
-    color: white;
-    text-align: left;
-  }
-}
-}
-
-@media screen and (min-width:$xlg) {
+@media screen and (min-width: $xlg) {
   #header-section {
     .header-section {
       padding: 10px 120px 400px 120px;
@@ -121,7 +153,7 @@
         top: 3%;
         right: 5%;
       }
-    
+
       .nav li {
         padding-left: 20px;
         padding-right: 20px;
@@ -129,7 +161,7 @@
         border-top: 3px solid transparent;
         padding: 10px;
       }
-    
+
       .nav li:hover {
         border-top: 3px solid orangered;
       }
@@ -138,31 +170,31 @@
         flex-flow: row wrap;
         justify-content: start;
       }
-    
+
       &__logo {
         font-size: 50px;
         font-family: "Pacifico", cursive;
       }
-    
+
       &__text .header {
         font-weight: bold;
         font-size: 60px;
         margin-top: 200px;
       }
-    
+
       &__text .describe {
         font-size: 17px;
         word-wrap: break-word;
         padding: 10px;
         width: 20%;
       }
-    
+
       &__scroll-image {
         position: absolute;
         left: 50%;
         top: 90%;
       }
-    
+
       &__button {
         text-transform: uppercase;
         background-color: rgb(230, 101, 54);
@@ -189,7 +221,7 @@
         }
       }
     }
-    
+
     .about-us-section {
       background: #00bcbc;
       display: flex;
@@ -197,15 +229,15 @@
       flex-direction: row;
       align-items: center;
       text-align: center;
-    
+
       &__image {
         flex-basis: 45%;
       }
-    
+
       &__text {
         flex-basis: 45%;
         padding: 50px;
       }
     }
-    }
+  }
 }

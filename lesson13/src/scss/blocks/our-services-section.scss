@@ -58,7 +58,6 @@
     font-family: Raleway;
     font-size: 80px;
     font-weight: 700;
-    line-height: 27px;
     text-align: center;
     margin: 10px;
     position: relative;
@@ -69,6 +68,9 @@
     position: relative;
     top: -300px;
     word-wrap: break-word;
+    @media screen and (max-width:480px) {
+      font-size: 70px;
+    }
 
   }
 

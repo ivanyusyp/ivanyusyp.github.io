@@ -14,62 +14,205 @@
     $(document).ready(function () {
       $('.contact__item_phone').mask('(000) 000-0000')
     });</script>
+  <link rel="stylesheet" href="./style-icon-moon.css">
 </head>
 
 <body>
   <!-- 1-st section start -->
-  <div class="header-section">
-    <div class="header-section__nav">
-      <div class="header-section__logo">
-        <p>Cahee</p>
+  <div id="header-section">
+    <div class="header-section">
+      <div class="header-section__container">
+        <div class="header-section__logo">
+          <p>Cahee</p>
+        </div>
+        <div class="header-section__nav">
+          <ul class="nav">
+            <li class="nav-item"><a href="#home"></a>Home</li>
+            <li class="nav-item"><a href="#about"></a>About</li>
+            <li class="nav-item"><a href="#services"></a>Services</li>
+            <li class="nav-item"><a href="#gallery"></a>Gallery</li>
+            <li class="nav-item"><a href="#blog"></a>Blog</li>
+            <li class="nav-item"><a href="#contact"></a>Contact</li>
+          </ul>
+        </div>
       </div>
-      <ul class="nav">
-        <li class="nav-item"><a href="#home"></a>Home</li>
-        <li class="nav-item"><a href="#about"></a>About</li>
-        <li class="nav-item"><a href="#services"></a>Services</li>
-        <li class="nav-item"><a href="#gallery"></a>Gallery</li>
-        <li class="nav-item"><a href="#blog"></a>Blog</li>
-        <li class="nav-item"><a href="#contact"></a>Contact</li>
-      </ul>
+      <div class="header-section__text">
+        <p class="header">
+          Fresh Life
+        </p>
+        <p class="describe">
+          Sed do eiusmod tempor incididunt ut labore
+          et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco.
+        </p>
+      </div>
+      <div class="header-section__scroll-image">
+        <img src="./images/scrollsvg.svg" alt="scroll">
+      </div>
+      <button class="header-section__button">
+        get free now
+      </button>
     </div>
-    <div class="header-section__text">
-      <p class="header">
-        Fresh Life
-      </p>
-      <p class="describe">
-        Sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco.
-      </p>
-    </div>
-    <div class="header-section__scroll-image">
-      <img src="./images/scroll.png" alt="scroll">
-    </div>
-    <button class="header-section__button">
-      get free now
-    </button>
-  </div>
-  <div class="about-us-section">
-    <div class="about-us-section__image">
-      <img src="./images/img-cotnainer-2.png" alt="Strawberry">
-    </div>
-    <div class="about-us-section__text">
-      <p class="header">
-        About Us
-      </p>
-      <p class="describe">
-        Abore Cahee magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum.
-        Nim id est laborum. Sed ut perspiciatis unde omnis iste natus
-        error sit voluptatem accusantium doloremque laudantium, totam
-        rem aperiam, eaque ipsa quae ab illo inventore.
-      </p>
+    <div class="about-us-section">
+      <div class="about-us-section__image">
+        <img src="./images/img-cotnainer-2.png" alt="Strawberry">
+      </div>
+      <div class="about-us-section__text">
+        <p class="header">
+          About Us
+        </p>
+        <p class="describe">
+          Abore Cahee magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum.
+          Nim id est laborum. Sed ut perspiciatis unde omnis iste natus
+          error sit voluptatem accusantium doloremque laudantium, totam
+          rem aperiam, eaque ipsa quae ab illo inventore.
+        </p>
+      </div>
     </div>
   </div>
   <!-- 1-st section end -->
-  <div class="contact-section">
+  <!-- start 2-nd section -->
+  <div id="our-services-section">
+    <div class="our-services">
+      <div class="our-services__body">
+        <div class="our-services__list">
+          <div class="our-services__item">
+            <div class="our-services__text">
+              Online Shopping
+            </div>
+            <div class="our-services__icon">
+              <i class="icon-shopping fz-icon"></i>
+            </div>
+          </div>
+          <div class="our-services__item">
+            <div class="our-services__text">
+              Quality Product
+            </div>
+            <div class="our-services__icon">
+              <i class="icon-product fz-icon"></i>
+            </div>
+          </div>
+          <div class="our-services__item">
+            <div class="our-services__text">
+              Domestic & International Delivery
+            </div>
+            <div class="our-services__icon">
+              <i class="icon-delivery fz-icon"></i>
+            </div>
+          </div>
+          <div class="our-services__item">
+            <div class="our-services__text">
+              Well Organized
+            </div>
+            <div class="our-services__icon">
+              <i class="icon-well-organised fz-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="our-services__image">
+          <img src="../dist/images/services/tomato.png" alt="tomato">
+          <p class="our-services__image_white-text-in-box">Our Services
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end 2-nd section -->
+  <!-- start 3 section -->
+  <div id="gallery-section">
+    <div class="gallery">
+      <div class="gallery__header">
+        <p class="gallery__head-text">
+          Gallery
+        </p>
+        <p class="gallery__desc-text">
+          Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="gallery__images">
+        <div class="item1-2-3-block">
+          <img src="../../../dist/images/gallery/img01.png" class="gallery__item1">
+          <div class="item2-3-block">
+            <img src="../../../dist/images/gallery/img02.png" class="gallery__item2">
+            <img src="../../../dist/images/gallery/img03.png" class="gallery__item3">
+          </div>
+        </div>
+        <div class="item-4-5-block">
+          <img src="../../../dist/images/gallery/img04.png" class="gallery__item4">
+          <img src="../../../dist/images/gallery/img05.png" class="gallery__item5">
+        </div>
+      </div>
+      <div class="view-more">
+        <button class="view-more__button">
+          VIEW MORE
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- end 3 section -->
+  <!-- start 4 section -->
+  <div id="subscribe-to-us">
+    <div class="subscribe">
+      <div class="subscribe__body">
+        <div class="subscribe__title">
+          Subscribe To Us
+        </div>
+        <div class="subscribe__subtitle">
+          Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam.
+        </div>
+        <div class="subscribe__submit-email">
+          <input  class="subscribe__email-form" type="email" placeholder="Your email address..." name="" id="">
+          <button class="subscribe__submit-button" type="submit">SUBSCRIBE</button>
+        </div>
+        <img class="subscribe__image" src="./images/services/bg.png" alt="bg">
+      </div>
+    </div>
+  </div>
+  <!-- end 4 section -->
+  <!-- start 5 section -->
+  <div id="blog-section">
+    <p class="header">
+      Blog
+    </p>
+    <p class="main-article">
+      Dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation <br>
+      ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute
+      irure <br>
+      dolor in reprehenderit in voluptate velit.
+    </p>
+    <div class="container">
+      <div class="article1">
+        <p class="date">
+          20 <br> nov
+        </p>
+        <p class="article-head">Green Smoothies: Too Much of a Good Thing?</p>
+        <p class="autor">By Auskteez - 2 hours ago</p>
+      </div>
+      <div class="article2">
+        <p class="date">14 <br> nov</p>
+        <p class="article-head">Growing Food and a “Thirst” for Innovation</p>
+        <p class="autor">By Auskteez - 3 hours ago</p>
+      </div>
+      <div class="article3">
+        <p class="date">10 <br> nov</p>
+        <p class="article-head">Pesticides & Food: What You Need to Know</p>
+        <p class="autor">By Auskteez - 6 hours ago</p>
+      </div>
+    </div>
+    <div class="blog-button">
+      <button>view more</button>
+    </div>
+  </div>
+  <!-- end 5 section -->
+  <!-- start last section -->
+  <div id="contact-section">
     <div class="contact">
       <div class="contact__header">
         <div class="contact__title">
@@ -125,6 +268,7 @@
       </div>
     </footer>
   </div>
+  <!-- end last section -->
 </body>
 
 </html>

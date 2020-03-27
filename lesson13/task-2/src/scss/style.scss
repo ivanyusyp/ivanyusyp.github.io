@@ -7,8 +7,8 @@
   &__body {
     text-align: center;
     margin: 0px auto;
-    min-width: 850px;
-    padding-top: 100px;
+    max-width: 850px;
+    margin-top: 20px;
   }
   &__header {
     text-align: center;
@@ -115,14 +115,14 @@
     &::after {
       content: url("../../dist/images/angle_right_icon.png");
       position: absolute;
-      top: 51%;
-      right: 20%;
+      top: 64%;
+      right: 16%;
     }
     &::before {
       content: url("../../dist/images/circles.png");
       position: absolute;
-      top: 83%;
-      right: 48.5%;
+      top: 108%;
+      right: 47.5%;
     }
   }
 }

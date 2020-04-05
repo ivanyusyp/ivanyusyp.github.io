@@ -8,7 +8,6 @@
     background-image: url(/lesson12/images/design-lab/introducing-bg.png);
     background-repeat: no-repeat;
     max-width: 1920px;
-    height: 1072px;
     font-family: 'Lato', sans-serif;
     position: relative;
 }
@@ -46,11 +45,15 @@
 
 .about-us {
     max-width: 1920px;
-    height: 630px;
     position: relative;
 }
 
+.about-us fieldset {
+    margin: 50px 0px;
+}
+
 .about-us__body {
+    width: 100%;
     max-width: 932px;
     display: flex;
     flex-direction: column;
@@ -72,6 +75,12 @@
     text-align: center;
 }
 
+@media screen and (max-width:768px) {
+    .title {
+        font-size: 20px;
+    }
+}
+
 .subtitle-body {
     max-width: 560px;
     text-align: center;
@@ -90,19 +99,16 @@
     line-height: 24px;
 }
 
-.about-us__box {
-    position: absolute;
-    left: 26%;
-    top: 18%;
-}
-
-
 .services {
     max-width: 1920px;
-    height: 488px;
     position: relative;
     background-image: url(../images/design-lab/services-bg.jpg.png);
     background-repeat: no-repeat;
+    
+}
+
+.services fieldset {
+    margin: 50px 0px;
 }
 
 .services__body {
@@ -115,10 +121,16 @@
     padding-top: 90px;
 }
 
+@media screen and (max-width:768px){
+    .services__body {
+        padding: 0px;
+    }
+}
+
 .services__subtitle-body {
     max-width: 560px;
     text-align: center;
-    margin: auto;
+    margin: 0px auto;
 }
 
 .services__title {
@@ -129,31 +141,27 @@
     color: #ffffff;
 }
 
-.services__box {
-    position: absolute;
-    top: 20%;
-    left: 26%;
-}
 
 .what-we-do {
     max-width: 1920px;
-    height: 1415px;
     position: relative;
 }
 
 .what-we-do__body {
-    max-width: 560px;
+    max-width: 932px;
     text-align: center;
     margin: 50px auto;
 }
-
-
 
 .what-we-do__column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 538px;
+    margin: 0 auto;
 }
+
+
 
 .item-what-we-do {
     align-self: space-around;
@@ -182,12 +190,20 @@
 }
 
 .our-works {
-    width: 1920px;
-    height: 484px;
+    width: 100%;
+    max-width: 1920px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+@media screen and (max-width:768px) {
+    .our-works {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
 }
 
 .item-our-work {
@@ -195,59 +211,54 @@
     font-size: 34px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 8.95px;
-    display: flex;
-    align-items: flex-end;
-    padding-left: 49px;
-    padding-bottom: 43px;
+    padding:40px 0px 40px 10px;
+    width: 100%;
+    margin-top: 10px;
+    
 }
 
 .our-works__topworkz {
     background-image: url(../images/design-lab/topworkz.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 548px;
-    height: 237px;
+   flex-basis: 30%;
+
 }
 
 .our-works__joint {
     background-image: url(../images/design-lab/joint.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 802px;
-    height: 237px;
+    flex-basis: 38%;
 }
 
 .our-works__market {
     background-image: url(../images/design-lab/market.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 548px;
-    height: 237px;
+    flex-basis: 30%;
+    
 }
 
 .our-works__worktop {
     background-image: url(../images/design-lab/worktop.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 548px;
-    height: 237px;
+    flex-basis: 30%;
 }
 
 .our-works__lable {
     background-image: url(../images/design-lab/lable.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 802px;
-    height: 237px;
+    flex-basis: 38%;
 }
 
 .our-works__kyiv {
     background-image: url(../images/design-lab/kyiv.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 548px;
-    height: 237px;
+    flex-basis: 30%;
 }
 
 .contact-us {
@@ -256,22 +267,36 @@
 }
 
 .contact-us__body {
-    max-width: 543px;
+    max-width: 932px;
+    width: 100%;
     text-align: center;
     margin: 50px auto;
+    padding: 50px;
+
+}
+
+@media screen and (max-width:768px) {
+    .contact-us__body {
+        margin: 10px auto;
+        padding: 0px;
+    }
 }
 
 
 .contact-us__button {
-    width: 398px;
-    height: 62px;
-    border: 2px solid #3c3c3c;
+    max-width: 398px;
+    width: 100%;
+    max-height: 62px;
+    border: 2px solid #0c0b0b;
     background-color: #3c3c3c;
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2.54px;
+    margin-top: 40px;
+
+
 }
 
 .footer-container {
@@ -284,6 +309,16 @@
     text-align: center;
 }
 
+
+
+@media screen and (max-width:768px) {
+    .footer-container {
+        margin: 10px auto;
+        flex-flow: column wrap;
+    }
+}
+
+
 .footer-text {
     color: #3c3c3c;
     font-size: 14px;
@@ -291,4 +326,9 @@
     padding-left: 20px;
 }
 
-
+@media screen and (max-width:768px) {
+    .footer-text {
+        padding: 5px;
+        word-wrap: break-word;
+    }
+}

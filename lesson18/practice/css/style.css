@@ -1,0 +1,176 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+body {
+  background: #9789f9;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Layout */
+
+.ba-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 100px;
+  max-width: 1200px;
+}
+
+.ba-pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ba-price__position {
+  font-size: 24px;
+  font-family: 'bebas_neue_regularregular', sans-serif;
+  margin: 0;
+  padding: 0px 0px 45px 0px;
+}
+
+.ba-pricing__col {
+  width: 327px;
+  -webkit-box-shadow: 2.4px 4.4px 59px 0 #7a6be7;
+  box-shadow: 2.4px 4.4px 59px 0 #7a6be7;
+  text-align: center;
+  padding: 50px 0;
+  margin: 10px;
+  background: #f5f4f9;
+  position: relative;
+}
+
+.ba-pricing__col--center {
+  position: relative;
+  width: 100%;
+  max-width: 370px;
+  -webkit-box-shadow: 2.4px 4.4px 59px 0 #7a6be7;
+  box-shadow: 2.4px 4.4px 59px 0 #7a6be7;
+  text-align: center;
+  padding-top: 40px;
+  margin: 0px;
+  background: #f5f4f9;
+  background-image: url(../../images/P.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.ba-pricing__col--center:hover .ba-price::after {
+  content: url("../../images/Popular.png");
+  position: absolute;
+  top: 18px;
+  right: -90px;
+  z-index: 1;
+}
+
+.ba-price__discount {
+  color: #a9a9a9;
+  font-size: 11px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.ba-price__rate {
+  font-family: 'bebas_neuethin', sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  margin: 0px;
+}
+
+.ba-price__body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+
+.ba-price__body li {
+  line-height: 2;
+  font-size: 16px;
+  margin: 0;
+  text-align: left;
+}
+
+.ba-price__body {
+  background: white;
+  text-align: left;
+  padding: 123px 72px 110px;
+  border: 0px solid transparent;
+  border-radius: 200px/150px 150px 0 0;
+  -moz-border-radius: 200px 200px 0px 0px;
+  -webkit-border-radius: 200px 200px 0px 0px;
+  text-align: center;
+}
+
+svg {
+  width: 36px;
+  height: 36px;
+}
+
+sup {
+  font-size: 24px;
+  position: relative;
+  top: -30px;
+}
+
+sub {
+  font-size: 16px;
+}
+
+/* Typography */
+
+.ba-button--red {
+  background-color: #fd8d7b;
+  border-color: #fd8d7b;
+}
+
+a, input[type="submit"], input[type="button"], button {
+  -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+  -o-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="submit"], input[type="button"], button, .ba-button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: 'bebas_neuebold', sans-serif;
+  border: 1px solid #6fcffb;
+  border-radius: 27px 27px 27px 27px;
+  min-width: 203px;
+  min-height: 54px;
+  background-color: #6fcffb;
+  position: relative;
+  top: 75px;
+}
+
+.ba-button--red {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: 'bebas_neuebold', sans-serif;
+  border: 1px solid #fd8d7b;
+  border-radius: 27px 27px 27px 27px;
+  width: 203px;
+  height: 54px;
+  background-color: #fd8d7b;
+  position: relative;
+  top: -30px;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, button:hover, .ba-button--red:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}

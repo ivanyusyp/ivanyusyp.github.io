@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css?family=Aleo:300i,400,400i,700|Josefin+Sans:300,400,400i,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.caption {
+  &__body {
+    background-image: url(../images/caption/bg-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__title {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
+    padding-top: 265px;
+    text-align: center;
+  }
+  &__subtitle {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-align: center;
+    padding: 15px 0px 50px 0px;
+  }
+  &__search-block {
+    text-align: center;
+    max-width: 500px;
+    background-color: #ffffff;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    border: 2px solid #ffffff;
+  }
+  &__search-input {
+    background: transparent;
+    flex-basis: 80%;
+    border: 0px solid transparent;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+    ::placeholder {
+      color: #999999;
+    }
+  }
+  &__block {
+    background-color: #5474fd;
+    color: #ffffff;
+    font-family: "Aleo", serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    padding: 15px;
+    flex-basis: 20%;
+  }
+  &__footer {
+    background: #5474fd;
+  }
+  &__body-footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  &__company-name {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    padding: 28px 0px 32px 0px;
+  }
+  &__nav {
+    padding: 28px 0px 32px 0px;
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style-type: none;
+  }
+  &__nav-list a {
+    color: #ffffff;
+    font-family: "Aleo", serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &__nav-item {
+    padding: 0px 20px 0px 20px;
+  }
+}
+
+.scroll-down {
+  text-align: center;
+  padding: 120px 0px 135px 0px;
+  &__text {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+  }
+}
+
+.why-choose-us {
+  background-image: url(../images/why-choose-us/bg-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__body {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  &__col {
+    flex-basis: 45%;
+  }
+  &__title {
+    color: #ffffff;
+    font-family: "Aleo", serif;
+    font-size: 36px;
+    font-weight: 400;
+    padding: 204px 0px 62px 0px;
+  }
+  &__subtitle {
+    color: #e8e8e8;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    line-height: 26px;
+    padding-bottom: 60px;
+    &_desc-1-st-part {
+      padding-bottom: 40px;
+    }
+  }
+  &__button {
+    min-width: 225px;
+    height: 60px;
+    background-color: #5474fd;
+    border: 0px;
+    color: #ffffff;
+    font-family: "Aleo", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+  &__pictures {
+    flex-basis: 50%;
+    padding: 120px 0px;
+  }
+  &__item-picture {
+  }
+  &__footer {
+    background: #333333;
+  }
+  &__row {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  &__row-item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: relative;
+  }
+  &__row-image {
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+  }
+  &__row-desc {
+    color: #e8e8e8;
+    font-family: "Aleo", serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 20px;
+  }
+}
+
+.booking-first-block {
+  background-image: url(../images/booking-first-block/bg-booking-first.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__body {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 230px 0px 100px 0px;
+  }
+  &__block {
+    max-width: 540px;
+    padding: 50px 30px;
+  }
+  &__location {
+  }
+  &__title {
+  }
+  &__desc {
+    padding-bottom: 50px;
+  }
+  &__button {
+  }
+}
+
+.block-for-booking {
+  background-color: #232323;
+  opacity: 0.9;
+}
+.location-for-booking {
+  color: #e8e8e8;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+}
+.title-for-booking {
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  padding: 30px 0px 30px 0px;
+}
+.desc-for-booking {
+  color: #e8e8e8;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.button-for-booking {
+  background-image: url(../images/booking-first-block/bg-button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  min-width: 225px;
+  height: 60px;
+  color: #ffffff;
+  font-family: "Aleo", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border: 0px;
+}
+
+.booking-second-block {
+  background-image: url(../images/booking-second-block/bg-booking-second.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__body {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 230px 0px 100px 0px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__block {
+    max-width: 540px;
+    padding: 50px 30px;
+  }
+  &__location {
+  }
+  &__title {
+  }
+  &__desc {
+    padding-bottom: 50px;
+  }
+  &__button {
+  }
+}
+
+.reviews {
+  background-image: url(../images/reviews/bg-reviews.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  &__header {
+    color: #ffffff;
+    font-family: "Aleo", serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    padding: 120px 0px 95px 0px;
+  }
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+  }
+  &__author-img {
+    flex-basis: 30%;
+  }
+  &__article {
+    flex-basis: 60%;
+    padding: 50px;
+    background-color: #333333;
+  }
+  &__autrhor-article {
+    color: #fefefe;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    text-align: left;
+  }
+  &__article-desc {
+    color: #e8e8e8;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: justify;
+  }
+  .icon-quotes-left {
+    color: #5474fd;
+    font-size: 36px;
+  }
+}
+
+.footer {
+  &__body {
+    background-color: #232323;
+    text-align: center;
+    padding: 120px 0px 50px 0px;
+  }
+  &__company-name {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 3.36px;
+  }
+  &__company-desc {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1px;
+    padding-top: 15px;
+  }
+  &__socials {
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    padding-top: 30px;
+    &-item {
+      padding: 0px 10px 0px 10px;
+    }
+  }
+  .icon-linkedin2 {
+    color: #5474fd;
+  }
+}

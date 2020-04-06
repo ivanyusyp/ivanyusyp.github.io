@@ -7,6 +7,7 @@
   <title>exam</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./favicon-16x16.png" type="image/png" />
 </head>
 
 <body>
@@ -19,9 +20,13 @@
         Safe Travel Anywhere
       </div>
       <div class="caption__search-block">
-        <input type="text" name="Search Your Travel Destination" id="" class="caption__search-input"
-          placeholder="Search Your Travel Destination">
-        <button type="submit" class="caption__block">
+        <form action="" id="form" required class="caption__search-form">
+          <input type="text" name="Search Your Travel Destination"  class="caption__search-input"
+          autocomplete="address-level1" placeholder="Search Your Travel Destination" pattern="[az] {3-25}"
+          required  maxlength="25">
+        </form>
+
+        <button type="submit" form="form" class="caption__block">
           search <span class="icon-search"></span>
         </button>
       </div>
@@ -46,13 +51,13 @@
           Bhromaon
         </div>
         <div class="caption__nav">
-          <button class="caption__dropbtn" type="submit"></button>
-            <ul id="nav-list" class="caption__nav-list">
-              <li class="caption__nav-item"><a href="#">Who We Are</a></li>
-              <li class="caption__nav-item"><a href="#">What We Do</a></li>
-              <li class="caption__nav-item"><a href="#">Travel With Us</a></li>
-              <li class="caption__nav-item"><a href="#">Contact Us</a></li>
-            </ul>
+          <button class="caption__dropbtn" type="submit">&#9776</button>
+          <ul id="nav-list" class="caption__nav-list">
+            <li class="caption__nav-item"><a href="#">Who We Are</a></li>
+            <li class="caption__nav-item"><a href="#">What We Do</a></li>
+            <li class="caption__nav-item"><a href="#">Travel With Us</a></li>
+            <li class="caption__nav-item"><a href="#">Contact Us</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -181,7 +186,8 @@
           Sam Sumon
         </div>
         <div class="reviews__article-desc">
-          <span class="icon-quotes-left"></span> But I must explain to you how all this mistaken idea of account to denouncinpleasure and praising pain But
+          <span class="icon-quotes-left"></span> But I must explain to you how all this mistaken idea of account to
+          denouncinpleasure and praising pain But
           I must explain to you how all this mistaken idea of account to nai denouncing pleasure and praising pain was
           account born and I account will give you a complete account of the system was account born and I account
           will give you a nai the complete account of the system

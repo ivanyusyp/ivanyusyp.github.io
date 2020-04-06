@@ -1,0 +1,727 @@
+@import url("https://fonts.googleapis.com/css?family=Aleo:300i,400,400i,700|Josefin+Sans:300,400,400i,700&display=swap");
+@import "_variables";
+@import "_normalize";
+
+body {
+  padding: 15px;
+}
+.caption {
+  &__body {
+    background-image: url(../images/caption/bg-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__title {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-top: 277px;
+    text-align: center;
+    @media screen and(max-width:$sm) {
+      padding-top: 50px;
+      font-size: 24px;
+    }
+  }
+  &__subtitle {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 5.2px;
+    text-align: center;
+    padding: 15px 0px 50px 0px;
+    @media screen and(max-width:$sm) {
+      font-size: 14px;
+    }
+  }
+  &__search-block {
+    text-align: center;
+    max-width: 648px;
+    background-color: #ffffff;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    border: 2px solid #ffffff;
+    @media screen and(max-width:$sm) {
+      max-width: 280px;
+      height: auto;
+    }
+    @media screen and(max-width:$md) {
+      max-width: 400px;
+      height: auto;
+    }
+  }
+  &__search-form {
+    background: transparent;
+    flex-basis: 80%;
+    border: 0px solid transparent;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    @media screen and(max-width:$sm) {
+      letter-spacing: 0px;
+      word-wrap: break-word;
+      text-align: center;
+    }
+
+    ::placeholder {
+      color: #999999;
+    }
+
+  }
+  &__search-input {
+    background: transparent;
+    border: 0px solid transparent;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    height: 55px;
+    @media screen and(max-width:$sm) {
+      letter-spacing: 0px;
+      word-wrap: break-word;
+      text-align: center;
+    }
+    @media screen and(max-width:$md) {
+    }
+
+    ::placeholder {
+      color: #999999;
+    }
+  }
+  &__block {
+    background-color: #5474fd;
+    color: #ffffff;
+    font-family: "Aleo", serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    padding: 10px;
+    flex-basis: 20%;
+    border: 2px solid transparent;
+    letter-spacing: 2px;
+    &:hover {
+      border: 2px solid aqua;
+      text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+      transition: 0.2s;
+    }
+    &:active {
+      border: 2px solid rgb(14, 16, 128);
+      transform: scale(1.04);
+      transition: 0.2s;
+    }
+    @media screen and(max-width:$sm) {
+      letter-spacing: 0px;
+      text-align: center;
+      padding: 2px;
+      font-size: 12px;
+    }
+  }
+  .icon-search {
+    font-size: 20px;
+    @media screen and(max-width:$sm) {
+      font-size: 14px;
+    }
+  }
+  &__footer {
+    background: #5474fd;
+    position: relative;
+  }
+  &__body-footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+    @media screen and(max-width:$lg) {
+      max-width: 700px;
+    }
+    @media screen and(max-width:$xlg) {
+      max-width: 900px;
+    }
+  }
+  &__company-name {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    padding: 28px 0px 32px 0px;
+    @media screen and(max-width:$sm) {
+      letter-spacing: 0px;
+      text-align: center;
+      padding: 8px 0px 0px 0px;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+    @media screen and(max-width:$md) {
+      letter-spacing: 2px;
+      text-align: center;
+      padding: 20px 0px 10px 0px;
+      margin: 0 auto;
+    }
+  }
+  &__nav {
+    position: relative;
+    padding: 28px 0px 32px 0px;
+    @media screen and(max-width:$md) {
+      &:hover &-list {
+        display: block;
+        position: absolute;
+        z-index: 5;
+        top: -240px;
+        right: 20px;
+        font-size: 14px;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        height: 280px;
+        padding: 20px;
+        overflow: visible;
+        & li {
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style-type: none;
+
+    @media screen and(max-width:$md) {
+      display: none;
+    }
+  }
+  &__nav-list a {
+    color: #ffffff;
+    font-family: "Aleo", serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      color: #444444;
+    }
+
+    @media screen and(max-width:$sm) {
+    }
+  }
+  &__nav-item {
+    padding: 0px 20px 0px 20px;
+    &:hover {
+      color: #444444;
+    }
+    }
+    &__dropbtn {
+      display: none;
+      @media screen and(max-width:$md) {
+        display: inline-block;
+        margin: auto;
+        width: 50px;
+        height: 40px;
+        text-align: center;
+        padding: 5px 0px 10px 0px;
+        background: transparent;
+        border: 2px solid transparent;
+        font-size: 20px;
+        &:hover {
+          color: transparent;
+        }
+        &:active .caption__nav-list {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+.scroll-down {
+  text-align: center;
+  padding: 115px 0px 135px 0px;
+  &__text {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 2px;
+  }
+}
+
+.why-choose-us {
+  background-image: url(../images/why-choose-us/bg-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__body {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @media screen and(max-width:$sm) {
+      justify-content: center;
+    }
+    @media screen and(max-width:$md) {
+      justify-content: center;
+    }
+    @media screen and(max-width:$lg) {
+      max-width: 700px;
+    }
+    @media screen and(max-width:$xlg) {
+      max-width: 900px;
+    }
+  }
+  &__col {
+    flex-basis: 45%;
+    padding-bottom: 20px;
+    @media screen and(max-width:$sm) {
+      flex-basis: 90%;
+      padding: 0px;
+      text-align: justify;
+    }
+    @media screen and(max-width:$md) {
+      flex-basis: 90%;
+      padding: 0px;
+      text-align: center;
+    }
+    @media screen and(max-width:$lg) {
+      flex-basis: 50%;
+    }
+  }
+  &__title {
+    color: #ffffff;
+    font-family: "Aleo", serif;
+    font-size: 36px;
+    font-weight: 400;
+    padding: 204px 0px 62px 0px;
+    @media screen and(max-width:$sm) {
+      padding: 50px 0px 20px 0px;
+      font-size: 30px;
+      text-align: center;
+    }
+    @media screen and(max-width:$md) {
+      padding: 50px 0px 20px 0px;
+      font-size: 30px;
+      text-align: center;
+    }
+    @media screen and(max-width:$lg) {
+      padding: 90px 0px 20px 0px;
+    }
+    @media screen and(max-width:$xlg) {
+      padding: 90px 0px 20px 0px;
+    }
+  }
+  &__subtitle {
+    color: #e8e8e8;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    line-height: 26px;
+    padding-bottom: 60px;
+    &_desc-1-st-part {
+      padding-bottom: 40px;
+    }
+    @media screen and(max-width:$sm) {
+      font-size: 14px;
+    }
+    @media screen and(max-width:$md) {
+      text-align: justify;
+    }
+  }
+  &__button {
+  }
+  &__pictures {
+    flex-basis: 50%;
+    padding: 120px 0px;
+    @media screen and(max-width:$sm) {
+      flex-basis: 80%;
+      padding: 20px 0px;
+    }
+    @media screen and(max-width:$md) {
+      flex-basis: 90%;
+      padding: 40px 0px;
+    }
+  }
+  &__item-picture {
+  }
+  &__footer {
+    background: #333333;
+  }
+  &__row {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 100px 0px 120px 0px;
+    @media screen and(max-width:$sm) {
+      justify-content: center;
+      padding: 20px 0px 12px 0px;
+    }
+    @media screen and(max-width:$md) {
+      justify-content: center;
+      padding: 30px 0px 15px 0px;
+    }
+    @media screen and(max-width:$lg) {
+      max-width: 700px;
+      padding: 40px 0px 30px 0px;
+    }
+    @media screen and(max-width:$xlg) {
+      max-width: 800px;
+    }
+  }
+  &__row-item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: relative;
+  }
+  &__row-image {
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+  }
+  &__row-desc {
+    color: #e8e8e8;
+    font-family: "Aleo", serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 20px;
+    @media screen and(max-width:$sm) {
+      font-size: 30px;
+    }
+    @media screen and(max-width:$md) {
+      font-size: 20px;
+    }
+    @media screen and(max-width:$lg) {
+      font-size: 30px;
+    }
+  }
+}
+
+.booking-first-block {
+  background-image: url(../images/booking-first-block/bg-booking-first.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__body {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 230px 0px 100px 0px;
+    @media screen and(max-width:$sm) {
+      padding: 70px 10px;
+      margin: 0 auto;
+    }
+    @media screen and(max-width:$lg) {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    @media screen and(max-width:$xlg) {
+      max-width: 900px;
+    }
+  }
+  &__block {
+    max-width: 540px;
+    padding: 50px 30px;
+    @media screen and(max-width:$sm) {
+      max-width: 300px;
+      padding: 20px 10px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &__location {
+  }
+  &__title {
+  }
+  &__desc {
+    padding-bottom: 50px;
+  }
+  &__button {
+  }
+}
+
+.block-for-booking {
+  background-color: rgba(35, 35, 35, 0.9);
+}
+.location-for-booking {
+  color: #e8e8e8;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+}
+.title-for-booking {
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  padding: 30px 0px 30px 0px;
+}
+.desc-for-booking {
+  color: #e8e8e8;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.button-for-booking {
+  background-image: url(../images/booking-first-block/bg-button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  min-width: 225px;
+  height: 60px;
+  color: #ffffff;
+  font-family: "Aleo", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border: 0px;
+  &:hover {
+    border: 2px solid aqua;
+    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+    transition: 0.2s;
+  }
+  &:active {
+    border: 2px solid rgb(14, 16, 128);
+    transform: scale(1.04);
+    transition: 0.2s;
+  }
+}
+
+.booking-second-block {
+  background-image: url(../images/booking-second-block/bg-booking-second.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__body {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 230px 0px 100px 0px;
+    display: flex;
+    justify-content: flex-end;
+    @media screen and(max-width:$sm) {
+      padding: 70px 10px;
+      margin: 0 auto;
+    }
+    @media screen and(max-width:$lg) {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    @media screen and(max-width:$xlg) {
+      max-width: 900px;
+    }
+  }
+  &__block {
+    max-width: 540px;
+    padding: 50px 30px;
+    @media screen and(max-width:$sm) {
+      max-width: 300px;
+      padding: 20px 10px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &__location {
+  }
+  &__title {
+  }
+  &__desc {
+    padding-bottom: 50px;
+  }
+  &__button {
+  }
+}
+
+.reviews {
+  background-image: url(../images/reviews/bg-reviews.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  &__header {
+    color: #ffffff;
+    font-family: "Aleo", serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    padding: 120px 0px 95px 0px;
+    @media screen and(max-width:$sm) {
+      margin: 0 auto;
+      font-size: 30px;
+      padding: 60px 0px 35px 0px;
+    }
+    @media screen and(max-width:$md) {
+      margin: 0 auto;
+      padding: 90px 0px 45px 0px;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+    @media all and (-ms-high-contrast:none) {
+    height: 60vh;
+    }
+    @media screen and(max-width:$sm) {
+      max-width: 300px;
+      margin: 0 auto;
+      font-size: 30px;
+      padding-bottom: 0px;
+      flex-flow: column wrap;
+      justify-content: center;
+    }
+    @media screen and(max-width:$md) {
+      max-width: 500px;
+      margin: 0 auto;
+      flex-flow: column wrap;
+      justify-content: center;
+      padding-bottom: 50px;
+    }
+    @media screen and(max-width:$lg) {
+      justify-content: center;
+      max-width: 700px;
+      padding-bottom: 100px;
+    }
+    @media screen and(max-width:$xlg) {
+      max-width: 900px;
+    }
+  }
+  &__author-img {
+    flex-basis: 30%;
+    @media screen and(max-width:$sm) {
+      flex-basis: 40%;
+    }
+    @media screen and(max-width:$lg) {
+      max-width: 300px;
+    }
+    @media screen and(max-width:$xlg) {
+      max-width: 360px;
+    }
+  }
+  &__article {
+    flex-basis: 60%;
+    padding: 50px;
+    background-color: #333333;
+    @media screen and(max-width:$sm) {
+      flex-basis: 60%;
+      padding: 10px;
+    }
+    @media screen and(max-width:$lg) {
+      flex-basis: 55%;
+      padding: 20px;
+    }
+    @media screen and(max-width:$xlg) {
+      flex-basis: 60%;
+      padding: 50px;
+    }
+  }
+  &__autrhor-article {
+    color: #fefefe;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    text-align: left;
+  }
+  &__article-desc {
+    color: #e8e8e8;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: justify;
+  }
+  .icon-quotes-left {
+    color: #5474fd;
+    font-size: 36px;
+  }
+}
+
+.footer {
+  &__body {
+    background-color: #232323;
+    text-align: center;
+    padding: 120px 0px 50px 0px;
+    @media screen and(max-width:$sm) {
+      padding: 60px 0px 20px 0px;
+    }
+    @media screen and(max-width:$md) {
+      padding: 50px 0px 30px 0px;
+    }
+    @media screen and(max-width:$lg) {
+      padding: 60px 0px 40px 0px;
+    }
+  }
+  &__company-name {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 3.36px;
+  }
+  &__company-desc {
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1px;
+    padding-top: 15px;
+    @media screen and(max-width:$lg) {
+      padding-top: 5px;
+    }
+  }
+  &__socials {
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    padding-top: 30px;
+    &-item {
+      padding: 0px 10px 0px 10px;
+    }
+    @media screen and(max-width:$sm) {
+      padding-top: 5px;
+    }
+    @media screen and(max-width:$md) {
+      padding-top: 7px;
+    }
+    @media screen and(max-width:$lg) {
+      padding-top: 10px;
+    }
+  }
+  .icon-linkedin2 {
+    color: #5474fd;
+  }
+}

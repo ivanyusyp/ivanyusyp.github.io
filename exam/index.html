@@ -21,9 +21,9 @@
       <div class="caption__search-block">
         <input type="text" name="Search Your Travel Destination" id="" class="caption__search-input"
           placeholder="Search Your Travel Destination">
-        <div class="caption__block">
-          search
-        </div>
+        <button type="submit" class="caption__block">
+          search <span class="icon-search"></span>
+        </button>
       </div>
       <div class="scroll-down">
         <div class="scroll-down__text">
@@ -46,12 +46,13 @@
           Bhromaon
         </div>
         <div class="caption__nav">
-          <ul class="caption__nav-list">
-            <li class="caption__nav-item"><a href="#">Who We Are</a></li>
-            <li class="caption__nav-item"><a href="#">What We Do</a></li>
-            <li class="caption__nav-item"><a href="#">Travel With Us</a></li>
-            <li class="caption__nav-item"><a href="#">Contact Us</a></li>
-          </ul>
+          <button class="caption__dropbtn" type="submit"></button>
+            <ul id="nav-list" class="caption__nav-list">
+              <li class="caption__nav-item"><a href="#">Who We Are</a></li>
+              <li class="caption__nav-item"><a href="#">What We Do</a></li>
+              <li class="caption__nav-item"><a href="#">Travel With Us</a></li>
+              <li class="caption__nav-item"><a href="#">Contact Us</a></li>
+            </ul>
         </div>
       </div>
     </div>
@@ -74,7 +75,7 @@
             that.
           </p>
         </div>
-        <button class="why-choose-us__button " type="submit">
+        <button class="why-choose-us__button button-for-booking " type="submit">
           Explore Places
         </button>
       </div>

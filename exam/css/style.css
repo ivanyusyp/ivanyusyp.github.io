@@ -283,7 +283,7 @@ body {
 
 .caption__nav {
   position: relative;
-  padding: 26px 0px 24px 0px;
+  padding: 26px 15px 24px 0px;
 }
 
 @media screen and (max-width: 768px) {
@@ -385,7 +385,7 @@ body {
 }
 
 .why-choose-us__body {
-  max-width: 1170px;
+  max-width: 1110px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,9 +428,10 @@ body {
 }
 
 .why-choose-us__col {
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  padding-bottom: 20px;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  padding-bottom: 0px;
+  padding-left: 0px;
 }
 
 @media screen and (max-width: 576px) {
@@ -463,7 +464,7 @@ body {
   font-family: "Aleo", serif;
   font-size: 36px;
   font-weight: 400;
-  padding: 204px 0px 62px 0px;
+  padding: 200px 0px 52px 0px;
 }
 
 @media screen and (max-width: 576px) {
@@ -499,13 +500,14 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: 1.6px;
+  letter-spacing: 1px;
   line-height: 26px;
-  padding-bottom: 60px;
+  padding-bottom: 45px;
+  text-align: justify;
 }
 
 .why-choose-us__subtitle_desc-1-st-part {
-  padding-bottom: 40px;
+  padding-bottom: 25px;
 }
 
 @media screen and (max-width: 576px) {
@@ -521,8 +523,8 @@ body {
 }
 
 .why-choose-us__pictures {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 43%;
+      flex-basis: 43%;
   padding: 120px 0px;
 }
 
@@ -544,10 +546,11 @@ body {
 
 .why-choose-us__footer {
   background: #333333;
+  padding: 0px;
 }
 
 .why-choose-us__row {
-  max-width: 1170px;
+  max-width: 1140px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -556,10 +559,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 100px 0px 120px 0px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 73px 0px 20px 0px;
 }
 
 @media screen and (max-width: 576px) {
@@ -609,7 +611,7 @@ body {
 
 .why-choose-us__row-image {
   text-align: center;
-  padding: 20px;
+  padding: 16px;
   z-index: 2;
 }
 
@@ -619,7 +621,7 @@ body {
   font-size: 36px;
   font-weight: 400;
   line-height: 26px;
-  padding: 20px;
+  padding: 15px;
 }
 
 @media screen and (max-width: 576px) {
@@ -648,9 +650,9 @@ body {
 }
 
 .booking-first-block__body {
-  max-width: 1170px;
+  max-width: 1110px;
   margin: 0 auto;
-  padding: 230px 0px 100px 0px;
+  padding: 308px 0px 100px 0px;
 }
 
 @media screen and (max-width: 576px) {
@@ -688,7 +690,7 @@ body {
 }
 
 .booking-first-block__desc {
-  padding-bottom: 50px;
+  padding-bottom: 28px;
 }
 
 .block-for-booking {
@@ -762,7 +764,7 @@ body {
 }
 
 .booking-second-block__body {
-  max-width: 1170px;
+  max-width: 1110px;
   margin: 0 auto;
   padding: 230px 0px 100px 0px;
   display: -webkit-box;
@@ -795,7 +797,7 @@ body {
 
 .booking-second-block__block {
   max-width: 540px;
-  padding: 50px 30px;
+  padding: 40px 30px 40px 30px;
 }
 
 @media screen and (max-width: 576px) {
@@ -808,7 +810,7 @@ body {
 }
 
 .booking-second-block__desc {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .reviews {
@@ -825,7 +827,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
-  padding: 120px 0px 95px 0px;
+  padding: 132px 0px 95px 0px;
 }
 
 @media screen and (max-width: 576px) {
@@ -851,7 +853,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  max-width: 1170px;
+  max-width: 1140px;
   margin: 0 auto;
   padding-bottom: 200px;
 }
@@ -992,7 +994,7 @@ body {
 .footer__body {
   background-color: #232323;
   text-align: center;
-  padding: 120px 0px 50px 0px;
+  padding: 78px 0px 40px 0px;
 }
 
 @media screen and (max-width: 576px) {
@@ -1030,7 +1032,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 1px;
-  padding-top: 15px;
+  padding-top: 6px;
 }
 
 @media screen and (max-width: 992px) {
@@ -1043,11 +1045,11 @@ body {
   text-align: center;
   color: #ffffff;
   font-size: 16px;
-  padding-top: 30px;
+  padding-top: 24px;
 }
 
 .footer__socials-item {
-  padding: 0px 10px 0px 10px;
+  padding: 0px 9px 0px 9px;
 }
 
 @media screen and (max-width: 576px) {

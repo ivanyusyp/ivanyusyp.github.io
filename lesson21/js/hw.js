@@ -29,3 +29,21 @@ const filesDatabase = 820;
 let numberOfFiles = storageCapasity * numberOfMegabyteInGigabyte / filesDatabase;
 numberOfFiles = Math.floor(numberOfFiles);
 alert(`You can upload ${numberOfFiles} files in your storage device`);
+
+let theAmountOfMoneyInTheWallet = prompt('Enter the amount of money in your wallet in $:', 0);
+let thePriceOfOneChocolate = prompt('Enter the price of the one chocolate', 0);
+let numberOfChocolates = Math.floor(theAmountOfMoneyInTheWallet / thePriceOfOneChocolate);
+let numberOfSurrender = theAmountOfMoneyInTheWallet - thePriceOfOneChocolate * numberOfChocolates;
+alert(`You can buy ${numberOfChocolates} Chocolate(s)`);
+alert(`Your surrender is ${numberOfSurrender}$`);
+
+const userNumber = +prompt('Enter your number:', 0);
+const firstNumber = Math.floor(userNumber / 100);
+const secondNumber = Math.floor((userNumber % 100) / 10);
+const thirdNumber = Math.floor((userNumber % 100) % 10);
+alert(`${'' + thirdNumber + secondNumber + firstNumber}`);
+
+const ClientDeposit = +prompt('Enter the amount of your deposit in $ :', 0);
+const ClientPercent = ClientDeposit * 0.05 / 12;
+alert(`Your amount with percent is ${ClientPercent + ClientDeposit}$`);
+

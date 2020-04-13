@@ -48,13 +48,13 @@ if (userYear % 4 == 0 || userYear % 400 == 0) {
 }
 // ? it's doesn't work 
 
-const userDigit = prompt('Please enter five digit number:', 00000);
-const firstDigit = (userDigit[0]);
-const secondDigit = (userDigit[1]);
-const thirdDigit = (userDigit[2]);
-const fourthDigit = (userDigit[3]);
-const fivethDigit = (userDigit[4]);
-if (firstDigit === fivethDigit && secondDigit === fourthDigit) {
+const userDigit2 = prompt('Please enter five digit number:', 00000);
+const firstDigit2 = (userDigit2[0]);
+const secondDigit2 = (userDigit2[1]);
+const thirdDigit2 = (userDigit2[2]);
+const fourthDigit2 = (userDigit2[3]);
+const fivethDigit2 = (userDigit2[4]);
+if (firstDigit2 === fivethDigit2 && secondDigit2 === fourthDigit2) {
 	alert('Your number is palidrome');
 } else {
 	alert('Your number is normal');

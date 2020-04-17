@@ -1,0 +1,16 @@
+body {
+	margin: 0 auto;
+	max-width: 1170px;
+	width: 100%;
+	font-family: "Roboto", sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	color: black;
+}

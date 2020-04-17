@@ -1,0 +1,47 @@
+body {
+	font-family: "Roboto", sans-serif;
+	background: #ffdab3;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+	padding-top: 200px;
+}
+main {
+	margin: 0 auto;
+	text-align: center;
+	max-width: 800px;
+	background: #ffc180;
+	border-radius: 50px;
+	padding: 15px;
+}
+.list {
+	list-style-type: none;
+	text-align: left;
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.list__item {
+	border: 1px solid #cc6900;
+	max-width: 600px;
+	margin: 5px auto;
+	border-radius: 50px;
+}
+
+.list__item:hover {
+	transform: scale(1.1);
+}
+.list__item:active {
+	background: #ff8400;
+}
+input[type="checkbox"]:checked + span {
+	text-decoration: line-through;
+	color: #cc6900;
+}
+
+label {
+	display: block;
+	padding: 20px;
+}

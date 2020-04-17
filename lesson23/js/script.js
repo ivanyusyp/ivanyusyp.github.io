@@ -8,18 +8,35 @@
 // alert(sum);
 //!work
 /* 2. Запросить 2 числа и найти только наибольший общий делитель. */
-// const firstUserDigit = +prompt('Введіть перше число:', 0);
-// const secondtUserDigit = +prompt('Введіть друге число:', 0);
-// let firstDivider = 1;
-// let secondDivider = 1;
-// let jointDivider = 0;
-// for (firstDivider; firstUserDigit%jointDivider===0 && secondtUserDigit%jointDivider ===0 &&  / secondDivider === 1; firstDivider++) {
+// let firstUserNumber = +prompt("Введіть перше число:", 0);
+// let secondUserNumber = +prompt("Введіть друге число:", 0);
+
+// function getFirstDivider(i) {
+// 	if (firstUserNumber % i === 0) {
+// 	}
+// 	return i;
+
 // }
-//?doesn't work
+// function getSecondDivider(i) {
+// 	if (firstUserNumber % i === 0) {
+// 	}
+// 	return i;
+// }
+
+// let firstDivider = getFirstDivider();
+// let secondDivider = getSecondDivider();
+// ?doesn't work
 
 /* 3. Запросить у пользователя число и вывести все делители этого числа.*/
-// const userNumber2 = +prompt('Введіть довільне ціле число :', 0)
-// let divider2 = 1;
+// let userNumberForDivide = +prompt('Введіть довільне ціле число :', 0)
+// let dividerForUserNumber = 1;
+// for (dividerForUserNumber; dividerForUserNumber <= userNumberForDivide; dividerForUserNumber++) {
+// 	if (userNumberForDivide % dividerForUserNumber === 0) {
+// 		alert(`Ділителі вашого числа:${dividerForUserNumber}`);
+// 	}
+
+// }
+//!work
 
 
 
@@ -31,34 +48,84 @@
 /* 5. Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.*/
 // let userNumber5 = prompt('Введіть десять довільних чисел через кому (0,1,2,3,4,5,6,7,8,9):', 0);
 // let arr = userNumber5.split(',');
-// let array = arr.find();
-// alert(array);
+// function getPositiveNumbers(i) {
+// 	return i > 0;
+// }
+// function getNegativeNumbers(i) {
+// 	return i < 0;
+// }
 
+// function getZeroNumbers(i) {
+// 	return i == 0;
+// }
 
+// function getEvenNumbers(i) {
+// 	return i % 2 === 0;
+// }
 
-
-
-
-
-
+// function getOddNumbers(i) {
+// 	return i % 2 != 0;
+// }
+// let positiveNumbers = arr.filter(getPositiveNumbers);
+// let negativeNumbers = arr.filter(getNegativeNumbers);
+// let zeroNumbers = arr.filter(getZeroNumbers);
+// let evenNumbers = arr.filter(getEvenNumbers);
+// let oddNumbers = arr.filter(getOddNumbers);
+// console.log(`Ви ввели ${positiveNumbers.length} додатніх чисел`);
+// console.log(`Ви ввели ${negativeNumbers.length} від\'ємних чисел`);
+// console.log(`Ви ввели ${zeroNumbers.length} нулів`);
+// console.log(`Ви ввели ${evenNumbers.length} парних чисел`);
+// console.log(`Ви ввели ${oddNumbers.length} непарних чисел`);
+// !work
 
 /* 6. Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.*/
-
+// do {
+// 	let firstUserOperand = +prompt('Введіть перше число:', 0);
+// 	let secondUserOperand = +prompt('Введіть друге число:', 0);
+// 	let userOperator = prompt('Введіть дію якую необхідно виконати з числами додати + , відняти - , поділити / чи помножити *', "+");
+// 	let result = 0;
+// 	if (userOperator === "+") {
+// 		result = firstUserOperand + secondUserOperand;
+// 	} else if (userOperator === "-") {
+// 		result = firstUserOperand - secondUserOperand;
+// 	} else if (userOperator === "*") {
+// 		result = firstUserOperand * secondUserOperand;
+// 	} else if (userOperator === "/") {
+// 		result = firstUserOperand / secondUserOperand;
+// 	} alert(result);
+// } while (confirm('Бажаєте порахувати ще один приклад?') === true)
+// !work
 
 /* 7. Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат (если число 123456 сдвинуть на 2 цифры, то получится 345612).*/
 
+// let userNumberForAction = prompt('Введіть довільне число яке містить мінімум цифри:', "000");
+// let arr = userNumberForAction.split('');
+// let firstArrElement = arr[0];
+// let secondArrElement = arr[1];
+// arr.push(firstArrElement, secondArrElement);
+// arr.shift(firstArrElement, secondArrElement);
+// console.log(arr);
+//!work
 
 /* 8. Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?» и так до тех пор, пока пользователь нажимает OK.*/
 // let daysOfTheWeek = ['Понеділок', 'Вівторок', 'Середа', 'Четвер', 'П\'ятниця', 'Субота', 'Неділя'];
-// for (let i = 0; i < daysOfTheWeek.length; i++) {
-// 	alert(`${daysOfTheWeek[i]}, Хочете побачити наступний день?`);
+// let i = 0;
+// while (confirm(`${daysOfTheWeek[i]} Хочете побачити наступний день?`)) {
+// 	if (i === 6) {
+// 		i = -1;
+// 	}
+// 	i++;
 // }
-//? doesn't work
-
-
-
+//!work
 
 
 /* 9. Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10.*/
+// for (let i = 2; i <= 9; i++) {
+// 	for (let j = 1; j <= 10; j++) {
+// 		console.log("" + i + "X" + j + "=" + (j * i));
+// 	}
+// }
+//!work
 
-/* 10. Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом: каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?». В зависимости от того, что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50. Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N.*/
+
+/* 10. Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом: каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?». В зависимости от того, что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50. Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N. */

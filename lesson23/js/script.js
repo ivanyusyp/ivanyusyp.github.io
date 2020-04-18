@@ -8,24 +8,31 @@
 // alert(sum);
 //!work
 /* 2. Запросить 2 числа и найти только наибольший общий делитель. */
+// let firstNumberDividers = [];
+// let secondNumberDividers = [];
 // let firstUserNumber = +prompt("Введіть перше число:", 0);
 // let secondUserNumber = +prompt("Введіть друге число:", 0);
 
-// function getFirstDivider(i) {
-// 	if (firstUserNumber % i === 0) {
+// for (let i = secondUserNumber; i >= 1; i--) {
+// 	if (secondUserNumber % i === 0) {
+// 		secondNumberDividers.push(i);
 // 	}
-// 	return i;
-
-// }
-// function getSecondDivider(i) {
-// 	if (firstUserNumber % i === 0) {
-// 	}
-// 	return i;
 // }
 
-// let firstDivider = getFirstDivider();
-// let secondDivider = getSecondDivider();
-// ?doesn't work
+// for (let i = firstUserNumber; i >= 1; i--) {
+// 	if (firstUserNumber % i === 0) {
+// 		firstNumberDividers.push(i);
+// 	}
+// }
+
+// for (let i = 0; i < firstNumberDividers.length; i++) {
+// 	const currentDivider = firstNumberDividers[i];
+// 	if (secondNumberDividers.includes(currentDivider)) {
+// 		console.log(`Найбільший спільний дільник ваших чисел : ${currentDivider}`);
+// 		break
+// 	}
+// }
+//!work
 
 /* 3. Запросить у пользователя число и вывести все делители этого числа.*/
 // let userNumberForDivide = +prompt('Введіть довільне ціле число :', 0)

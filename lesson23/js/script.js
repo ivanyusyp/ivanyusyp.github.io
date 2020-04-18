@@ -8,8 +8,6 @@
 // alert(sum);
 //!work
 /* 2. Запросить 2 числа и найти только наибольший общий делитель. */
-// let firstNumberDividers = [];
-// let secondNumberDividers = [];
 // let firstUserNumber = +prompt("Введіть перше число:", 0);
 // let secondUserNumber = +prompt("Введіть друге число:", 0);
 
@@ -136,3 +134,37 @@
 
 
 /* 10. Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом: каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?». В зависимости от того, что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50. Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N. */
+const userNumber = prompt('Ввведіть число від 0 до 100', 0);
+let currentUserNumber = 50;
+let minRange = 0;
+let maxRange = 100;
+let currentUserAnswer;
+do {
+	currentUserAnswer = prompt(`Ваше число > ${minRange}, < ${maxRange}, чи = ${currentUserNumber} ? `, '');
+	if (currentUserAnswer === ">") {
+		if (minRange === 0 && maxRange === 100) {
+			minRange = 50;
+		}
+		currentUserNumber = Math.floor((maxRange + minRange) / 2);
+		console.log("min>", minRange);
+		console.log('max>', maxRange);
+		console.log(">cun", currentUserNumber);
+		minRange = currentUserNumber;
+
+	} else if (currentUserAnswer === "<") {
+		if (maxRange === 100 && minRange === 0) {
+			maxRange = 50;
+		}
+		currentUserNumber = Math.floor((maxRange + minRange) / 2);
+		console.log("min<", minRange);
+		console.log('max<', maxRange);
+		console.log("<cun", currentUserNumber);
+		maxRange = currentUserNumber;
+
+	}
+}
+while (currentUserAnswer !== '=');
+console.log(currentUserNumber);
+
+
+

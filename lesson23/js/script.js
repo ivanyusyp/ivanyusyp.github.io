@@ -11,21 +11,26 @@
 // let firstUserNumber = +prompt("Введіть перше число:", 0);
 // let secondUserNumber = +prompt("Введіть друге число:", 0);
 
-// function getFirstDivider(i) {
-// 	if (firstUserNumber % i === 0) {
+// for (let i = secondUserNumber; i >= 1; i--) {
+// 	if (secondUserNumber % i === 0) {
+// 		secondNumberDividers.push(i);
 // 	}
-// 	return i;
-
-// }
-// function getSecondDivider(i) {
-// 	if (firstUserNumber % i === 0) {
-// 	}
-// 	return i;
 // }
 
-// let firstDivider = getFirstDivider();
-// let secondDivider = getSecondDivider();
-// ?doesn't work
+// for (let i = firstUserNumber; i >= 1; i--) {
+// 	if (firstUserNumber % i === 0) {
+// 		firstNumberDividers.push(i);
+// 	}
+// }
+
+// for (let i = 0; i < firstNumberDividers.length; i++) {
+// 	const currentDivider = firstNumberDividers[i];
+// 	if (secondNumberDividers.includes(currentDivider)) {
+// 		console.log(`Найбільший спільний дільник ваших чисел : ${currentDivider}`);
+// 		break
+// 	}
+// }
+//!work
 
 /* 3. Запросить у пользователя число и вывести все делители этого числа.*/
 // let userNumberForDivide = +prompt('Введіть довільне ціле число :', 0)
@@ -129,3 +134,29 @@
 
 
 /* 10. Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом: каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?». В зависимости от того, что указал пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100, поделили пополам и получили 50. Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N. */
+// const userNumber = prompt('Ввведіть число від 0 до 100', 0);
+// let currentUserNumber = 50;
+// let minRange = 0;
+// let maxRange = 100;
+// let currentUserAnswer;
+// do {
+// 	currentUserAnswer = prompt(`Ваше число > ${currentUserNumber}, < ${currentUserNumber}, чи = ${currentUserNumber} ? `, '');
+// 	if (currentUserAnswer === ">") {
+// 		if (minRange === 0 && maxRange === 100) {
+// 			minRange = 50;
+// 			maxRange = 100;
+// 		}
+// 		minRange = currentUserNumber;
+// 		currentUserNumber = Math.floor(((maxRange - minRange) / 2) + minRange);
+// 	} else if (currentUserAnswer === "<") {
+// 		if (maxRange === 100 && minRange === 0) {
+// 			maxRange = 50;
+// 			minRange = 0;
+// 		}
+// 		maxRange = currentUserNumber;
+// 		currentUserNumber = Math.floor((maxRange + minRange) / 2);
+// 	}
+// }
+// while (currentUserAnswer !== '=');
+// console.log(`Ваше число: ${currentUserNumber}`); 
+// ! work

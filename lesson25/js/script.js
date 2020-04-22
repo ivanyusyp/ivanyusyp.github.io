@@ -47,17 +47,24 @@
 //!work
 
 // 5. Написать функцию, которая проверяет, является ли переданное ей число совершенным. Совершенное число – это число, равное сумме всех своих собственных делителей.
+
 // function checkPerfectNumber(a) {
+// 	let dividers = [];
 // 	for (let i = 1; i < a; i++) {
-// 		let dividers = [];
 // 		if (a % i === 0) {
+// 			dividers.push(i);
 // 		}
-// 		dividers.push(i);
+// 	}
+// 	let result = dividers.reduce((sum, current) => sum + current, 0);
+// 	if (result == a) {
+// 		return "це число є досконалим"
+// 	} else {
+// 		return "це число не є досколалим"
 // 	}
 // }
-// console.log(checkPerfectNumber(6));
-// console.log(dividers);
-//?doesn`t work
+// console.log(checkPerfectNumber(8128));
+//!work
+
 
 
 // 6. Написать функцию, которая принимает минимальное и максимальное значения для диапазона, и выводит только те числа из диапазона, которые являются совершенными. Используйте написанную ранее функцию, чтобы узнавать, совершенное число или нет. 

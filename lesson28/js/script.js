@@ -51,15 +51,27 @@
 // Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для заправки маркера.
 
 // Продемонстрировать работу написанных методов. 
-class marker {
+class Marker {
 	constructor(_color, _amountInkInPrecent) {
 		this.color = _color;
 		this.amountInkInPrecent = _amountInkInPrecent;
 	}
-	print() {
-
+	print(t = ["Some text"]) {
+		let text = t.split('');
+		for(i = 0; i<200; i+text.lenght) {
+			
+			document.write("<p>" + t.fontcolor('red') + "</p>");
+		}
+		
+		console.log(t);
+		console.log(text);
 	}
 }
+let m = new Marker;
+m.color = "red";
+m.amountInkInPrecent = 0;
+m.print('dsadasd');
+
 
 // 3) Реализовать класс Employee, описывающий работника, и создать массив работников банка.
 

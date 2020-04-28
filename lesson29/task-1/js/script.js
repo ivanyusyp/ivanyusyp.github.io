@@ -39,4 +39,4 @@ playList.forEach(({ author, song }) => {
 	const li = document.createElement("li");
 	li.innerHTML = `${author}<br>${song}`;
 	document.getElementById("songlist").appendChild(li);
-});
+}); 

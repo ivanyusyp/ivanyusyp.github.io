@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task-1</title>
+</head>
+
+<body>
+	<ol id="text"></ol>
+	<script>
+		let playList = [
+			{
+				author: "LED ZEPPELIN",
+				song: "STAIRWAY TO HEAVEN"
+			},
+			{
+				author: "QUEEN",
+				song: "BOHEMIAN RHAPSODY"
+			},
+			{
+				author: "LYNYRD SKYNYRD",
+				song: "FREE BIRD"
+			},
+			{
+				author: "DEEP PURPLE",
+				song: "SMOKE ON THE WATER"
+			},
+			{
+				author: "JIMI HENDRIX",
+				song: "ALL ALONG THE WATCHTOWER"
+			},
+			{
+				author: "AC/DC",
+				song: "BACK IN BLACK"
+			},
+			{
+				author: "QUEEN",
+				song: "WE WILL ROCK YOU"
+			},
+			{
+				author: "METALLICA",
+				song: "ENTER SANDMAN"
+			}
+		];
+		const html = playList.map(function (element) {
+			return "<li>" + element.author + "<br>" + element.song + "<li>";
+		});
+		document.getElementById('text').innerHTML = html;
+
+
+	</script>
+</body>
+
+</html>

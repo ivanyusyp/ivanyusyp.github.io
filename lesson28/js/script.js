@@ -56,21 +56,21 @@ class Marker {
 		this.color = _color;
 		this.amountInkInPrecent = _amountInkInPrecent;
 	}
+
 	print(t = ["Some text"]) {
 		let text = t.split('');
-		for(i = 0; i<200; i+text.lenght) {
-			
-			document.write("<p>" + t.fontcolor('red') + "</p>");
+		for (let i = 100; i >= 0; i -= 0.05) {
+			// document.write("<p>" + t.fontcolor(this.color) + "</p>");
 		}
-		
+
 		console.log(t);
 		console.log(text);
+		console.log(this.color);
 	}
 }
-let m = new Marker;
+let m = new Marker();
 m.color = "red";
-m.amountInkInPrecent = 0;
-m.print('dsadasd');
+m.print('aaaaaaaaaaaaaaaaaa');
 
 
 // 3) Реализовать класс Employee, описывающий работника, и создать массив работников банка.

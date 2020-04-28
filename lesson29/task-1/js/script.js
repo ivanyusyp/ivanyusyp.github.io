@@ -35,9 +35,8 @@ const playList = [
 const ol = document.createElement('ol');
 ol.setAttribute('id', 'songlist');
 document.body.appendChild(ol);
-playList.forEach(element => {
+playList.forEach(({ author, song }) => {
 	const li = document.createElement("li");
-	li.innerHTML = `${element.author}<br>${element.song}`;
+	li.innerHTML = `${author}<br>${song}`;
 	document.getElementById("songlist").appendChild(li);
 });
-

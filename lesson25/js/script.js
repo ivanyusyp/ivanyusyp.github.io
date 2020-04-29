@@ -69,62 +69,38 @@
 
 // 6. Написать функцию, которая принимает минимальное и максимальное значения для диапазона, и выводит только те числа из диапазона, которые являются совершенными. Используйте написанную ранее функцию, чтобы узнавать, совершенное число или нет. 
 // function checkPerfectNumber(min, max) {
-// 	let divider = [];
-// 	for (j = min; j <= max; j++) {
-// 		if (a / j == 1) {
-// 			divider.push(j);
-// 		}
-// 		function getPerfectNumber(a) {
+
+// 	for (let j = min; j <= max; j++) {
+// 		const divider = [];
+// 		divider.push(j);
+// 		for (let i = 1; i < j; i++) {
 // 			let dividers = [];
-// 			for (let i = 1; i < a; i++) {
-// 				if (a % i === 0) {
-// 					dividers.push(i);
-// 				}
+// 			if (j % i == 0) {
+// 				dividers.push(i);
 // 			}
-// 			let result = dividers.reduce((sum, current) => sum + current, 0);
-// 			if (result == a) {
-// 				return a
-// 			}
+
+// 			console.log(divider);
+// 			console.log(dividers);
+// 			console.log(i);
+// 			console.log(j);
 // 		}
-// 		return divider;
 // 	}
 // }
 // console.log(checkPerfectNumber(1, 10));
 //?doesn't work
 
 // 7. Написать функцию, которая принимает время (часы, минуты, секунды) и выводит его на экран в формате «чч:мм:сс».Если при вызове функции минуты и/или секунды не были переданы, то выводить их как 00.
-// function getTime(a, b, c) {
+// function getTime(a = "00", b = "00", c = "00") {
 // 	if (0 > a || a > 23 || b < 0 || b > 59 || c < 0 || c > 59) {
 // 		return "Ви ввели невірні дані"
 // 	}
-// 	if (!a) {
-// 		return '00' + ':' + b + ':' + c;
-// 	}
-// 	if (!b) {
-// 		return a + ':' + '00' + ':' + c;
-// 	}
-// 	if (!c) {
-// 		return a + ':' + b + ':' + '00';
-// 	}
-// 	if (!b && !c) {
-// 		return a + ':' + '00' + ':' + '00';
-// 	}
-// 	if (!a && !c) {
-// 		return '00' + ':' + b + ':' + '00';
-// 	}
-// 	if (!a && !b) {
-// 		return '00' + ':' + '00' + ':' + c;
-// 	}
-// 	if (!a && !b && !c) {
-// 		return '00' + ':' + '00' + ':' + '00';
-// 	}
 // 	return a + ':' + b + ':' + c
 // }
-// console.log(getTime(0, 0, 0));
-// ?doesn't correct for 1-st or second empty values
+// console.log(getTime());
+// !work
 
 // 8. Написать функцию, которая принимает часы, минуты и секунды и возвращает это время в секундах.
-// function getTime(a, b, c) {
+// function getTime(a = 0, b = 0, c = 0) {
 // 	if (0 > a || a > 23 || b < 0 || b > 59 || c < 0 || c > 59) {
 // 		return "Ви ввели невірні дані"
 // 	}
@@ -151,11 +127,11 @@
 // 	}
 // 	return a * 3600 + b * 60 + c + '';
 // }
-// console.log(getTime(0, 0, 0));
-// !work => but without empty values
+// console.log(getTime(23, 0));
+// !work
 
 // 9. Написать функцию, которая принимает количество секунд, переводит их в часы, минуты и секунды и возвращает в виде строки «чч:мм:сс».
-// function calcTime(a) {
+// function calcTime(a = "0") {
 // 	if (a > 86399 || a < 0||!a) {
 // 		return "Ви ввели невірні дані"
 // 	}
@@ -166,10 +142,11 @@
 
 // }
 // console.log(calcTime(3661));
-// !work => but without check for number or not
+// !work 
 
 // 10. Написать функцию, которая считает разницу между датами. Функция принимает 6 параметров, которые описывают 2 даты, и возвращает результат в виде строки «чч:мм:сс». При выполнении задания используйте функции из предыдущих 2-х заданий: сначала обе даты переведите в секунды, узнайте разницу в секундах, а потом разницу переведите обратно в «чч:мм:сс»
-function calcDateDifference(a, b, c, d, e, f) {
+// function calcDateDifference(a = "0", b = "0", c = "0", d = "0", e = "0", f = "0") {
 
-}
+
+// }
 

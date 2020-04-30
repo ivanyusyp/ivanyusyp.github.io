@@ -177,35 +177,54 @@
 // 	hours: 20,
 // 	minutes: 26,
 // 	seconds: 45,
-// 	getTimeOnScreen: function getTime(a, b, c) {
+// 	getTimeOnScreen: function getTime(a = 0, b = 0, c = 0) {
 // 		if (0 > a || a > 23 || b < 0 || b > 59 || c < 0 || c > 59) {
 // 			return "Ви ввели невірні дані"
 // 		}
-// 		if (!a) {
-// 			return '00' + ':' + b + ':' + c;
+// 		this.hours = a;
+// 		this.minutes = b;
+// 		this.seconds = c;
+// 		return this.hours + ':' + this.minutes + ':' + this.seconds;
+// 	},
+// 	changeTimeSeconsds: function getTime(c = 0) {
+// 		if (c < 0) {
+// 			return "Ви ввели невірні дані"
+// 		} else {
+// 			const time = this.hours * 3600 + this.minutes * 60 + this.seconds + c;
+// 			let h = Math.floor(time / 3600);
+// 			let m = Math.floor((time % 3600) / 60);
+// 			let s = ((time % 3600) % 60);
+// 			return h + ':' + m + ':' + s;
 // 		}
-// 		if (!b) {
-// 			return a + ':' + '00' + ':' + c;
+// 	},
+// 	changeTimeMinutes: function getTime(c = 0) {
+// 		if (c < 0) {
+// 			return "Ви ввели невірні дані"
+// 		} else {
+// 			const time = this.hours * 3600 + ((this.minutes + c) * 60) + this.seconds;
+// 			let h = Math.floor(time / 3600);
+// 			let m = Math.floor((time % 3600) / 60);
+// 			let s = ((time % 3600) % 60);
+// 			return h + ':' + m + ':' + s;
 // 		}
-// 		if (!c) {
-// 			return a + ':' + b + ':' + '00';
+// 	},
+// 	changeTimeHours: function getTime(c = 0) {
+// 		if (c < 0) {
+// 			return "Ви ввели невірні дані"
+// 		} else {
+// 			const time = ((this.hours + c) * 3600) + this.minutes * 60 + this.seconds;
+// 			let h = Math.floor(time / 3600);
+// 			let m = Math.floor((time % 3600) / 60);
+// 			let s = ((time % 3600) % 60);
+// 			return h + ':' + m + ':' + s;
 // 		}
-// 		if (!b && !c) {
-// 			return a + ':' + '00' + ':' + '00';
-// 		}
-// 		if (!a && !c) {
-// 			return '00' + ':' + b + ':' + '00';
-// 		}
-// 		if (!a && !b) {
-// 			return '00' + ':' + '00' + ':' + c;
-// 		}
-// 		if (!a && !b && !c) {
-// 			return '00' + ':' + '00' + ':' + '00';
-// 		}
-// 		return a + ':' + b + ':' + c
-// 	}
+// 	},
 
 
 // }
 // console.log(timeInfo.getTimeOnScreen(20, 45, 45));
-// ? work just 1-st function
+// console.log(timeInfo.changeTimeSeconsds(10));
+// console.log(timeInfo.changeTimeMinutes(10));
+// console.log(timeInfo.changeTimeHours(3));
+
+// !work

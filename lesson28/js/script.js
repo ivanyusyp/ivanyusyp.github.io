@@ -51,26 +51,27 @@
 // Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для заправки маркера.
 
 // Продемонстрировать работу написанных методов. 
-class Marker {
-	constructor(_color, _amountInkInPrecent) {
-		this.color = _color;
-		this.amountInkInPrecent = _amountInkInPrecent;
-	}
+// class Marker {
+// 	constructor(_color, _amountInkInPrecent) {
+// 		this.color = _color;
+// 		this.amountInkInPrecent = _amountInkInPrecent;
+// 	}
 
-	print(t = ["Some text"]) {
-		let text = t.split('');
-		for (let i = 100; i >= 0; i -= 0.05) {
-			// document.write("<p>" + t.fontcolor(this.color) + "</p>");
-		}
+// 	print(t = ["Some text"]) {
+// 		let text = t.split('');
+// 		for (let i = 100; i >= 0; i -= 0.05) {
+// 			document.write("<p>" + t.fontcolor(this.color) + "</p>");
+// 		}
 
-		console.log(t);
-		console.log(text);
-		console.log(this.color);
-	}
-}
-let m = new Marker();
-m.color = "red";
-m.print('aaaaaaaaaaaaaaaaaa');
+// 		console.log(t);
+// 		console.log(text);
+// 		console.log(this.color);
+// 	}
+// }
+// let m = new Marker();
+// m.color = "red";
+// m.print('aaaaaaaaaaaaaaaaaa');
+// ? doesn't work
 
 
 // 3) Реализовать класс Employee, описывающий работника, и создать массив работников банка.
@@ -78,3 +79,10 @@ m.print('aaaaaaaaaaaaaaaaaa');
 // Реализовать класс EmpTable для генерации HTML-кода таблицы со списком работников банка. Массив работников необходимо передавать через конструктор, а получать HTML-код с помощью метода getHtml().
 
 // Создать объект класса EmpTable и вывести на экран результат работы метода getHtml().
+
+class Employee {
+	constructor(_name, _position) {
+		this.name = _name;
+		this.position = _position;
+	}
+}

@@ -34,9 +34,21 @@ body {
   color: gray;
 }
 
-.nav__item--active {
+.main-image {
+  padding-bottom: 10px;
+}
+
+.active {
   color: white;
   border-bottom: 2px solid white;
+}
+
+.active .cls-1 {
+  fill: white;
+}
+
+.hover {
+  cursor: pointer;
 }
 
 .cls-1 {
@@ -83,12 +95,13 @@ body {
 .title__text--small {
   color: white;
   font-size: 14px;
-  padding: 0px;
+  padding: 10px 0px 0px 0px;
   margin: 0px;
 }
 
 .describe {
   color: #b7bacd;
+  padding: 20px 0px;
 }
 
 .benefits {

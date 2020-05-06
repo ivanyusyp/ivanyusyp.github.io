@@ -32,14 +32,22 @@ button {
 	border-radius: 50px;
 	border: 1px solid gray;
 }
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
 .operator {
+	background-color: rgb(235, 220, 220);
 }
 .decimal {
+	background-color: rgb(235, 220, 220);
 }
 .all-clear {
-	background-color: firebrick;
+	background-color: rgb(211, 80, 80);
 	border-radius: 50px;
 	border: 1px solid transparent;
 }
 .equal-sign {
+	background-color: rgb(164, 164, 223);
 }

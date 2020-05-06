@@ -45,8 +45,26 @@ button {
   border: 1px solid gray;
 }
 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.operator {
+  background-color: #ebdcdc;
+}
+
+.decimal {
+  background-color: #ebdcdc;
+}
+
 .all-clear {
-  background-color: firebrick;
+  background-color: #d35050;
   border-radius: 50px;
   border: 1px solid transparent;
+}
+
+.equal-sign {
+  background-color: #a4a4df;
 }

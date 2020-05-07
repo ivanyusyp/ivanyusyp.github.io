@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap");
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	position: relative;
+}
+.container::before {
+	content: url("../images/triangle.png");
+	position: absolute;
+	top: 25%;
+	left: 6%;
+}
+.container::after {
+	content: url("../images/plus-image.png");
+	position: absolute;
+	top: 0%;
+	left: 77%;
+}
+.desc {
+	text-align: center;
+	font-size: 18px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 0px;
+	margin: 0px;
+}
+.title {
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-size: 86px;
+	text-transform: uppercase;
+	padding: 0px;
+	margin: 0px;
+	line-height: 1.2;
+}
+.triangle-image {
+	position: absolute;
+	top: 55%;
+	left: 7%;
+}
+.plus-image {
+	position: absolute;
+	top: 0px;
+	right: 22%;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	padding: 10px;
+}
+
+.swiper-button-next {
+	display: none;
+}
+.swiper-button-prev {
+	display: none;
+}

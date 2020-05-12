@@ -53,7 +53,20 @@ input[type="search"] {
   margin: 50px auto;
   width: 100%;
   max-width: 800px;
-  height: 400px;
+}
+
+.pagination {
+  margin: 50px auto;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 70%;
+  max-width: 800px;
 }
 
 .result-div {
@@ -78,7 +91,7 @@ input[type="search"] {
   width: 200px;
 }
 
-#details {
+.details-btn {
   height: 20px;
   position: relative;
   top: 280px;
@@ -96,4 +109,28 @@ input[type="search"] {
 .not-found {
   font-size: 20px;
   text-align: center;
+}
+
+.active-pagination-btn {
+  background-color: dodgerblue;
+  border: none;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.previous-btn,
+.next-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.pagination-btn {
+  margin: 3px;
+  border: none;
+  border-radius: 5px;
 }

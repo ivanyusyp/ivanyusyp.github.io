@@ -1,9 +1,13 @@
 $(document).ready(function () {
-	$(".btn").click(function (e) {
+	let inputData,
+		selectData,
+		pageValue = 1;
+	$(".btn").click(function nextPage(e) {
 		e.preventDefault();
-		const inputData = $("#search-movies").val(),
+		$(".results").empty();
+		$(".pagination").empty();
+		inputData = $("#search-movies").val(),
 			selectData = $("#select-video-type").val();
-		let pageValue = 1;
 		$.ajax({
 			url: `http://www.omdbapi.com/?s=${inputData}&type=${selectData}&page=${pageValue}&apikey=e7bc09c9`,
 			type: 'post',
@@ -37,29 +41,47 @@ $(document).ready(function () {
 					if (+(totalResult) > 10) {
 						$('.pagination').append(
 							`<button class="previous-btn"><<</button>
-							<button class="active-pagination-btn pagination-btn">1</button>
-							<button class="pagination-btn">2</button>
-							<button class="pagination-btn">3</button>
-							<button class="pagination-btn">4</button>
-							<button class="pagination-btn">5</button>
-							<button class="pagination-btn">6</button>
-							<button class="pagination-btn">7</button>
-							<button class="pagination-btn">8</button>
-							<button class="pagination-btn">9</button>
-							<button class="pagination-btn">10</button>
-							<button class="next-btn">>></button>`
+							<button class="pagination-btn" value="1">1</button>
+							<button class="next-btn">>></button>
+							<button class="last-btn">last</button>`
 						);
-						$(".pagination-btn").click(function (e) {
-							$(".pagination-btn").removeClass('active-pagination-btn');
-							$(".pagination-btn").attr('class', 'active-pagination-btn');
-							let bntValue = $(".active-pagination-btn").val();
-							pageValue = bntValue;
-						});
 					}
-
+					console.log(`Current value: ${pageValue}`);
+					$(`.pagination-btn`).click(function (e) {
+						e.preventDefault();
+						let bntValue = $(".pagination-btn").val();
+						console.log(`btnvalue : ${bntValue}`);
+						pageValue = bntValue;
+						$(".results").empty();
+						$(".pagination").empty();
+						nextPage(e);
+					});
+					console.log(`New value: ${pageValue}`);
+					$(`.next-btn`).click(function (e) {
+						e.preventDefault();
+						let currentValue = +(pageValue) + 1;
+						pageValue = currentValue;
+						$(".results").empty();
+						$(".pagination").empty();
+						nextPage(e);
+					});
+					$(`.previous-btn`).click(function (e) {
+						e.preventDefault();
+						if (pageValue > 1) {
+							let currentValue = +(pageValue) - 1;
+							pageValue = currentValue;
+							$(".results").empty();
+							$(".pagination").empty();
+							nextPage(e);
+						} else {
+							$(".results").empty();
+							$(".pagination").empty();
+							nextPage(e);
+						}
+					});
 				} else {
 					$(".results").append(
-						`< p class= "not-found" > You did not enter anything </ > `
+						`<p class= "not-found" > Movie not found! </ p> `
 					);
 				}
 			}

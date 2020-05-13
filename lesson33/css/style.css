@@ -74,7 +74,8 @@ input[type="search"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10px;
+  margin: 30px;
+  border: 1px solid lightgray;
 }
 
 .result-p {
@@ -130,8 +131,25 @@ button:hover {
   background-color: transparent;
 }
 
-.pagination-btn {
+.pagination-btn,
+.last-btn,
+.before-the-last-btn,
+.first-btn,
+.2,
+.3 {
   margin: 3px;
   border: none;
   border-radius: 5px;
+}
+
+.next {
+  border: none;
+  background: transparent;
+}
+
+.film-title {
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  font-weight: bolder;
 }

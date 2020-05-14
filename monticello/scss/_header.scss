@@ -1,0 +1,72 @@
+.header {
+	background-color: #7373ff;
+	width: 1600px;
+}
+.header__container {
+	margin: 0 auto;
+	max-width: 1200px;
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	align-items: center;
+	height: 150px;
+	justify-content: space-around;
+}
+.logo {
+	margin-left: -30px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+.list {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 0px 0px 0px;
+	margin: -5px 17px 0px 0px;
+}
+.list__item {
+	font-family: $book;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $white;
+	font-size: 14px;
+	position: relative;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: 1px;
+	&::before {
+		content: url("../img/header/Ellipse-empty.svg");
+		position: absolute;
+		left: -20px;
+		top: -3px;
+	}
+	&:active::before {
+		content: url("../img/header/Ellipse-full.svg");
+		position: absolute;
+		left: -20px;
+		top: -3px;
+	}
+}
+.list__item--active {
+	margin-left: 32px;
+}
+.item-project {
+	margin-left: 88px;
+}
+.item-news {
+	margin-left: 80px;
+}
+.item-contact {
+	margin-left: 94px;
+}
+.socials {
+	margin-right: -16px;
+}
+
+.socials__item {
+	padding-left: 15px;
+	&:hover {
+		cursor: pointer;
+	}
+}

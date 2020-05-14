@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
+
 @font-face {
 	font-family: "gothambold1";
 	src: url("./font/gothambold/gothambold1.eot");
@@ -17,8 +19,4 @@
 	src: url("./font/Gotham-Medium-Regular/gotham-medium-webfont.woff2");
 	src: local("Gotham-Medium-Regular"), url("./font/Gotham-Medium-Regular/gotham-medium-webfont.woff") format("woff"),
 		url("./font/Gotham-Medium-Regular/Gotham-Medium-Regular.ttf") format("truetype");
-}
-@font-face {
-	font-family: "Open_Sans_italic";
-	src: url("./font/Open_Sans/OpenSans-Italic.ttf");
 }

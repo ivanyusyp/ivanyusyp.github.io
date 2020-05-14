@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
 @font-face {
   font-family: "gothambold1";
   src: url("./font/gothambold/gothambold1.eot");
@@ -16,7 +17,100 @@
   src: local("Gotham-Medium-Regular"), url("./font/Gotham-Medium-Regular/gotham-medium-webfont.woff") format("woff"), url("./font/Gotham-Medium-Regular/Gotham-Medium-Regular.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "Open_Sans_italic";
-  src: url("./font/Open_Sans/OpenSans-Italic.ttf");
+.header {
+  background-color: #7373ff;
+  width: 1600px;
+}
+
+.header__container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.logo {
+  margin-left: -30px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 0px 0px 0px;
+  margin: -5px 17px 0px 0px;
+}
+
+.list__item {
+  font-family: "GothamBook";
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 14px;
+  position: relative;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.list__item::before {
+  content: url("../img/header/Ellipse-empty.svg");
+  position: absolute;
+  left: -20px;
+  top: -3px;
+}
+
+.list__item:active::before {
+  content: url("../img/header/Ellipse-full.svg");
+  position: absolute;
+  left: -20px;
+  top: -3px;
+}
+
+.list__item--active {
+  margin-left: 32px;
+}
+
+.item-project {
+  margin-left: 88px;
+}
+
+.item-news {
+  margin-left: 80px;
+}
+
+.item-contact {
+  margin-left: 94px;
+}
+
+.socials {
+  margin-right: -16px;
+}
+
+.socials__item {
+  padding-left: 15px;
+}
+
+.socials__item:hover {
+  cursor: pointer;
 }

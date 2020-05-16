@@ -1,0 +1,25 @@
+.gallery {
+	height: 1000px;
+}
+.gallery__container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0px auto;
+	padding-top: 140px;
+}
+.gallery__title {
+	text-align: center;
+}
+.collection {
+	width: 100%;
+	height: 438px;
+}
+.collection__item360 {
+}
+.collecton__items {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 238px;
+}
+.gallery__btn {
+}

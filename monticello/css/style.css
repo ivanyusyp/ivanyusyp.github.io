@@ -89,8 +89,7 @@
 }
 
 .socials {
-  max-width: 162px;
-  width: 13.5%;
+  max-width: 169px;
 }
 
 .socials__item {
@@ -284,4 +283,65 @@ body {
 img {
   width: 100%;
   height: auto;
+}
+
+.news {
+  margin-top: 140px;
+  height: 1035px;
+  background-image: url("../img/news/news-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.news__title {
+  text-align: center;
+  color: black;
+  font-family: "gothambold1";
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: uppercase;
+  padding-top: 185px;
+  position: relative;
+}
+
+.news__title::before {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 120px;
+  right: 48%;
+}
+
+.gallery {
+  height: 1000px;
+}
+
+.gallery__container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0px auto;
+  padding-top: 140px;
+}
+
+.gallery__title {
+  text-align: center;
+}
+
+.collection {
+  width: 100%;
+  height: 438px;
+}
+
+.collecton__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 238px;
 }

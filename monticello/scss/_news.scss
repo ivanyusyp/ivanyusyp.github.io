@@ -1,0 +1,29 @@
+.news {
+	margin-top: 140px;
+	height: 1035px;
+	background-image: url("../img/news/news-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.news__container {
+}
+.news__title {
+	text-align: center;
+	color: black;
+	font-family: $bold;
+	font-size: 44px;
+	font-weight: 500;
+	line-height: 22px;
+	text-transform: uppercase;
+	padding-top: 185px;
+	position: relative;
+	&::before {
+		content: "";
+		width: 100px;
+		height: 1px;
+		background-color: black;
+		position: absolute;
+		top: 120px;
+		right: 48%;
+	}
+}

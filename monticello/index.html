@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Exam 2</title>
 	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/map/index.js"></script>
 </head>
 
 <body>
@@ -104,12 +105,12 @@
 				gallery
 			</h2>
 			<div class="collection">
-				<img src="./img/gallery/gallery__item360.jpg" alt="gallery__item360" class="collection__item360">
+				<img src="./img/gallery/gallery__item360.png" alt="gallery__item360" class="collection__item360">
 				<div class="collecton__items">
-					<img src="./img/gallery/gallery__item1.png" alt="gallery__item1">
-					<img src="./img/gallery/gallery__item2.png" alt="gallery__item2">
-					<img src="./img/gallery/gallery__item3.png" alt="gallery__item3">
-					<img src="./img/gallery/gallery__item4.png" alt="gallery__item4">
+					<img class="item-gallery" src="./img/gallery/gallery__item1.png" alt="gallery__item1">
+					<img class="item-gallery" src="./img/gallery/gallery__item2.png" alt="gallery__item2">
+					<img class="item-gallery" src="./img/gallery/gallery__item3.png" alt="gallery__item3">
+					<img class="item-gallery" src="./img/gallery/gallery__item4.png" alt="gallery__item4">
 				</div>
 			</div>
 			<button class="gallery__btn">
@@ -117,6 +118,12 @@
 			</button>
 		</div>
 	</section>
+	<section id="map">
+
+	</section>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaZzNFf-sbMYUvhtcIWJr2gV7-iLUMFnI&callback=initMap"
+		async defer></script>
+
 </body>
 
 </html>

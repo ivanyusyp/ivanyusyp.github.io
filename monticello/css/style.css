@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap");
 @font-face {
   font-family: "gothambold1";
   src: url("./font/gothambold/gothambold1.eot");
@@ -17,6 +18,805 @@
 }
 
 @font-face {
-  font-family: "Open_Sans_italic";
-  src: url("./font/Open_Sans/OpenSans-Italic.ttf");
+  font-family: "icomoon";
+  src: url("./font/iconmoon/icomoon.eot?ym57ur");
+  src: url("./font/iconmoon/icomoon.eot?ym57ur#iefix") format("embedded-opentype"), url("./font/iconmoon/icomoon.ttf?ym57ur") format("truetype"), url("./font/iconmoon/icomoon.woff?ym57ur") format("woff"), url("./font/iconmoon/icomoon.svg?ym57ur#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-inbox:before {
+  content: "\e900";
+}
+
+.icon-clock-o:before {
+  content: "\e901";
+}
+
+.icon-phone:before {
+  content: "\e902";
+}
+
+.icon-heart:before {
+  content: "\e904";
+}
+
+.icon-location:before {
+  content: "\e903";
+}
+
+#head .header {
+  background-color: #4b4b4b;
+  background-image: linear-gradient(45deg, #55b7ff 0%, #7e5aff 100%);
+}
+
+#head .header__container {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+
+#head .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  background-color: #1d83cc;
+  width: 100%;
+  z-index: 2;
+}
+
+#head .header-slide-items {
+  opacity: 0.1;
+}
+
+#head #slick-slide-control00 {
+  display: none;
+}
+
+#head #slick-slide-control01 {
+  display: none;
+}
+
+#head #slick-slide-control02 {
+  display: none;
+}
+
+#head #slick-slide-control03 {
+  display: none;
+}
+
+#head #slick-slide-control04 {
+  display: none;
+}
+
+#head .slick-dots {
+  color: white;
+  list-style: circle;
+  position: absolute;
+  top: 30%;
+  right: 1%;
+  font-size: 25px;
+}
+
+#head .slick-active {
+  list-style-type: disc;
+  color: white;
+}
+
+#head .logo {
+  padding-left: 15px;
+}
+
+#head .logo:hover {
+  cursor: pointer;
+}
+
+#head .list {
+  margin: -7px 0px 0px 0px;
+  max-width: 595px;
+  width: 49.5%;
+  text-align: center;
+}
+
+#head .list__item {
+  font-family: "GothamBook";
+  text-decoration: none;
+  padding-left: 70px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 10px;
+  position: relative;
+}
+
+#head .list__item::before {
+  content: url("../img/header/Ellipse-empty.svg");
+  position: absolute;
+  left: 40px;
+  top: 1px;
+}
+
+#head .list__item:active::before {
+  content: url("../img/header/Ellipse-full.svg");
+  position: absolute;
+  left: 40px;
+  top: 1px;
+}
+
+#head .socials {
+  max-width: 169px;
+}
+
+#head .socials__item {
+  padding-left: 10px;
+}
+
+#head .socials__item:hover {
+  cursor: pointer;
+}
+
+.projects__title {
+  width: 100%;
+  height: 160px;
+  text-align: center;
+  margin-top: 146px;
+}
+
+.title {
+  color: #2c4058;
+  font-family: "gothambold1";
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  width: 102px;
+  height: 4px;
+  background-color: #2c4058;
+  position: absolute;
+  top: -50px;
+  right: 47%;
+}
+
+.projects {
+  height: 1220px;
+  background-image: url("../img/projects/project-bg.jpg");
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin: 0px;
+}
+
+.projects__container {
+  max-width: 1170px;
+  margin: 0px auto;
+}
+
+.trade-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.trade-center__img {
+  max-width: 630px;
+}
+
+.trade-center__about {
+  max-width: 468px;
+  margin-top: 0px;
+}
+
+.trade-center__headline {
+  margin-top: -5px;
+}
+
+.trade-headline__desc {
+  margin-top: 55px;
+}
+
+.headline-desc {
+  font-family: "GothamBook";
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.projects-headline {
+  color: #2c4058;
+  font-family: "gothambold1";
+  font-size: 43px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.trade-center__desc {
+  margin-top: -6px;
+}
+
+.projects-desc {
+  color: #4b5562;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.trade-center__btn {
+  min-width: 190px;
+  min-height: 50px;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #2c4058;
+  color: #2c4058;
+  font-family: "GothamBook";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin-top: 13px;
+}
+
+.trade-center__location {
+  margin-top: 52px;
+  color: #2c4058;
+  font-family: "Open Sans";
+  font-style: italic;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.commerce-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 210px;
+}
+
+.commerce-center__about {
+  max-width: 467px;
+}
+
+.commerce-headline__desc {
+  margin-top: 54px;
+}
+
+.commerce-center__headline {
+  margin-top: -6px;
+}
+
+.trade-commerce__desc {
+  margin-top: -4px;
+}
+
+.commerce-center__btn {
+  min-width: 190px;
+  min-height: 50px;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #2c4058;
+  color: #2c4058;
+  font-family: "GothamBook";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+.commerce-center__location {
+  margin-top: 60px;
+  color: #2c4058;
+  font-family: "Open Sans";
+  font-style: italic;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 52px;
+}
+
+.commerce-center__img {
+  max-width: 630px;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#news .news {
+  margin-top: 140px;
+  height: 1035px;
+  background-image: url("../img/news/news-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#news .news__title {
+  text-align: center;
+  color: #fff;
+  font-family: "gothambold1";
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: uppercase;
+  padding-top: 185px;
+  position: relative;
+}
+
+#news .news__title::before {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 120px;
+  right: 48%;
+}
+
+#news .column {
+  width: 100%;
+  max-width: 1210px;
+  height: 514px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin: 85px auto;
+  position: relative;
+}
+
+#news .column__item {
+  max-width: 370px;
+  height: 514px;
+  margin: 20px;
+  background-color: #fff;
+}
+
+#news .column__image {
+  max-height: 240px;
+}
+
+#news .column__desc-container {
+  padding: 0px 0px 0px 20px;
+}
+
+#news .column__title {
+  color: #2c4058;
+  font-family: "gothambold1";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 34px;
+  text-transform: uppercase;
+}
+
+#news .column__desc {
+  margin-top: -20px;
+  color: #4b5562;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+#news .author {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  padding-top: 15px;
+}
+
+#news .author__image {
+  width: 60px;
+  height: 60px;
+  border: 0px solid transparent;
+  border-radius: 50%;
+}
+
+#news .author__about {
+  height: 37px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+#news .about-name {
+  color: #2c4058;
+  font-family: "GothamBook";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin-top: 7px;
+}
+
+#news .date-of-publication-about {
+  color: #55b7ff;
+  font-family: "GothamBook";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: -15px;
+}
+
+#news .slick-prev {
+  background-color: transparent;
+  border: none;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+}
+
+#news .slick-next {
+  background-color: transparent;
+  border: none;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  right: -10%;
+}
+
+#news #slick-slide-control00,
+#news #slick-slide-control01,
+#news #slick-slide-control02,
+#news #slick-slide-control03,
+#news #slick-slide-control04,
+#news #slick-slide-control05,
+#news #slick-slide-control06,
+#news #slick-slide-control07,
+#news #slick-slide-control08,
+#news #slick-slide-control09,
+#news #slick-slide-control10,
+#news #slick-slide-control11,
+#news #slick-slide-control12,
+#news #slick-slide-control13 {
+  display: none;
+}
+
+#news .slick-dots {
+  color: #fff;
+  list-style: circle;
+  width: 10%;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  position: absolute;
+  left: 43%;
+  top: 108%;
+}
+
+#news .slick-dots li {
+  width: 25px;
+  padding: 25px;
+  font-size: 30px;
+}
+
+#news .slick-active {
+  list-style-type: disc;
+  color: #fff;
+  font-size: 30px;
+}
+
+.gallery {
+  height: 1000px;
+}
+
+.gallery__container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0px auto;
+  padding-top: 150px;
+  text-align: center;
+}
+
+.gallery__title {
+  text-align: center;
+}
+
+.collection {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.collection__item360 {
+  width: 45%;
+  padding: 5px;
+}
+
+.collecton__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 50%;
+}
+
+.item-gallery {
+  width: 45%;
+  padding: 5px;
+}
+
+.gallery__btn {
+  min-width: 190px;
+  min-height: 50px;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #2c4058;
+  color: #2c4058;
+  font-family: "GothamBook";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+
+#map {
+  width: 100%;
+  height: 700px;
+}
+
+.footer {
+  background-image: url("../img/footer/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer__container {
+  max-width: 772px;
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+}
+
+.contact {
+  height: 450px;
+  background-image: url("../img/footer/contact-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -300px;
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.contact__title {
+  padding-top: 90px;
+  text-align: center;
+  color: #2c4058;
+  font-family: "gothambold1";
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.contact__title::before {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: #2c4058;
+  position: absolute;
+  top: 40px;
+  left: 45%;
+}
+
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 650px;
+  width: 100%;
+  height: 190px;
+  margin: 0px auto;
+  margin-top: 60px;
+}
+
+.our-contact {
+  max-width: 300px;
+  color: #2c4058;
+  font-family: "GothamBook";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.contacts-icon {
+  color: #7e5aff;
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.name-form {
+  min-width: 310px;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.name-form::-webkit-input-placeholder {
+  color: lightgray;
+}
+
+.name-form:-ms-input-placeholder {
+  color: lightgray;
+}
+
+.name-form::-ms-input-placeholder {
+  color: lightgray;
+}
+
+.name-form::placeholder {
+  color: lightgray;
+}
+
+.mail-form {
+  min-width: 310px;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.mail-form::-webkit-input-placeholder {
+  color: lightgray;
+}
+
+.mail-form:-ms-input-placeholder {
+  color: lightgray;
+}
+
+.mail-form::-ms-input-placeholder {
+  color: lightgray;
+}
+
+.mail-form::placeholder {
+  color: lightgray;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  max-width: 140px;
+  height: 50px;
+  color: #2c4058;
+  font-family: "GothamBook";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #2c4058;
+  margin-left: 168px;
+}
+
+.logo-socials-container {
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 55px;
+}
+
+.social-items {
+  padding-left: 5px;
+}
+
+.copiright {
+  margin-top: 38px;
+  color: #ffffff;
+  font-family: "GothamBook";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.copyright__divider {
+  padding: 0px 20px 0px 20px;
 }

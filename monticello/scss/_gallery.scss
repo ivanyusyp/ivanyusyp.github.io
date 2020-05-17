@@ -1,0 +1,46 @@
+.gallery {
+	height: 1000px;
+}
+.gallery__container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0px auto;
+	padding-top: 150px;
+	text-align: center;
+}
+.gallery__title {
+	text-align: center;
+}
+.collection {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-flow: row nowrap;
+}
+.collection__item360 {
+	width: 45%;
+	padding: 5px;
+}
+.collecton__items {
+	display: flex;
+	flex-flow: row wrap;
+	width: 50%;
+}
+.item-gallery {
+	width: 45%;
+	padding: 5px;
+}
+.gallery__btn {
+	min-width: 190px;
+	min-height: 50px;
+	background-color: transparent;
+	box-shadow: none;
+	border: 1px solid #2c4058;
+	color: #2c4058;
+	font-family: $book;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	text-transform: uppercase;
+	margin-top: 60px;
+}

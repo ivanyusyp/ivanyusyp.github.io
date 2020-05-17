@@ -1,0 +1,134 @@
+.footer {
+	background-image: url("../img/footer/footer-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.footer__container {
+	max-width: 772px;
+	width: 100%;
+	margin: 0px auto;
+	position: relative;
+}
+.contact {
+	height: 450px;
+	background-image: url("../img/footer/contact-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: -300px;
+	width: 100%;
+	background-color: #ffffff;
+	position: relative;
+}
+.contact__title {
+	padding-top: 90px;
+	text-align: center;
+	color: #2c4058;
+	font-family: $bold;
+	font-size: 44px;
+	font-weight: 500;
+	line-height: 22px;
+	text-transform: uppercase;
+	position: relative;
+	&::before {
+		content: "";
+		width: 100px;
+		height: 1px;
+		background-color: #2c4058;
+		position: absolute;
+		top: 40px;
+		left: 45%;
+	}
+}
+.contact__container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	max-width: 650px;
+	width: 100%;
+	height: 190px;
+	margin: 0px auto;
+	margin-top: 60px;
+}
+.our-contact {
+	max-width: 300px;
+	color: #2c4058;
+	font-family: $book;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 34px;
+}
+.contacts-icon {
+	color: #7e5aff;
+}
+.our-contact__location {
+}
+.ourcontact__number {
+}
+.our-contact__mail {
+}
+.our-contact__work-time {
+}
+.contact__form {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+.name-form {
+	min-width: 310px;
+	height: 50px;
+	border: none;
+	border-bottom: 1px solid lightgray;
+}
+.name-form::placeholder {
+	color: lightgray;
+}
+.mail-form {
+	min-width: 310px;
+	height: 50px;
+	border: none;
+	border-bottom: 1px solid lightgray;
+}
+.mail-form::placeholder {
+	color: lightgray;
+}
+.submit-btn {
+	margin-top: 30px;
+	max-width: 140px;
+	height: 50px;
+	color: #2c4058;
+	font-family: $book;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	text-transform: uppercase;
+	background-color: transparent;
+	border: none;
+	border: 1px solid $dark-blue;
+	margin-left: 168px;
+}
+.logo-socials-container {
+	height: 54px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top: 55px;
+}
+.footer__logo {
+}
+.footer__socials {
+}
+.social-items {
+	padding-left: 5px;
+}
+.copiright {
+	margin-top: 38px;
+	color: #ffffff;
+	font-family: $book;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+}
+.copyright__divider {
+	padding: 0px 20px 0px 20px;
+}

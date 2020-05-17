@@ -1,0 +1,106 @@
+#head {
+	.header {
+		background-color: #4b4b4b;
+		background-image: linear-gradient(45deg, #55b7ff 0%, #7e5aff 100%);
+	}
+	.header__container {
+		position: relative;
+		width: 100%;
+		height: 800px;
+	}
+	.header__nav {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		background-color: #1d83cc;
+		width: 100%;
+		z-index: 2;
+	}
+	.header-slide-items {
+		opacity: 0.1;
+	}
+	#slick-slide-control00 {
+		display: none;
+	}
+	#slick-slide-control01 {
+		display: none;
+	}
+	#slick-slide-control02 {
+		display: none;
+	}
+	#slick-slide-control03 {
+		display: none;
+	}
+	#slick-slide-control04 {
+		display: none;
+	}
+	.slick-dots {
+		color: white;
+		list-style: circle;
+		position: absolute;
+		top: 30%;
+		right: 1%;
+		font-size: 25px;
+	}
+
+	.slick-active {
+		list-style-type: disc;
+		color: white;
+	}
+	.logo {
+		padding-left: 15px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.list {
+		margin: -7px 0px 0px 0px;
+		max-width: 595px;
+		width: 49.5%;
+		text-align: center;
+	}
+	.list__item {
+		font-family: $book;
+		text-decoration: none;
+		padding-left: 70px;
+		text-transform: uppercase;
+		color: $white;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 10px;
+		position: relative;
+
+		&::before {
+			content: url("../img/header/Ellipse-empty.svg");
+			position: absolute;
+			left: 40px;
+			top: 1px;
+		}
+		&:active::before {
+			content: url("../img/header/Ellipse-full.svg");
+			position: absolute;
+			left: 40px;
+			top: 1px;
+		}
+	}
+	.list__item--active {
+	}
+	.item-project {
+	}
+	.item-news {
+	}
+	.item-contact {
+	}
+	.socials {
+		max-width: 169px;
+	}
+
+	.socials__item {
+		padding-left: 10px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

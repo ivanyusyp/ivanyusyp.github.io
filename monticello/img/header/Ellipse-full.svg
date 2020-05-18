@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 9 9">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <circle class="cls-1" cx="4.5" cy="4.5" r="4.5"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9"><g><g><path fill="#fff" d="M4.5 0a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z"/></g></g></svg>

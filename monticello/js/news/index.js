@@ -7,4 +7,6 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplaySpeed: 4000,
 	});
+	$(".slick-prev").text('<');
+	$(".slick-next").text('>');
 });

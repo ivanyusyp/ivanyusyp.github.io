@@ -1,8 +1,10 @@
 $(document).ready(function () {
 	$('.single-item').slick({
-		adaptiveHeight: true,
+		adaptiveHeight: false,
 		slidesToShow: 1,
 		arrows: false,
 		dots: true,
+		respondTo: 'min',
+		mobileFirst: true,
 	});
 });

@@ -20,6 +20,11 @@
 	background-color: #ffffff;
 	position: relative;
 }
+@media only screen and (max-width: 786px) {
+	.contact {
+		height: 600px;
+	}
+}
 .contact__title {
 	padding-top: 90px;
 	text-align: center;
@@ -40,15 +45,26 @@
 		left: 45%;
 	}
 }
+@media only screen and (max-width: 786px) {
+	.contact__title {
+		font-size: 36px;
+	}
+}
 .contact__container {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	max-width: 650px;
 	width: 100%;
-	height: 190px;
+	min-height: 190px;
 	margin: 0px auto;
 	margin-top: 60px;
+}
+@media only screen and (max-width: 786px) {
+	.contact__container {
+		flex-flow: column;
+		align-items: center;
+	}
 }
 .our-contact {
 	max-width: 300px;
@@ -75,19 +91,30 @@
 	justify-content: center;
 }
 .name-form {
-	min-width: 310px;
+	width: 310px;
 	height: 50px;
 	border: none;
 	border-bottom: 1px solid lightgray;
+}
+@media only screen and (max-width: 400px) {
+	.name-form {
+		width: 200px;
+		margin: 0px auto;
+	}
 }
 .name-form::placeholder {
 	color: lightgray;
 }
 .mail-form {
-	min-width: 310px;
+	width: 310px;
 	height: 50px;
 	border: none;
 	border-bottom: 1px solid lightgray;
+}
+@media only screen and (max-width: 400px) {
+	.mail-form {
+		width: 200px;
+	}
 }
 .mail-form::placeholder {
 	color: lightgray;
@@ -107,20 +134,34 @@
 	border: 1px solid $dark-blue;
 	margin-left: 168px;
 }
+@media only screen and (max-width: 786px) {
+	.submit-btn {
+		margin: 0px auto;
+		margin-top: 20px;
+	}
+}
 .logo-socials-container {
-	height: 54px;
+	min-height: 54px;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	margin-top: 55px;
 }
+
 .footer__logo {
 }
 .footer__socials {
 }
+@media only screen and (max-width: 400px) {
+	.footer__socials {
+		margin: 10px;
+	}
+}
+
 .social-items {
 	padding-left: 5px;
 }
+
 .copiright {
 	margin-top: 38px;
 	color: #ffffff;

@@ -7,3 +7,9 @@
 @import "_gallery";
 @import "map";
 @import "_footer";
+
+button {
+	&:hover {
+		transform: scale(1.2);
+	}
+}

@@ -3,8 +3,6 @@ $(document).ready(function () {
 		adaptiveHeight: false,
 		slidesToShow: 1,
 		arrows: false,
-		dots: true,
-		respondTo: 'min',
-		mobileFirst: true,
+		dots: true
 	});
 });

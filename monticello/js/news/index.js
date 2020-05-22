@@ -9,7 +9,13 @@ $(document).ready(function () {
 		autoplaySpeed: 4000,
 		responsive: [
 			{
-				breakpoint: 1500,
+				breakpoint: 1370,
+				settings: {
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 1276,
 				settings: {
 					infinite: true,
 					slidesToShow: 2,
@@ -17,15 +23,16 @@ $(document).ready(function () {
 					dots: true,
 					autoplay: true,
 					autoplaySpeed: 4000,
-					centerPadding: '10px'
+					centerPadding: '10px',
+					arrows: false,
 				}
 			},
 			{
-				breakpoint: 1000,
+				breakpoint: 920,
 				settings: {
 					adaptiveHeight: false,
 					slidesToShow: 1,
-					arrows: false,
+					arrows: true,
 					dots: false,
 					centerPadding: "2px"
 				}

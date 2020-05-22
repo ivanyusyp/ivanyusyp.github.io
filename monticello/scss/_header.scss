@@ -35,19 +35,13 @@
 		}
 	}
 
-	@media only screen and (max-width: 806px) {
-		.header__nav {
-			height: 60px;
-			padding: 40px;
-			justify-content: center;
-		}
-	}
 	@media only screen and (max-width: 620px) {
 		.header__nav {
-			height: 20px;
-			padding: 40px;
-			justify-content: flex-start;
-			width: max-content;
+			max-width: 50px;
+			border-radius: 10%;
+			justify-content: center;
+			align-self: center;
+			align-items: center;
 		}
 	}
 
@@ -90,6 +84,19 @@
 			letter-spacing: 4px;
 			text-align: center;
 			margin: 386px 0px 0px 0px;
+		}
+		@media (max-width: 1440px) {
+			&__title {
+				font-size: 60px;
+				line-break: auto;
+			}
+		}
+		@media (max-width: 1340px) {
+			&__title {
+				font-size: 40px;
+				line-break: auto;
+				line-height: 30px;
+			}
 		}
 		@media (max-width: 576px) {
 			&__title {
@@ -211,8 +218,8 @@
 		color: #ffffff;
 		list-style: circle;
 		position: absolute;
-		top: 30%;
-		right: -100%;
+		top: 35%;
+		right: 1%;
 		font-size: 25px;
 		display: flex;
 		flex-flow: column;
@@ -238,7 +245,7 @@
 	}
 	@media only screen and (max-width: 1200px) {
 		.logo {
-			margin-right: 5px;
+			margin: 25px;
 		}
 	}
 	@media only screen and (max-width: 620px) {
@@ -252,22 +259,38 @@
 		width: 49.5%;
 		text-align: center;
 	}
-	.list a.icon {
+	a.icon {
 		display: none;
-		margin-top: -10px;
 	}
 	@media only screen and (max-width: 976px) {
-		.list a:not(:first-child) {
+		.header__nav {
+			justify-content: space-between;
+		}
+		.list {
 			display: none;
 		}
-		.list a.icon {
+		a.icon {
 			display: block;
 			color: white;
-			width: 50px;
+			text-decoration: none;
+			margin: 6px;
+			border: 1px solid white;
+			padding: 10px;
+			border-radius: 20%;
+			align-self: center;
 		}
-		nav.list {
-			margin: 0px;
-			width: 50px;
+		.list__item {
+			&::before {
+				content: "";
+				display: none;
+			}
+			&:active::before {
+				content: "";
+				display: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 	.list__item {
@@ -296,7 +319,19 @@
 	}
 	@media only screen and (max-width: 1200px) {
 		.list__item {
-			padding-left: 60px;
+			padding-left: 40px;
+			&::before {
+				content: url("../img/header/Ellipse-empty.svg");
+				position: absolute;
+				left: 10px;
+				top: 2px;
+			}
+			&:active::before {
+				content: url("../img/header/Ellipse-full.svg");
+				position: absolute;
+				left: 10px;
+				top: 2px;
+			}
 		}
 	}
 	@media only screen and (max-width: 1000px) {
@@ -338,7 +373,7 @@
 	}
 	@media only screen and (max-width: 1200px) {
 		.socials {
-			margin-left: 10px;
+			margin-left: 30px;
 		}
 	}
 	@media only screen and (max-width: 976px) {

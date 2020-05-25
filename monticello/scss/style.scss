@@ -13,3 +13,8 @@ button {
 		transform: scale(1.2);
 	}
 }
+@media only screen and (max-width: 576px) {
+	body {
+		overflow-x: hidden;
+	}
+}

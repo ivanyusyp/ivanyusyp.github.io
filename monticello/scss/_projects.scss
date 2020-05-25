@@ -30,6 +30,11 @@
 	margin: 0px auto;
 	padding-bottom: 75px;
 }
+@media only screen and (max-width: 576px) {
+	.projects__container {
+		overflow: hidden;
+	}
+}
 .trade-center {
 	display: flex;
 	flex-flow: row wrap;

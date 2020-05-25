@@ -8,7 +8,7 @@ $(document).ready(function () {
 	$(".btn").click(function nextPage(e) {
 		e.preventDefault();
 		$(".results").empty();
-		$(".pagination").empty();
+		// $(".pagination").empty();
 		inputData = $("#search-movies").val(),
 			selectData = $("#select-video-type").val();
 		$.ajax({
@@ -39,12 +39,14 @@ $(document).ready(function () {
 							});
 						});
 					});
+
 					const totalResult = searchResult.totalResults,
 						lastPage = Math.ceil(totalResult / 10);
 					if (+(totalResult) > 10) {
 						console.log(lastPage);
-						$('.pagination').append(
-							`
+						if (!$('.first-btn').val()) {
+							$('.pagination').append(
+								`
 							<button class="previous-btn"><<</button>
 							<button class="first-btn" value="1">1</button>
 							<button class="second-btn" value="2">2 </button>
@@ -54,7 +56,10 @@ $(document).ready(function () {
 							<button class=" last-btn" value="${lastPage}">${lastPage}</button>
 							<button class="next-btn">>></button>
 							`
-						);
+							);
+						}
+						console.log($('.first-btn').val());
+						console.log($('.first-b').val());
 					}
 					console.log(`Current value: ${pageValue}`);
 					$(`.first-btn`).click(function (e) {

@@ -50,8 +50,8 @@ $(document).ready(function () {
 							<button class="second-btn" value="2">2 </button>
 							<button class="third-btn" value="3">3</button>
 							<button class="next" >...</button>
-							<button class=" before-the-last-btn" value="L-1">${lastPage - 1}</button>
-							<button class=" last-btn" value="L">${lastPage}</button>
+							<button class=" before-the-last-btn" value=${lastPage - 1}>${lastPage - 1}</button>
+							<button class=" last-btn" value="${lastPage}">${lastPage}</button>
 							<button class="next-btn">>></button>
 							`
 						);
@@ -66,33 +66,27 @@ $(document).ready(function () {
 					});
 					$(`.second-btn`).click(function (e) {
 						e.preventDefault();
-						pageValue = secondBtnValue;
-						$(".results").empty();
-						$(".pagination").empty();
+						pageValue = e.target.innerHTML;
 						nextPage(e);
 					});
 					$(`.third-btn`).click(function (e) {
 						e.preventDefault();
-						pageValue = thirdBntValue;
-						$(".results").empty();
-						$(".pagination").empty();
+						pageValue = e.target.innerHTML;
 						nextPage(e);
 					});
 					$(`.next`).click(function (e) {
 						e.preventDefault();
-						$(".second-btn").empty();
-						$(".third-btn").empty();
-						console.log(secondBtnValue);
-						console.log(thirdBntValue);
-						let secondBtnCurrentValue = +(thirdBntValue + 1);
-						let secondBtnCurrentText = +(thirdBntValue + 1);
-						let thirdBtnCurrentValue = +(thirdBntValue + 2);
-						let thirdBtnCurrentText = +(thirdBntValue + 2);
-						$(`.second-btn`).val(`${secondBtnCurrentValue}`);
-						$(`.second-btn`).text(`${secondBtnCurrentText}`);
-						$(`.third-btn`).val(`${thirdBtnCurrentValue}`);
-						$(`.third-btn`).text(`${thirdBtnCurrentText}`);
-						console.log(`2v = ${secondBtnCurrentValue} \n2t = ${secondBtnCurrentText}`)
+						const secondBtnCurrentValue = +($('.second-btn').val());
+						const thirdBtnCurrentValue = +($('.third-btn').val());
+						if ($('.before-the-last-btn').val() != thirdBtnCurrentValue + 1) {
+							$(`.second-btn`).val(secondBtnCurrentValue + 1);
+							$(`.second-btn`).text(secondBtnCurrentValue + 1);
+							$(`.third-btn`).val(thirdBtnCurrentValue + 1);
+							$(`.third-btn`).text(thirdBtnCurrentValue + 1);
+						}
+						console.log(thirdBtnCurrentValue);
+						console.log($('.before-the-last-btn').val());
+
 					});
 					console.log(`New value: ${pageValue}`);
 					$(`.next-btn`).click(function (e) {
@@ -127,7 +121,7 @@ $(document).ready(function () {
 					});
 					$(`.before-the-last-btn`).click(function (e) {
 						e.preventDefault();
-						let endPage = lastPage - 1;
+						let endPage = +(lastPage - 1);
 						pageValue = endPage;
 						$(".results").empty();
 						$(".pagination").empty();

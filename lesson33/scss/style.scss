@@ -65,6 +65,15 @@ input[type="search"] {
 	position: relative;
 	top: 280px;
 }
+.add-to-favorite-btn {
+	height: 18px;
+	position: absolute;
+	right: 0px;
+	text-decoration: none;
+	color: lightslategray;
+	border: 1px solid lightslategray;
+	border-radius: 4px;
+}
 .plot-text {
 	text-align: justify;
 	padding: 10px;
@@ -95,8 +104,8 @@ button:hover {
 .last-btn,
 .before-the-last-btn,
 .first-btn,
-.2,
-.3 {
+.third-btn,
+.second-btn {
 	margin: 3px;
 	border: none;
 	border-radius: 5px;

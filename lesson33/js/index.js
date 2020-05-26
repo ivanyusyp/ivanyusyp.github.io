@@ -8,13 +8,12 @@ $(document).ready(function () {
 	$(".btn").click(function nextPage(e) {
 		e.preventDefault();
 		$(".results").empty();
-		// $(".pagination").empty();
 		inputData = $("#search-movies").val(),
 			selectData = $("#select-video-type").val();
 		$.ajax({
 			url: `http://www.omdbapi.com/?s=${inputData}&type=${selectData}&page=${pageValue}&apikey=e7bc09c9`,
 			type: 'post',
-			success: function (result) {
+			success: function appendResult(result) {
 				const searchResult = result;
 				const searchArray = searchResult.Search;
 				console.log(searchArray);
@@ -23,6 +22,7 @@ $(document).ready(function () {
 					searchArray.map(item => {
 						$(".results").append(
 							`<div class='result-div${item.imdbID} result-div'><p class="film-title">${item.Title}</p><img class="result-img" src="${item.Poster}" alt="">
+							<button value='${item.imdbID}' class ="add-to-favorite-btn" >add to favorite</button>
 							<button id="${item.imdbID}" class="details-btn">Details</button>
 							</div>`
 						);
@@ -58,8 +58,6 @@ $(document).ready(function () {
 							`
 							);
 						}
-						console.log($('.first-btn').val());
-						console.log($('.first-b').val());
 					}
 					console.log(`Current value: ${pageValue}`);
 					$(`.first-btn`).click(function (e) {
@@ -132,6 +130,17 @@ $(document).ready(function () {
 						$(".pagination").empty();
 						nextPage(e);
 					});
+					const favoriteMovies = [];
+					$('.add-to-favorite-btn').click(function (e) {
+						e.preventDefault();
+						console.log(e.target.value);
+						const filmId = e.target.value;
+						if (!favoriteMovies.includes(filmId, 0)) {
+							favoriteMovies.push(filmId);
+						}
+						localStorage.setItem('idfilm', favoriteMovies);
+						console.log(favoriteMovies);
+					});
 				} else {
 					$(".results").append(
 						`<p class= "not-found" > Movie not found! </ p> `
@@ -139,5 +148,12 @@ $(document).ready(function () {
 				}
 			}
 		})
+	});
+	$('.favorit').click(function (e) {
+		e.preventDefault();
+		const result = localStorage.getItem('idfilm');
+		const arrayOfMovies = result.split(',');
+		console.log(result);
+		console.log(arrayOfMovies);
 	});
 });

@@ -54,9 +54,10 @@ body {
 	min-height: 850px;
 	display: grid;
 	grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+	filter: brightness(0.3);
 
 	&__item1 {
-		background: url("../img/footer/footer-gallery-1.png");
+		background-image: url("../img/footer/footer-gallery-1.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
@@ -105,14 +106,3 @@ body {
 }
 .footer-items {
 }
-
-// [class*="item"] {
-// 	background-color: rgba(26, 26, 26, 1.9);
-// 	border: 1px transparent solid;
-// 	mix-blend-mode: screen;
-// }
-
-// [class*="item"]:hover {
-// 	background-color: rgba(26, 26, 26, 1.9);
-// 	border: 1px white solid;
-// }

@@ -65,10 +65,12 @@ body {
   -ms-grid-rows: (1fr)[2];
   -ms-grid-columns: (1fr)[4];
       grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
 }
 
 .footer-gallery__item1 {
-  background: url("../img/footer/footer-gallery-1.png");
+  background-image: url("../img/footer/footer-gallery-1.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

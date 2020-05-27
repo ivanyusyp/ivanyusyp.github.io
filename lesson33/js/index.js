@@ -8,13 +8,12 @@ $(document).ready(function () {
 	$(".btn").click(function nextPage(e) {
 		e.preventDefault();
 		$(".results").empty();
-		$(".pagination").empty();
 		inputData = $("#search-movies").val(),
 			selectData = $("#select-video-type").val();
 		$.ajax({
 			url: `http://www.omdbapi.com/?s=${inputData}&type=${selectData}&page=${pageValue}&apikey=e7bc09c9`,
 			type: 'post',
-			success: function (result) {
+			success: function appendResult(result) {
 				const searchResult = result;
 				const searchArray = searchResult.Search;
 				console.log(searchArray);
@@ -23,6 +22,7 @@ $(document).ready(function () {
 					searchArray.map(item => {
 						$(".results").append(
 							`<div class='result-div${item.imdbID} result-div'><p class="film-title">${item.Title}</p><img class="result-img" src="${item.Poster}" alt="">
+							<button value='${item.imdbID}' class ="add-to-favorite-btn" >add to favorite</button>
 							<button id="${item.imdbID}" class="details-btn">Details</button>
 							</div>`
 						);
@@ -39,22 +39,25 @@ $(document).ready(function () {
 							});
 						});
 					});
+
 					const totalResult = searchResult.totalResults,
 						lastPage = Math.ceil(totalResult / 10);
 					if (+(totalResult) > 10) {
 						console.log(lastPage);
-						$('.pagination').append(
-							`
+						if (!$('.first-btn').val()) {
+							$('.pagination').append(
+								`
 							<button class="previous-btn"><<</button>
 							<button class="first-btn" value="1">1</button>
 							<button class="second-btn" value="2">2 </button>
 							<button class="third-btn" value="3">3</button>
 							<button class="next" >...</button>
-							<button class=" before-the-last-btn" value="L-1">${lastPage - 1}</button>
-							<button class=" last-btn" value="L">${lastPage}</button>
+							<button class=" before-the-last-btn" value=${lastPage - 1}>${lastPage - 1}</button>
+							<button class=" last-btn" value="${lastPage}">${lastPage}</button>
 							<button class="next-btn">>></button>
 							`
-						);
+							);
+						}
 					}
 					console.log(`Current value: ${pageValue}`);
 					$(`.first-btn`).click(function (e) {
@@ -66,33 +69,27 @@ $(document).ready(function () {
 					});
 					$(`.second-btn`).click(function (e) {
 						e.preventDefault();
-						pageValue = secondBtnValue;
-						$(".results").empty();
-						$(".pagination").empty();
+						pageValue = e.target.innerHTML;
 						nextPage(e);
 					});
 					$(`.third-btn`).click(function (e) {
 						e.preventDefault();
-						pageValue = thirdBntValue;
-						$(".results").empty();
-						$(".pagination").empty();
+						pageValue = e.target.innerHTML;
 						nextPage(e);
 					});
 					$(`.next`).click(function (e) {
 						e.preventDefault();
-						$(".second-btn").empty();
-						$(".third-btn").empty();
-						console.log(secondBtnValue);
-						console.log(thirdBntValue);
-						let secondBtnCurrentValue = +(thirdBntValue + 1);
-						let secondBtnCurrentText = +(thirdBntValue + 1);
-						let thirdBtnCurrentValue = +(thirdBntValue + 2);
-						let thirdBtnCurrentText = +(thirdBntValue + 2);
-						$(`.second-btn`).val(`${secondBtnCurrentValue}`);
-						$(`.second-btn`).text(`${secondBtnCurrentText}`);
-						$(`.third-btn`).val(`${thirdBtnCurrentValue}`);
-						$(`.third-btn`).text(`${thirdBtnCurrentText}`);
-						console.log(`2v = ${secondBtnCurrentValue} \n2t = ${secondBtnCurrentText}`)
+						const secondBtnCurrentValue = +($('.second-btn').val());
+						const thirdBtnCurrentValue = +($('.third-btn').val());
+						if ($('.before-the-last-btn').val() != thirdBtnCurrentValue + 1) {
+							$(`.second-btn`).val(secondBtnCurrentValue + 1);
+							$(`.second-btn`).text(secondBtnCurrentValue + 1);
+							$(`.third-btn`).val(thirdBtnCurrentValue + 1);
+							$(`.third-btn`).text(thirdBtnCurrentValue + 1);
+						}
+						console.log(thirdBtnCurrentValue);
+						console.log($('.before-the-last-btn').val());
+
 					});
 					console.log(`New value: ${pageValue}`);
 					$(`.next-btn`).click(function (e) {
@@ -127,11 +124,22 @@ $(document).ready(function () {
 					});
 					$(`.before-the-last-btn`).click(function (e) {
 						e.preventDefault();
-						let endPage = lastPage - 1;
+						let endPage = +(lastPage - 1);
 						pageValue = endPage;
 						$(".results").empty();
 						$(".pagination").empty();
 						nextPage(e);
+					});
+					const favoriteMovies = [];
+					$('.add-to-favorite-btn').click(function (e) {
+						e.preventDefault();
+						console.log(e.target.value);
+						const filmId = e.target.value;
+						if (!favoriteMovies.includes(filmId, 0)) {
+							favoriteMovies.push(filmId);
+						}
+						localStorage.setItem('idfilm', favoriteMovies);
+						console.log(favoriteMovies);
 					});
 				} else {
 					$(".results").append(
@@ -140,5 +148,12 @@ $(document).ready(function () {
 				}
 			}
 		})
+	});
+	$('.favorit').click(function (e) {
+		e.preventDefault();
+		const result = localStorage.getItem('idfilm');
+		const arrayOfMovies = result.split(',');
+		console.log(result);
+		console.log(arrayOfMovies);
 	});
 });

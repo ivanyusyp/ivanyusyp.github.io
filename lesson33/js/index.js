@@ -5,6 +5,25 @@ $(document).ready(function () {
 		secondBtnValue = firstBntValue + 1,
 		thirdBntValue = secondBtnValue + 1,
 		pageValue = 1;
+	// function removeItemOnce(arr, value) {
+	// 	var index = arr.indexOf(value);
+	// 	if (index > -1) {
+	// 		arr.splice(index, 1);
+	// 	}
+	// 	return arr;
+	// }
+
+	// function removeItemAll(arr, value) {
+	// 	var i = 0;
+	// 	while (i < arr.length) {
+	// 		if (arr[i] === value) {
+	// 			arr.splice(i, 1);
+	// 		} else {
+	// 			++i;
+	// 		}
+	// 	}
+	// 	return arr;
+	// }
 	$(".btn").click(function nextPage(e) {
 		e.preventDefault();
 		$(".results").empty();
@@ -151,9 +170,62 @@ $(document).ready(function () {
 	});
 	$('.favorit').click(function (e) {
 		e.preventDefault();
+		$(".results").empty();
+		$(".pagination").empty();
 		const result = localStorage.getItem('idfilm');
 		const arrayOfMovies = result.split(',');
-		console.log(result);
-		console.log(arrayOfMovies);
+		arrayOfMovies.forEach(function (e) {
+			$.ajax({
+				type: "post",
+				url: `http://www.omdbapi.com/?i=${e}&apikey=e7bc09c9`,
+				success: function (results) {
+					const searchResults = results;
+					console.log(searchResults);
+					$(".results").append(
+						`<div class='result-div${searchResults.imdbID} result-div'><p class="film-title">${searchResults.Title}</p><img class="result-img" src="${searchResults.Poster}" alt="">
+								<button id="${searchResults.imdbID}"class="details-btn">Details</button>
+								<button style="	height: 18px;
+								position: absolute;
+								right: 0px;
+								text-decoration: none;
+								color: lightslategray;
+								border: 1px solid lightslategray;
+								border-radius: 4px;
+								" 
+								class ="del-from-favorite-btn"
+								id="${searchResults.imdbID}-del">delete form favorite</button>
+								</div>`
+					)
+					$(`#${searchResults.imdbID}-del`).click(function (e) {
+						e.preventDefault();
+						console.log('=============CLICK==================')
+						$(`.result-div${searchResults.imdbID}`).empty();
+						$(`.result-div${searchResults.imdbID}`).css('display', 'none');
+						const localData = localStorage.getItem('idfilm');
+						const localDataArray = localData.split(',');
+						console.log(localDataArray);
+						console.log(searchResults.imdbID);
+						const filteredArray = localDataArray.filter((item) => {
+							return item != searchResults.imdbID;
+						})
+						localStorage.setItem('idfilm', filteredArray);
+						console.log(filteredArray, "===IT\'S NEW ARRAY======");
+					});
+					$(`#${searchResults.imdbID}`).click(function (e) {
+						$.ajax({
+							type: "post",
+							url: `http://www.omdbapi.com/?i=${searchResults.imdbID}&apikey=e7bc09c9`,
+							success: function (results) {
+								console.log(results);
+								$(`.result-div${searchResults.imdbID}`).append(
+									`<p class="plot${searchResults.imdbID}">${results.Plot}</p>`
+								)
+							}
+						});
+					});
+
+				}
+			});
+		});
 	});
-});
+})

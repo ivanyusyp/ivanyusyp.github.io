@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,400i,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#header-section .header-section {
+  background: url("../../../dist/images/cahee-full/cahee-bg-new.jpg") no-repeat bottom center;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  #header-section .header-section .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #header-section .header-section .sidenav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #header-section .header-section .sidenav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 3px solid transparent;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #header-section .header-section .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #header-section .header-section .sidenav :first-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #header-section .header-section .sidenav a:hover {
+    border-top: 3px solid red;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #header-section .header-section .sidenav a:hover {
+    color: #f1f1f1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #header-section .header-section .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #header-section .header-section #main {
+    -webkit-transition: margin-left .5s;
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #header-section .header-section .navigation__button {
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #header-section .header-section .navigation__button {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  #header-section .header-section .sidenav {
+    padding-top: 15px;
+  }
+  #header-section .header-section .sidenav a {
+    font-size: 18px;
+  }
+}
+
+#header-section .header-section__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+#header-section .header-section__logo {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+}
+
+@media screen and (768px) {
+  #header-section .header-section__logo {
+    display: block;
+    text-align: center;
+  }
+}
+
+#header-section .header-section__text .header {
+  font-weight: bold;
+  font-size: 60px;
+}
+
+@media screen and (max-width: 480px) {
+  #header-section .header-section__text .header {
+    text-align: center;
+  }
+}
+
+#header-section .header-section__text .describe {
+  font-size: 17px;
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  #header-section .header-section__text .describe {
+    text-align: center;
+  }
+}
+
+#header-section .header-section__scroll-image {
+  position: absolute;
+  left: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  #header-section .header-section__scroll-image {
+    display: none;
+  }
+}
+
+#header-section .header-section__button {
+  text-transform: uppercase;
+  background-color: #e66536;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  max-width: 200px;
+  min-width: 44px;
+  height: auto;
+  max-height: 55px;
+  min-height: 44px;
+  display: block;
+  padding: 15px;
+  text-align: center;
+  -webkit-box-shadow: 0px 3px 3px 0px gray;
+          box-shadow: 0px 3px 3px 0px gray;
+  border: 0px;
+  margin: 10px;
+}
+
+#header-section .header-section__button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#header-section .header-section__button:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 480px) {
+  #header-section .header-section__button {
+    margin: 10px auto;
+  }
+}
+
+#header-section .about-us-section {
+  background: #00bcbc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  #header-section .about-us-section {
+    padding: 20px;
+  }
+}
+
+#header-section .about-us-section__image {
+  width: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  #header-section .about-us-section__image {
+    display: none;
+  }
+}
+
+#header-section .about-us-section__text {
+  width: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  #header-section .about-us-section__text {
+    width: 100%;
+  }
+}
+
+#header-section .about-us-section__text .header {
+  font-size: 90px;
+  color: white;
+  text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+  #header-section .about-us-section__text .header {
+    text-align: center;
+  }
+}
+
+#header-section .about-us-section__text .describe {
+  font-size: 17px;
+  color: white;
+  text-align: left;
+}
+
+@media screen and (min-width: 1200px) {
+  #header-section .header-section {
+    padding: 10px 120px 400px 120px;
+  }
+  #header-section .header-section .nav {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+  }
+  #header-section .header-section .nav li {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    border-top: 3px solid transparent;
+    padding: 10px;
+  }
+  #header-section .header-section .nav li:hover {
+    border-top: 3px solid orangered;
+  }
+  #header-section .header-section__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  #header-section .header-section__logo {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+  }
+  #header-section .header-section__text .header {
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 200px;
+  }
+  #header-section .header-section__text .describe {
+    font-size: 17px;
+    word-wrap: break-word;
+    padding: 10px;
+    width: 20%;
+  }
+  #header-section .header-section__scroll-image {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+  }
+  #header-section .header-section__button {
+    text-transform: uppercase;
+    background-color: #e66536;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    max-width: 200px;
+    min-width: 44px;
+    height: auto;
+    max-height: 55px;
+    min-height: 44px;
+    display: inline-block;
+    padding: 15px;
+    text-align: center;
+    -webkit-box-shadow: 0px 3px 3px 0px gray;
+            box-shadow: 0px 3px 3px 0px gray;
+    border: 0px;
+    margin-top: 50px;
+    margin: 10px;
+  }
+  #header-section .header-section__button:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  #header-section .header-section__button:active {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  #header-section .about-us-section {
+    background: #00bcbc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #header-section .about-us-section__image {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  #header-section .about-us-section__text {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    padding: 50px;
+  }
+}

@@ -32,6 +32,13 @@ module.exports = {
 					outputPath: 'img',
 				},
 			},
+			{
+				test: /\.(eot|ttf|woff|svg)$/,
+				loader: 'file-loader',
+				options: {
+					outputPath: 'fonts',
+				},
+			},
 		]
 	}
 };

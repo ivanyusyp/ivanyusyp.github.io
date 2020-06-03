@@ -1,0 +1,48 @@
+#header {
+	background-image: url("../img/header-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	.search-contact-us-container {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0px auto;
+	}
+	.search-container {
+		&__my-account {
+		}
+
+		&__cart {
+		}
+
+		&__checkout {
+		}
+
+		&__search {
+		}
+	}
+	.option-search-container {
+	}
+	.contact-choose-options-container {
+		&__logo {
+		}
+
+		&__wish-list {
+		}
+
+		&__compare {
+		}
+
+		&__my-cart {
+		}
+	}
+	.work-hours-and-phone {
+	}
+	.phone {
+	}
+	.work-hours {
+	}
+	.nav {
+		&__link {
+		}
+	}
+}

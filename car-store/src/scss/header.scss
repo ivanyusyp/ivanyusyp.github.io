@@ -1,48 +1,115 @@
+@import "variables";
 #header {
 	background-image: url("../img/header-bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
+	font-family: "Lato", sans-serif;
+	height: 900px;
 	.search-contact-us-container {
+		width: 100%;
+		margin: 0px auto;
+		background-color: $dark-gray;
+	}
+	.search-container {
 		max-width: 1200px;
 		width: 100%;
 		margin: 0px auto;
-	}
-	.search-container {
-		&__my-account {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+		align-items: center;
+		border-bottom: 1px solid $light-gray;
+		.search-icons {
+			padding: 4px;
 		}
 
-		&__cart {
-		}
-
+		&__my-account,
+		&__cart,
 		&__checkout {
+			padding: 0px 30px;
+			text-decoration: none;
+			color: $red;
 		}
-
 		&__search {
+			padding: 10px;
+			margin: 5px;
+			border-left: 1px solid $light-gray;
+			color: $white;
+			font-size: 25px;
+			text-decoration: none;
 		}
 	}
 	.option-search-container {
 	}
 	.contact-choose-options-container {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0px auto;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		padding: 10px 0px;
 		&__logo {
 		}
 
-		&__wish-list {
-		}
-
-		&__compare {
-		}
-
+		&__wish-list,
+		&__compare,
 		&__my-cart {
+			text-decoration: none;
+			color: $white;
+			border-left: 1px solid $light-gray;
+			text-align: center;
+			padding: 20px 0px 0px 20px;
+			font-size: 15px;
+			font-weight: bold;
+			text-transform: uppercase;
+			height: 80%;
 		}
+	}
+	.options-container {
+		flex-basis: 30%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: stretch;
+		overflow: hidden;
+	}
+	.option-icon {
+		font-size: 25px;
+		color: $red;
 	}
 	.work-hours-and-phone {
+		text-align: right;
 	}
 	.phone {
+		font-size: 25px;
+		font-weight: bold;
+		color: $white;
+		margin: 0px;
+	}
+	.contact-icon {
+		font-size: 25px;
+		color: $red;
 	}
 	.work-hours {
+		color: $light-gray;
+		text-transform: uppercase;
+	}
+	.nav-container {
+		background-color: $black;
+		width: 100%;
 	}
 	.nav {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0px auto;
+		color: $white;
+		text-transform: uppercase;
+		list-style: none;
+
 		&__link {
+			display: inline-block;
+			padding: 20px;
 		}
 	}
 }

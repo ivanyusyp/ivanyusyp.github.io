@@ -1,0 +1,32 @@
+.accessories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.accessories__item {
+  border: 2px solid red;
+}
+
+.accessories__title {
+  font-size: 35px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+.accessories__subtitle {
+  font-family: "Lato", sans-serif;
+  color: #a2a2a2;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.item-headlights {
+  background-image: url("../img/accessories__headlights.jpg");
+}

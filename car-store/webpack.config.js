@@ -26,7 +26,7 @@ module.exports = {
 				use: ['style-loader', 'css-loader', 'sass-loader']
 			},
 			{
-				test: /\.(png|jpeg|gif|svg)$/,
+				test: /\.(png|jpeg|gif|svg|webp)$/,
 				loader: 'file-loader',
 				options: {
 					outputPath: 'img',

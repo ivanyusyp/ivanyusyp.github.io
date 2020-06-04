@@ -1,6 +1,6 @@
 @import "variables";
 #header {
-	background-image: url("../img/header-bg.png");
+	background-image: url("../img/tesla-with-smoke.webp");
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: "Lato", sans-serif;
@@ -9,6 +9,16 @@
 		width: 100%;
 		margin: 0px auto;
 		background-color: $dark-gray;
+	}
+	.logo__title {
+		font-family: $ubuntu;
+		color: $pink;
+		font-size: 40px;
+		font-weight: bolder;
+	}
+	.logo__subtitle {
+		text-transform: uppercase;
+		color: $white;
 	}
 	.search-container {
 		max-width: 1200px;
@@ -28,7 +38,7 @@
 		&__checkout {
 			padding: 0px 30px;
 			text-decoration: none;
-			color: $red;
+			color: $pink;
 		}
 		&__search {
 			padding: 10px;
@@ -76,7 +86,7 @@
 	}
 	.option-icon {
 		font-size: 25px;
-		color: $red;
+		color: $pink;
 	}
 	.work-hours-and-phone {
 		text-align: right;
@@ -89,7 +99,7 @@
 	}
 	.contact-icon {
 		font-size: 25px;
-		color: $red;
+		color: $pink;
 	}
 	.work-hours {
 		color: $light-gray;
@@ -98,6 +108,8 @@
 	.nav-container {
 		background-color: $black;
 		width: 100%;
+		border-top: 3px solid $blue;
+		border-bottom: 3px solid $blue;
 	}
 	.nav {
 		max-width: 1200px;

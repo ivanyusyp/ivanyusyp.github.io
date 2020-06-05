@@ -1,4 +1,3 @@
-@import "variables";
 #header {
 	background-image: url("../img/tesla-with-smoke.webp");
 	background-repeat: no-repeat;
@@ -8,7 +7,7 @@
 	.search-contact-us-container {
 		width: 100%;
 		margin: 0px auto;
-		background-color: $dark-gray;
+		background-color: $darkgray;
 	}
 	.logo__title {
 		font-family: $forLogo;
@@ -28,7 +27,7 @@
 		flex-flow: row wrap;
 		justify-content: flex-end;
 		align-items: center;
-		border-bottom: 1px solid $light-gray;
+		border-bottom: 1px solid $lightgray;
 		.search-icons {
 			padding: 4px;
 		}
@@ -43,7 +42,7 @@
 		&__search {
 			padding: 10px;
 			margin: 5px;
-			border-left: 1px solid $light-gray;
+			border-left: 1px solid $lightgray;
 			color: $white;
 			font-size: 25px;
 			text-decoration: none;
@@ -67,7 +66,7 @@
 		&__my-cart {
 			text-decoration: none;
 			color: $white;
-			border-left: 1px solid $light-gray;
+			border-left: 1px solid $lightgray;
 			text-align: center;
 			padding: 20px 0px 0px 20px;
 			font-size: 15px;
@@ -102,7 +101,7 @@
 		color: $pink;
 	}
 	.work-hours {
-		color: $light-gray;
+		color: $lightgray;
 		text-transform: uppercase;
 	}
 	.nav-container {

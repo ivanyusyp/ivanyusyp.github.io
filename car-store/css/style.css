@@ -694,7 +694,7 @@ template {
 
 #section-accessories .accesories__item {
   border: 1px solid #2c2dbc;
-  padding: 90px;
+  padding: 150px;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   -webkit-box-sizing: border-box;
@@ -874,6 +874,21 @@ template {
   margin: 0px auto;
 }
 
+.contact-us__about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0px;
+  border-bottom: 3px solid #a2a2a2;
+}
+
 .links-and-letter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -973,4 +988,58 @@ template {
   background-color: #303030;
   border: none;
   min-height: 40px;
+}
+
+.about-info {
+  max-width: 390px;
+  width: 100%;
+  text-align: left;
+}
+
+.about-info__desc {
+  font-size: 15px;
+  color: #303030;
+  font-family: "Lato", sans-serif;
+}
+
+.contact-icons {
+  color: #fa4bdd;
+  padding-right: 5px;
+}
+
+.contacts-desc {
+  font-size: 15px;
+  color: #303030;
+  font-family: "Lato", sans-serif;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 0px;
+}
+
+.copyright__desc {
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  color: #303030;
+}
+
+.text-logo {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.payment-icons {
+  width: 100px;
+  height: 40px;
 }

@@ -4,8 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CarStore</title>
+	<title>ModernСar</title>
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -52,17 +53,30 @@
 				</div>
 
 			</div>
-			<div class="nav-container">
-				<ul class="nav">
-					<li class="nav__link">home</li>
-					<li class="nav__link">services</li>
-					<li class="nav__link">about</li>
-					<li class="nav__link">reviews</li>
-					<li class="nav__link">locations</li>
-					<li class="nav__link">contacts</li>
-				</ul>
+			<div class="nav">
+				<div class="nav__container">
+					<a href="#" class="nav-items">home</a>
+					<a href="#" class="nav-items">services</a>
+					<a href="#" class="nav-items">about</a>
+					<a href="#" class="nav-items">reviews</a>
+					<a href="#" class="nav-items">locations</a>
+					<a href="#" class="nav-items">contacts</a>
+				</div>
+				<div class="overlay" id="myNav">
+					<a href="javascript:void(0)" class="closebtn " onclick="closeNav()">&times;</a>
+					<div class="overlay-content">
+						<a href="#" class="nav__link">home</a>
+						<a href="#" class="nav__link">services</a>
+						<a href="#" class="nav__link">about</a>
+						<a href="#" class="nav__link">reviews</a>
+						<a href="#" class="nav__link">locations</a>
+						<a href="#" class="nav__link">contacts</a>
+					</div>
+				</div>
+				<span class="open-nav" onclick="openNav()">&#9776;</span>
 			</div>
 
+		</div>
 	</header>
 	<section id="section-accessories" class="accessories">
 		<div class="accesories__item item-headlights">
@@ -632,8 +646,8 @@
 				</div>
 			</div>
 		</div>
-
 	</footer>
+	<script src="./js/index.js"></script>
 </body>
 
 </html>

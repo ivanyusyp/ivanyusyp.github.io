@@ -515,6 +515,12 @@ template {
   background-size: cover;
   font-family: "Lato", sans-serif;
   height: 900px;
+  /* The Overlay (background) */
+  /* Position the content inside the overlay */
+  /* The navigation links inside the overlay */
+  /* When you mouse over the navigation links, change their color */
+  /* Position the close button (top right corner) */
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 }
 
 #header .search-contact-us-container {
@@ -647,25 +653,122 @@ template {
   text-transform: uppercase;
 }
 
-#header .nav-container {
-  background-color: #030303;
+#header .open-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  #header .open-nav {
+    display: block;
+    color: #fa4bdd;
+    padding: 30px;
+    text-align: right;
+    font-size: 30px;
+  }
+}
+
+#header .overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: black;
+  /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+#header .overlay-content {
+  position: relative;
+  top: 25%;
+  /* 25% from the top */
   width: 100%;
-  border-top: 3px solid #2c2dbc;
-  border-bottom: 3px solid #2c2dbc;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+#header .overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  /* Display block instead of inline */
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  /* Transition effects on hover (color) */
+}
+
+#header .overlay a:hover,
+#header .overlay a:focus {
+  color: #f1f1f1;
+}
+
+#header .overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  #header .overlay a {
+    font-size: 20px;
+  }
+  #header .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
 
 #header .nav {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0px auto;
-  color: #ffffff;
+  background-color: #030303;
   text-transform: uppercase;
-  list-style: none;
 }
 
-#header .nav__link {
-  display: inline-block;
-  padding: 20px;
+#header .nav__container {
+  max-width: 1200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin: 0px auto;
+}
+
+#header .nav-items {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 576px) {
+  #header .nav-items {
+    display: none;
+  }
 }
 
 #section-accessories {
@@ -685,6 +788,12 @@ template {
   color: #ffffff;
 }
 
+@media only screen and (max-width: 576px) {
+  #section-accessories .accessories__title {
+    padding-top: 0px;
+  }
+}
+
 #section-accessories .accessories__subtitle {
   margin-top: -30px;
   font-size: 20px;
@@ -699,6 +808,14 @@ template {
       flex-basis: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media only screen and (max-width: 576px) {
+  #section-accessories .accesories__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 200px 20px 0px 20px;
+  }
 }
 
 #section-accessories .item-headlights {
@@ -756,6 +873,12 @@ template {
   left: 41.5%;
 }
 
+@media only screen and (max-width: 576px) {
+  .products__title::after {
+    left: 25%;
+  }
+}
+
 .products__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -767,6 +890,15 @@ template {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .products__items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
 }
 
 .sales-item {
@@ -887,6 +1019,21 @@ template {
           justify-content: space-between;
   padding: 80px 0px;
   border-bottom: 3px solid #a2a2a2;
+}
+
+@media only screen and (max-width: 576px) {
+  .contact-us__about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .links-and-letter {
@@ -1033,10 +1180,22 @@ template {
   color: #303030;
 }
 
+@media only screen and (max-width: 576px) {
+  .copyright__desc {
+    margin: 0px auto;
+  }
+}
+
 .text-logo {
   font-size: 15px;
   font-weight: bold;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 576px) {
+  .payment-methods {
+    margin: 5px auto;
+  }
 }
 
 .payment-icons {

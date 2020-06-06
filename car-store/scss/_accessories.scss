@@ -8,7 +8,11 @@
 			font-family: $mainfont;
 			color: $white;
 		}
-
+		@media only screen and (max-width: $sm) {
+			&__title {
+				padding-top: 0px;
+			}
+		}
 		&__subtitle {
 			margin-top: -30px;
 			font-size: 20px;
@@ -22,6 +26,12 @@
 			padding: 150px;
 			flex-basis: 50%;
 			box-sizing: border-box;
+		}
+		@media only screen and (max-width: $sm) {
+			&__item {
+				flex-basis: 100%;
+				padding: 200px 20px 0px 20px;
+			}
 		}
 	}
 	.item-headlights {

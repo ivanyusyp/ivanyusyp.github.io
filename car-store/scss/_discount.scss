@@ -1,0 +1,58 @@
+.discount {
+	background-image: url("../img/Teslas-charging.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 200px 0px;
+	&__container {
+	}
+
+	&__proposal {
+		max-width: 470px;
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	&__desc {
+		font-size: 82px;
+		font-family: $mainfont;
+		font-weight: bold;
+		color: $white;
+		text-transform: uppercase;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	&__price {
+		font-size: 40px;
+		font-family: $mainfont;
+		font-weight: bold;
+		color: $white;
+		text-transform: uppercase;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	&__about {
+		font-family: $mainfont;
+		font-size: 15px;
+		color: $white;
+		margin-top: 30px;
+		padding: 0px;
+	}
+
+	&__btn {
+		font-family: $mainfont;
+		font-weight: bold;
+		font-size: 20px;
+		color: $white;
+		border: none;
+		border-radius: 50px;
+		background-color: $pink;
+		max-width: 195px;
+		width: 100%;
+		min-height: 25px;
+		padding: 5px;
+		margin-top: 30px;
+	}
+}

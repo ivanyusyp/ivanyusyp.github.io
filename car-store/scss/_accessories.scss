@@ -1,0 +1,61 @@
+#section-accessories {
+	display: flex;
+	flex-flow: row wrap;
+	.accessories {
+		&__title {
+			font-size: 35px;
+			text-transform: uppercase;
+			font-family: $mainfont;
+			color: $white;
+		}
+		@media only screen and (max-width: $sm) {
+			&__title {
+				padding-top: 0px;
+			}
+		}
+		&__subtitle {
+			margin-top: -30px;
+			font-size: 20px;
+			font-weight: 500;
+			color: $lightgray;
+		}
+	}
+	.accesories {
+		&__item {
+			border: 1px solid $blue;
+			padding: 150px;
+			flex-basis: 50%;
+			box-sizing: border-box;
+		}
+		@media only screen and (max-width: $sm) {
+			&__item {
+				flex-basis: 100%;
+				padding: 200px 20px 0px 20px;
+			}
+		}
+	}
+	.item-headlights {
+		background-image: url("../img/headlights.png");
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: $gray;
+	}
+	.item-brake-systems {
+		background-image: url("../img/Breack-systems.png");
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: $darkgray;
+	}
+	.item-disks {
+		background-image: url("../img/disks.png");
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: $darkgray;
+	}
+	.item-seats {
+		background-image: url("../img/seats.png");
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: $gray;
+	}
+}

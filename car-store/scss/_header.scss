@@ -31,6 +31,15 @@
 		.search-icons {
 			padding: 4px;
 		}
+		@media only screen and (max-width: $sm) {
+			.search-container {
+				justify-content: start;
+				border-bottom: none;
+			}
+			.search-icons {
+				padding: 1px;
+			}
+		}
 
 		&__my-account,
 		&__cart,
@@ -38,6 +47,13 @@
 			padding: 0px 30px;
 			text-decoration: none;
 			color: $pink;
+		}
+		@media only screen and (max-width: $sm) {
+			&__my-account,
+			&__cart,
+			&__checkout {
+				padding: 0px 5px;
+			}
 		}
 		&__search {
 			padding: 10px;
@@ -70,6 +86,24 @@
 			text-transform: uppercase;
 			height: 80%;
 		}
+		@media only screen and (max-width: $sm) {
+			&__wish-list,
+			&__compare,
+			&__my-cart {
+				padding: 0px 0px 0px 20px;
+				border: none;
+				height: 40%;
+				font-size: 12px;
+			}
+		}
+	}
+	@media only screen and (max-width: $sm) {
+		.contact-choose-options-container {
+			text-align: center;
+			justify-content: center;
+			flex-flow: column wrap;
+			align-items: center;
+		}
 	}
 	.options-container {
 		flex-basis: 30%;
@@ -79,12 +113,27 @@
 		align-items: stretch;
 		overflow: hidden;
 	}
+	@media only screen and (max-width: $sm) {
+		.options-container {
+			flex-flow: row nowrap;
+			align-items: flex-end;
+			width: 100%;
+			overflow: visible;
+			margin: 40px auto;
+		}
+	}
 	.option-icon {
 		font-size: 25px;
 		color: $pink;
 	}
 	.work-hours-and-phone {
 		text-align: right;
+	}
+	@media only screen and (max-width: $sm) {
+		.work-hours-and-phone {
+			text-align: center;
+			padding: 10px;
+		}
 	}
 	.phone {
 		font-size: 25px;
@@ -176,6 +225,8 @@
 	.nav {
 		background-color: $black;
 		text-transform: uppercase;
+		border-top: 3px solid $blue;
+		border-bottom: 3px solid $blue;
 
 		&__container {
 			max-width: 1200px;
@@ -193,6 +244,10 @@
 		font-weight: bold;
 		color: $white;
 		padding: 30px;
+		&:hover {
+			transform: scale(1.2);
+			color: $blue;
+		}
 	}
 	@media only screen and (max-width: $sm) {
 		.nav-items {

@@ -565,10 +565,28 @@ template {
   padding: 4px;
 }
 
+@media only screen and (max-width: 576px) {
+  #header .search-container .search-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    border-bottom: none;
+  }
+  #header .search-container .search-icons {
+    padding: 1px;
+  }
+}
+
 #header .search-container__my-account, #header .search-container__cart, #header .search-container__checkout {
   padding: 0px 30px;
   text-decoration: none;
   color: #fa4bdd;
+}
+
+@media only screen and (max-width: 576px) {
+  #header .search-container__my-account, #header .search-container__cart, #header .search-container__checkout {
+    padding: 0px 5px;
+  }
 }
 
 #header .search-container__search {
@@ -609,6 +627,31 @@ template {
   height: 80%;
 }
 
+@media only screen and (max-width: 576px) {
+  #header .contact-choose-options-container__wish-list, #header .contact-choose-options-container__compare, #header .contact-choose-options-container__my-cart {
+    padding: 0px 0px 0px 20px;
+    border: none;
+    height: 40%;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #header .contact-choose-options-container {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 #header .options-container {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
@@ -627,6 +670,21 @@ template {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 576px) {
+  #header .options-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 100%;
+    overflow: visible;
+    margin: 40px auto;
+  }
+}
+
 #header .option-icon {
   font-size: 25px;
   color: #fa4bdd;
@@ -634,6 +692,13 @@ template {
 
 #header .work-hours-and-phone {
   text-align: right;
+}
+
+@media only screen and (max-width: 576px) {
+  #header .work-hours-and-phone {
+    text-align: center;
+    padding: 10px;
+  }
 }
 
 #header .phone {
@@ -738,6 +803,8 @@ template {
 #header .nav {
   background-color: #030303;
   text-transform: uppercase;
+  border-top: 3px solid #2c2dbc;
+  border-bottom: 3px solid #2c2dbc;
 }
 
 #header .nav__container {
@@ -763,6 +830,12 @@ template {
   font-weight: bold;
   color: #ffffff;
   padding: 30px;
+}
+
+#header .nav-items:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #2c2dbc;
 }
 
 @media only screen and (max-width: 576px) {
@@ -875,7 +948,8 @@ template {
 
 @media only screen and (max-width: 576px) {
   .products__title::after {
-    left: 25%;
+    content: "";
+    display: none;
   }
 }
 
@@ -1048,6 +1122,12 @@ template {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 2px solid #a2a2a2;
+}
+
+@media only screen and (max-width: 576px) {
+  .links-and-letter {
+    padding: 10px;
+  }
 }
 
 .footer-title {

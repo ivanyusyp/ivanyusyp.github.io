@@ -8,10 +8,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-	<header class="page-header">
-		<button class="btn-for-search" id="searchBtn" type="submit">Уточнити пошук</button>
-	</header>
+<body id = 'searchPage'>
 	<section class="sidebar">
 		<label for="categories">
 			Типи транспорту
@@ -19,9 +16,20 @@
 			<select name="categories" id="categories">
 			</select>
 		</label>
-
-
+		<label for="bodystyles">
+			Тип кузову
+			<br>
+			<select name="bodystyles" id="bodystyles">
+			</select>
+		</label>
+		<label for="marks">
+			Марка
+			<br>
+			<select name="marks" id="marks">
+			</select>
+		</label>
 	</section>
+	<div id="loader"></div>
 	<main class="output-container" id="searchOutput">
 	</main>
 	<footer class="page-footer">footer</footer>

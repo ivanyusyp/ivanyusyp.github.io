@@ -17,7 +17,7 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'search.html',
-			'base': '/search/index.html',
+			// 'base': '/search/index.html',
 			template: './search/index.html'
 		})
 

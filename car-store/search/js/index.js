@@ -2,11 +2,14 @@ const search = document.getElementById("searchBtn");
 const output = document.getElementById("searchOutput");
 const categoriesSelect = document.getElementById('categories');
 const bodyStyles = document.querySelector('#bodystyles');
+const carBrands = document.querySelector('#marks');
 const API_KEY = 'wF83X8QPO0vZqpQ50l8OfCcdjGSNU74TbPOTADl3';
 const BASE_URL = 'https://developers.ria.com/auto/';
 const preloader = document.querySelector('#loader');
-const currentUrl = window.location.href;
-let carBlockElements;
+const urlParams = new URLSearchParams(window.location.search);
+let carBlockElements,
+	categoriesTargetValue,
+	bodyStylesTargetValue;
 const addImgToCarBlocks = ({ photoData: { seoLinkB } }) => {
 	// console.log('photoData, ', seoLinkB);
 	const imgSrc = seoLinkB;
@@ -51,9 +54,17 @@ const createContainerBlocks = ({ secureKey, ...data }) => {
 	addTitleAndPrice(data);
 	addRaceAndYear(data);
 }
+const forEmptyResult = () => {
+	const emptyResult = document.createElement('p');
+	emptyResult.setAttribute('class', 'empty-message');
+	emptyResult.innerText = "За вашим запитом нічого не знайдено.";
+	output.appendChild(emptyResult);
+}
 const fetchCarDataById = (item) => {
 	fetch(`${BASE_URL}info?api_key=${API_KEY}&auto_id=${item}`)
-		.then(function (response) { return response.json(); })
+		.then((response) => {
+			return response.json();
+		})
 		.then((data) => {
 			createContainerBlocks(data);
 			// console.log(data, "DATA_FOR_EACH");
@@ -61,40 +72,18 @@ const fetchCarDataById = (item) => {
 }
 const fetchForCarsCategories = () => {
 	fetch(`${BASE_URL}categories/?api_key=${API_KEY}`)
-		.then(function (response) { return response.json(); })
+		.then((response) => {
+			return response.json();
+		})
 		.then((data) => {
 			console.log(data, "DATA_FOR_CATEGORIES");
 		})
 }
-const setOptionForCategories = ({ name, value }) => {
-
-	const categoriesOption = document.createElement('option');
-	categoriesOption.setAttribute('name', `${name}`);
-	categoriesOption.setAttribute('value', `${value}`);
-	categoriesOption.innerText = name;
-	categoriesSelect.appendChild(categoriesOption);
-}
-const fetchOnChangeCategories = (e) => {
-	fetch(`${BASE_URL}search?api_key=${API_KEY}&category_id=${e}`)
-		.then(function (response) { return response.json(); })
-		.then(function (data) {
-			const dataResult = data.result;
-			const resultSearchResult = dataResult.search_result;
-			const autoIdArray = resultSearchResult.ids;
-			autoIdArray.forEach(item => {
-				fetchCarDataById(item);
-			})
-		})
-		.finally(() => {
-			preloader.style.display = 'none';
-		})
-}
-const fetchOnChangeBodyStyles = (e) => {
-	fetch(`${BASE_URL}search?api_key=${API_KEY}&category_id=${e}&bodystyle__id=${e}`)
-}
 const fetchForBodyStyles = (e) => {
 	fetch(`${BASE_URL}categories/${e}/bodystyles?api_key=${API_KEY}`)
-		.then(function (response) { return response.json(); })
+		.then((response) => {
+			return response.json();
+		})
 		.then((data) => {
 			data.forEach(item => {
 				setOptionForBodyStyles(item);
@@ -102,7 +91,25 @@ const fetchForBodyStyles = (e) => {
 			console.log(data, "DATA_FOR_BODYSTYLES");
 		})
 }
-
+const fetchForMarks = (e) => {
+	fetch(`${BASE_URL}categories/${e}/marks?api_key=${API_KEY}`)
+		.then((response) => {
+			return response.json();
+		})
+		.then((data) => {
+			data.forEach(item => {
+				setOptionForMarks(item);
+			})
+			console.log(data, '==================================DATA FOR MARKS=======================');
+		})
+}
+const setOptionForCategories = ({ name, value }) => {
+	const categoriesOption = document.createElement('option');
+	categoriesOption.setAttribute('name', `${name}`);
+	categoriesOption.setAttribute('value', `${value}`);
+	categoriesOption.innerText = name;
+	categoriesSelect.appendChild(categoriesOption);
+}
 const setOptionForBodyStyles = ({ name, value }) => {
 	const bodyStylesOption = document.createElement('option');
 	bodyStylesOption.setAttribute('name', `${name}`);
@@ -110,7 +117,79 @@ const setOptionForBodyStyles = ({ name, value }) => {
 	bodyStylesOption.innerText = name;
 	bodyStyles.appendChild(bodyStylesOption);
 }
-
+const setOptionForMarks = ({ name, value }) => {
+	const marksOptions = document.createElement('option');
+	marksOptions.setAttribute('name', `${name}`);
+	marksOptions.setAttribute('value', `${value}`);
+	marksOptions.innerText = name;
+	carBrands.appendChild(marksOptions);
+}
+const fetchOnChangeCategories = (e) => {
+	fetch(`${BASE_URL}search?api_key=${API_KEY}&category_id=${e}`)
+		.then((response) => {
+			return response.json();
+		})
+		.then((data) => {
+			const dataResult = data.result;
+			const resultSearchResult = dataResult.search_result;
+			const count = resultSearchResult.count;
+			if (count === 0) {
+				forEmptyResult();
+			} else {
+				const autoIdArray = resultSearchResult.ids;
+				autoIdArray.forEach(item => {
+					fetchCarDataById(item);
+				})
+			}
+		})
+		.finally(() => {
+			preloader.style.display = 'none';
+		})
+}
+const fetchOnChangeBodyStyles = (stringUrlParams) => {
+	fetch(`${BASE_URL}search?api_key=${API_KEY}&${stringUrlParams}`)
+		.then((response) => {
+			return response.json();
+		})
+		.then((data) => {
+			const dataResult = data.result;
+			const resultSearchResult = dataResult.search_result;
+			const count = resultSearchResult.count;
+			if (count === 0) {
+				forEmptyResult();
+			} else {
+				const autoIdArray = resultSearchResult.ids;
+				autoIdArray.forEach(item => {
+					fetchCarDataById(item);
+				})
+			}
+		})
+		.finally(() => {
+			preloader.style.display = 'none';
+		})
+}
+const fetchOnChangeMarks = (stringUrlParams) => {
+	fetch(`${BASE_URL}search?api_key=${API_KEY}&${stringUrlParams}`)
+		.then((response) => {
+			return response.json();
+		})
+		.then((data) => {
+			const dataResult = data.result;
+			const resultSearchResult = dataResult.search_result;
+			const count = resultSearchResult.count;
+			if (count === 0) {
+				forEmptyResult();
+			} else {
+				const autoIdArray = resultSearchResult.ids;
+				autoIdArray.forEach(item => {
+					fetchCarDataById(item);
+				})
+			}
+		})
+		.finally(() => {
+			preloader.style.display = 'none';
+		})
+}
 window.onload = (e) => {
 	fetch(`${BASE_URL}search?api_key=${API_KEY}&category_id=1`)
 		.then(function (response) { return response.json(); })
@@ -134,18 +213,40 @@ if (categoriesSelect) categoriesSelect.addEventListener('change', (e) => {
 	preloader.style.display = "block";
 	output.innerHTML = '';
 	bodyStyles.innerHTML = "";
+	carBrands.innerHTML = "";
+	categoriesTargetValue = e.target.value;
+	urlParams.set('category_id', categoriesTargetValue);
 	fetchOnChangeCategories(e.target.value);
 	console.log(e.target.value);
 	fetchForBodyStyles(e.target.value);
-	console.log(currentUrl, '===================CURRENT URL========================');
+	fetchForMarks(categoriesTargetValue);
+	return categoriesTargetValue;
 })
 if (bodyStyles) bodyStyles.addEventListener('change', (e) => {
+	e.preventDefault();
+	console.log(categoriesTargetValue);
+	console.log(e.target.value);
 	preloader.style.display = "block";
 	output.innerHTML = '';
-	bodyStyles.innerHTML = "";
-	// fetch(`${BASE_URL}search?api_key=${API_KEY}&category_id=1&bodystyle__id=3`)
-	// 	.then(function (response) { return response.json(); })
-	// 	.then((data) => {
-	// 		console.log(data, "DATA_FOR_BODYSTYLE3");
-	// 	})
+	bodyStylesTargetValue = e.target.value;
+	// urlParams.delete('marka_id');
+	urlParams.set('bodystyle', bodyStylesTargetValue);
+	const stringUrlParams = urlParams.toString();
+	console.log(stringUrlParams, '=============STRING==============');
+	history.pushState({}, '', '?' + stringUrlParams);
+	fetchOnChangeBodyStyles(stringUrlParams);
+	return bodyStylesTargetValue;
+})
+if (carBrands) carBrands.addEventListener('change', (e) => {
+	e.preventDefault();
+	preloader.style.display = "block";
+	output.innerHTML = '';
+	marksTargetValue = e.target.value;
+	console.log(marksTargetValue, "===================MARKS TAR VAL================");
+	// urlParams.delete('bodystyle');
+	urlParams.set('marka_id', marksTargetValue);
+	const stringUrlParams = urlParams.toString();
+	console.log(stringUrlParams, '=================URL PARAMS===================');
+	fetchOnChangeMarks(stringUrlParams);
+	return marksTargetValue;
 })

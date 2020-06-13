@@ -20,8 +20,6 @@ module.exports = {
 			// 'base': '/search/index.html',
 			template: './search/index.html'
 		})
-
-
 	],
 	devServer: {
 		port: 4200

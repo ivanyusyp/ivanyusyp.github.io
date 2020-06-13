@@ -149,12 +149,15 @@
 		color: $lightgray;
 		text-transform: uppercase;
 	}
+	.icon-open-nav {
+		cursor: pointer;
+	}
 	.open-nav {
 		display: none;
 	}
 	@media only screen and (max-width: $sm) {
 		.open-nav {
-			display: block;
+			display: inline-block;
 			color: $pink;
 			padding: 30px;
 			text-align: right;
@@ -219,6 +222,9 @@
 			font-size: 40px;
 			top: 15px;
 			right: 35px;
+		}
+		.closebtn {
+			cursor: pointer;
 		}
 	}
 

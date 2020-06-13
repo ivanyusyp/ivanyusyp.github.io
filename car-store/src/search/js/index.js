@@ -1,3 +1,4 @@
+
 const search = document.getElementById("searchBtn");
 const output = document.getElementById("searchOutput");
 const categoriesSelect = document.getElementById('categories');

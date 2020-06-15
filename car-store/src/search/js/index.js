@@ -232,10 +232,14 @@ if (categoriesSelect) categoriesSelect.addEventListener('change', (e) => {
 	fetchOnChangeCategories(e.target.value);
 	console.log(e.target.value);
   bodyStyles.innerHTML = '';
-  const emptyOption = document.createElement('option');
-	emptyOption.innerText ='Оберіть';
-  bodyStyles.appendChild(emptyOption);
+  const emptyOptionBodyStyles = document.createElement('option');
+	emptyOptionBodyStyles.innerText ='Оберіть';
+  bodyStyles.appendChild(emptyOptionBodyStyles);
 	fetchForBodyStyles(e.target.value);
+  carBrands.innerHTML = '';
+  const emptyOptionMarks = document.createElement('option');
+	emptyOptionMarks.innerText ='Оберіть';
+  carBrands.appendChild(emptyOptionMarks);
 	fetchForMarks(categoriesTargetValue);
 	return categoriesTargetValue;
 })

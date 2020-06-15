@@ -5,7 +5,8 @@ module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	entry: {
 		main: './index.js',
-		search: './search/index.js'
+		search: './search/index.js',
+		carAbout: './car-about/index.js'
 	},
 	output: {
 		filename: "[name].js",
@@ -19,6 +20,10 @@ module.exports = {
 			filename: 'search.html',
 			// 'base': '/search/index.html',
 			template: './search/index.html'
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'car.about.html',
+			template: './car-about/index.html'
 		})
 	],
 	devServer: {

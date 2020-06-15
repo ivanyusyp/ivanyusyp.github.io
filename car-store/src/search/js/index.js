@@ -104,6 +104,18 @@ const fetchForMarks = (e) => {
 			console.log(data, '==================================DATA FOR MARKS=======================');
 		})
 }
+// const fetchForModels = (e) => {
+// 	fetch(`${BASE_URL}categories/${e}/marks/${e}/_group?api_key=${API_KEY}`)
+// 		.then((response) => {
+// 			return response.json();
+// 		})
+// 		.then((data) => {
+// 			data.forEach(item => {
+// 				setOptionsForModels(item);
+// 			})
+// 			console.log(data, '================================DATA FOR MODELS=========================');
+// 		})
+// }
 const setOptionForCategories = ({ name, value }) => {
 	const categoriesOption = document.createElement('option');
 	categoriesOption.setAttribute('name', `${name}`);
@@ -211,14 +223,18 @@ window.onload = (e) => {
 		})
 }
 if (categoriesSelect) categoriesSelect.addEventListener('change', (e) => {
-	preloader.style.display = "block";
+		preloader.style.display = "block";
 	output.innerHTML = '';
-	bodyStyles.innerHTML = "";
-	carBrands.innerHTML = "";
 	categoriesTargetValue = e.target.value;
 	urlParams.set('category_id', categoriesTargetValue);
+	const stringUrlParams = urlParams.toString();
+	history.pushState({}, '', '?' + stringUrlParams);
 	fetchOnChangeCategories(e.target.value);
 	console.log(e.target.value);
+  bodyStyles.innerHTML = '';
+  const emptyOption = document.createElement('option');
+	emptyOption.innerText ='Оберіть';
+  bodyStyles.appendChild(emptyOption);
 	fetchForBodyStyles(e.target.value);
 	fetchForMarks(categoriesTargetValue);
 	return categoriesTargetValue;
@@ -250,4 +266,4 @@ if (carBrands) carBrands.addEventListener('change', (e) => {
 	console.log(stringUrlParams, '=================URL PARAMS===================');
 	fetchOnChangeMarks(stringUrlParams);
 	return marksTargetValue;
-})
+}) 

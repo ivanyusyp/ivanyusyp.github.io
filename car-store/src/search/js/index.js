@@ -20,7 +20,6 @@ const addImgToCarBlocks = ({ photoData: { seoLinkB } }) => {
 	img.setAttribute('width', '240px');
 	img.setAttribute('height', 'auto');
 	carBlockElements.appendChild(img);
-
 }
 const addTitleAndPrice = ({ title, USD }) => {
 	// console.log('title', title, 'USD', USD);
@@ -50,7 +49,6 @@ const createContainerBlocks = ({ secureKey, ...data }) => {
 	carBlock.setAttribute('class', 'cars__blocks');
 	carBlock.setAttribute('id', `${secureKey}`);
 	output.appendChild(carBlock);
-	carBlockElements = document.getElementById(`${secureKey}`);
 	addImgToCarBlocks(data);
 	addTitleAndPrice(data);
 	addRaceAndYear(data);
@@ -223,7 +221,7 @@ window.onload = (e) => {
 		})
 }
 if (categoriesSelect) categoriesSelect.addEventListener('change', (e) => {
-		preloader.style.display = "block";
+	preloader.style.display = "block";
 	output.innerHTML = '';
 	categoriesTargetValue = e.target.value;
 	urlParams.set('category_id', categoriesTargetValue);
@@ -231,15 +229,15 @@ if (categoriesSelect) categoriesSelect.addEventListener('change', (e) => {
 	history.pushState({}, '', '?' + stringUrlParams);
 	fetchOnChangeCategories(e.target.value);
 	console.log(e.target.value);
-  bodyStyles.innerHTML = '';
-  const emptyOptionBodyStyles = document.createElement('option');
-	emptyOptionBodyStyles.innerText ='Оберіть';
-  bodyStyles.appendChild(emptyOptionBodyStyles);
+	bodyStyles.innerHTML = '';
+	const emptyOptionBodyStyles = document.createElement('option');
+	emptyOptionBodyStyles.innerText = 'Оберіть';
+	bodyStyles.appendChild(emptyOptionBodyStyles);
 	fetchForBodyStyles(e.target.value);
-  carBrands.innerHTML = '';
-  const emptyOptionMarks = document.createElement('option');
-	emptyOptionMarks.innerText ='Оберіть';
-  carBrands.appendChild(emptyOptionMarks);
+	carBrands.innerHTML = '';
+	const emptyOptionMarks = document.createElement('option');
+	emptyOptionMarks.innerText = 'Оберіть';
+	carBrands.appendChild(emptyOptionMarks);
 	fetchForMarks(categoriesTargetValue);
 	return categoriesTargetValue;
 })
@@ -270,4 +268,6 @@ if (carBrands) carBrands.addEventListener('change', (e) => {
 	console.log(stringUrlParams, '=================URL PARAMS===================');
 	fetchOnChangeMarks(stringUrlParams);
 	return marksTargetValue;
-}) 
+})
+
+

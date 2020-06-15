@@ -20,7 +20,6 @@ const addImgToCarBlocks = ({ photoData: { seoLinkB } }) => {
 	img.setAttribute('width', '240px');
 	img.setAttribute('height', 'auto');
 	carBlockElements.appendChild(img);
-
 }
 const addTitleAndPrice = ({ title, USD }) => {
 	// console.log('title', title, 'USD', USD);
@@ -49,18 +48,39 @@ const createContainerBlocks = ({ secureKey, ...data }) => {
 	const carBlock = document.createElement('div');
 	carBlock.setAttribute('class', 'cars__blocks');
 	carBlock.setAttribute('id', `${secureKey}`);
+	//! carBlock.setAttribute('car-id', `${id}`);
 	output.appendChild(carBlock);
 	carBlockElements = document.getElementById(`${secureKey}`);
+	carBlockElements.addEventListener('click', () => {
+		console.log(secureKey, '=========CLICKED=====================');
+		window.open('./car.about.html', '_blank');
+	})
 	addImgToCarBlocks(data);
 	addTitleAndPrice(data);
 	addRaceAndYear(data);
 }
+const addedDataCarsAbout = () => {
+	const outputCarAbout = document.querySelector('#output-about-car');
+
+}
+
+
+
 const forEmptyResult = () => {
 	const emptyResult = document.createElement('p');
 	emptyResult.setAttribute('class', 'empty-message');
 	emptyResult.innerText = "За вашим запитом нічого не знайдено.";
 	output.appendChild(emptyResult);
 }
+// !const fetchCarDataForCarAbout = (item) => {
+// 	fetch(`${BASE_URL}info?api_key=${API_KEY}&auto_id=${item}`)
+// 		.then((response) => {
+// 			return response.json();
+// 		})
+// 		.then((data) => {
+// 			console.log(data, "===================DATA ABOUT====================");
+// 		})
+// !}
 const fetchCarDataById = (item) => {
 	fetch(`${BASE_URL}info?api_key=${API_KEY}&auto_id=${item}`)
 		.then((response) => {
@@ -223,7 +243,7 @@ window.onload = (e) => {
 		})
 }
 if (categoriesSelect) categoriesSelect.addEventListener('change', (e) => {
-		preloader.style.display = "block";
+	preloader.style.display = "block";
 	output.innerHTML = '';
 	categoriesTargetValue = e.target.value;
 	urlParams.set('category_id', categoriesTargetValue);
@@ -231,15 +251,15 @@ if (categoriesSelect) categoriesSelect.addEventListener('change', (e) => {
 	history.pushState({}, '', '?' + stringUrlParams);
 	fetchOnChangeCategories(e.target.value);
 	console.log(e.target.value);
-  bodyStyles.innerHTML = '';
-  const emptyOptionBodyStyles = document.createElement('option');
-	emptyOptionBodyStyles.innerText ='Оберіть';
-  bodyStyles.appendChild(emptyOptionBodyStyles);
+	bodyStyles.innerHTML = '';
+	const emptyOptionBodyStyles = document.createElement('option');
+	emptyOptionBodyStyles.innerText = 'Оберіть';
+	bodyStyles.appendChild(emptyOptionBodyStyles);
 	fetchForBodyStyles(e.target.value);
-  carBrands.innerHTML = '';
-  const emptyOptionMarks = document.createElement('option');
-	emptyOptionMarks.innerText ='Оберіть';
-  carBrands.appendChild(emptyOptionMarks);
+	carBrands.innerHTML = '';
+	const emptyOptionMarks = document.createElement('option');
+	emptyOptionMarks.innerText = 'Оберіть';
+	carBrands.appendChild(emptyOptionMarks);
 	fetchForMarks(categoriesTargetValue);
 	return categoriesTargetValue;
 })

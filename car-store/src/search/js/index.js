@@ -1,5 +1,4 @@
-
-const search = document.getElementById("searchBtn");
+const { data } = require("jquery");
 const output = document.getElementById("searchOutput");
 const categoriesSelect = document.getElementById('categories');
 const bodyStyles = document.querySelector('#bodystyles');
@@ -10,8 +9,9 @@ const preloader = document.querySelector('#loader');
 const urlParams = new URLSearchParams(window.location.search);
 let carBlockElements,
 	categoriesTargetValue,
-	bodyStylesTargetValue;
-const addImgToCarBlocks = ({ photoData: { seoLinkB } }) => {
+	bodyStylesTargetValue,
+	idAuto;
+const addImgToCarBlocks = ({ photoData: { seoLinkB }, autoId }) => {
 	// console.log('photoData, ', seoLinkB);
 	const imgSrc = seoLinkB;
 	const img = document.createElement('img');
@@ -19,68 +19,60 @@ const addImgToCarBlocks = ({ photoData: { seoLinkB } }) => {
 	img.setAttribute('src', `${imgSrc}`);
 	img.setAttribute('width', '240px');
 	img.setAttribute('height', 'auto');
+	img.setAttribute('id', autoId);
 	carBlockElements.appendChild(img);
 }
-const addTitleAndPrice = ({ title, USD }) => {
+const addTitleAndPrice = ({ title, USD, autoId }) => {
 	// console.log('title', title, 'USD', USD);
 	const carName = document.createElement('p');
 	const carCost = document.createElement('p');
 	carCost.innerText = 'Вартість: ' + '$' + USD;
 	carCost.setAttribute('class', 'cars__cost');
+	carCost.setAttribute('id', autoId);
 	carName.innerText = title;
 	carName.setAttribute("class", "cars__title");
+	carName.setAttribute('id', autoId);
 	carBlockElements.appendChild(carName);
 	carBlockElements.appendChild(carCost);
 }
-const addRaceAndYear = ({ autoData: { raceInt, year } }) => {
+const addRaceAndYear = ({ autoData: { raceInt, year, autoId } }) => {
 	// console.log('race', raceInt, "year", year);
 	const raceValue = document.createElement('p');
 	raceValue.setAttribute('class', 'cars__race');
+	raceValue.setAttribute('id', autoId);
 	raceValue.innerText = 'Пробіг: ' + raceInt + "тис. км.";
 	carBlockElements.appendChild(raceValue);
 	const yearOfManufacture = document.createElement('p');
 	yearOfManufacture.setAttribute('class', 'cars__year');
+	yearOfManufacture.setAttribute('id', autoId);
 	yearOfManufacture.innerText = "Рік виготовлення: " + year + "p.";
 	carBlockElements.appendChild(yearOfManufacture);
 }
-const createContainerBlocks = ({ secureKey, ...data }) => {
-	// console.log('userId', secureKey);
+const createContainerBlocks = ({ autoData: { autoId }, ...data }) => {
+	// console.log('userId', autoId);
 	const carBlock = document.createElement('div');
 	carBlock.setAttribute('class', 'cars__blocks');
-	carBlock.setAttribute('id', `${secureKey}`);
-	//! carBlock.setAttribute('car-id', `${id}`);
+	carBlock.setAttribute('id', `${autoId}`);
 	output.appendChild(carBlock);
-	carBlockElements = document.getElementById(`${secureKey}`);
-	carBlockElements.addEventListener('click', () => {
-		console.log(secureKey, '=========CLICKED=====================');
+	carBlockElements = document.getElementById(`${autoId}`);
+	console.log(carBlock);
+	carBlock.addEventListener('click', (e) => {
 		window.open('./car.about.html', '_blank');
+		console.log(e.target.id, '=========CLICKED=====================');
+		localStorage.setItem('autoId', e.target.id);
+		localStorage.removeItem('autoIds');
 	})
-	addImgToCarBlocks(data);
-	addTitleAndPrice(data);
-	addRaceAndYear(data);
+	addImgToCarBlocks({ ...data, autoId });
+	addTitleAndPrice({ ...data, autoId });
+	addRaceAndYear({ ...data, autoId });
+	return carBlockElements;
 }
-const addedDataCarsAbout = () => {
-	const outputCarAbout = document.querySelector('#output-about-car');
-
-}
-
-
-
 const forEmptyResult = () => {
 	const emptyResult = document.createElement('p');
 	emptyResult.setAttribute('class', 'empty-message');
 	emptyResult.innerText = "За вашим запитом нічого не знайдено.";
 	output.appendChild(emptyResult);
 }
-// !const fetchCarDataForCarAbout = (item) => {
-// 	fetch(`${BASE_URL}info?api_key=${API_KEY}&auto_id=${item}`)
-// 		.then((response) => {
-// 			return response.json();
-// 		})
-// 		.then((data) => {
-// 			console.log(data, "===================DATA ABOUT====================");
-// 		})
-// !}
 const fetchCarDataById = (item) => {
 	fetch(`${BASE_URL}info?api_key=${API_KEY}&auto_id=${item}`)
 		.then((response) => {
@@ -88,7 +80,7 @@ const fetchCarDataById = (item) => {
 		})
 		.then((data) => {
 			createContainerBlocks(data);
-			// console.log(data, "DATA_FOR_EACH");
+			console.log(data, "DATA_FOR_EACH");
 		})
 }
 const fetchForCarsCategories = () => {

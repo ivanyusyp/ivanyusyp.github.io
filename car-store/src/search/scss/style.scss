@@ -1,3 +1,6 @@
+@import "fonts";
+@import "variables";
+@import "footer";
 body#searchPage {
 	padding: 0px;
 	margin: 0px;
@@ -19,13 +22,11 @@ body#searchPage {
 	background-color: rgba(124, 132, 148, 0.267);
 }
 .output-container {
-	grid-area: main;
 	max-width: 1200px;
 	width: 100%;
 	margin: 0px auto;
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
+	flex-flow: column wrap;
 }
 p {
 	margin: 0px;
@@ -33,7 +34,8 @@ p {
 }
 .cars {
 	&__blocks {
-		max-width: 240px;
+		align-self: center;
+		max-width: 600px;
 		width: 100%;
 		margin: 5px;
 		border: 1px solid rgb(218, 216, 216);
@@ -64,8 +66,9 @@ p {
 	}
 }
 .sidebar {
+	position: sticky;
 	width: 400px;
-	background-color: rgb(127, 136, 156);
+	background-color: #607d8b;
 	padding: 10px;
 	text-align: center;
 	display: flex;

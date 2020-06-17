@@ -34,7 +34,7 @@ const addTitleAndPrice = ({ title, USD, autoId }) => {
 	carBlockElements.appendChild(carName);
 	carBlockElements.appendChild(carCost);
 }
-const addRaceAndYear = ({ autoData: { raceInt, year }, autoId }) => {
+const addRaceAndYear = ({ raceInt, year, autoId }) => {
 	// console.log('race', raceInt, "year", year);
 	const raceValue = document.createElement('p');
 	raceValue.setAttribute('class', 'cars__race');
@@ -47,7 +47,7 @@ const addRaceAndYear = ({ autoData: { raceInt, year }, autoId }) => {
 	yearOfManufacture.innerText = "Рік виготовлення: " + year + "p.";
 	carBlockElements.appendChild(yearOfManufacture);
 }
-const createContainerBlocks = ({ autoData: { autoId }, ...data }) => {
+const createContainerBlocks = ({ autoData: { autoId, ...autodata }, ...data }) => {
 	// console.log('userId', autoId);
 	const carBlock = document.createElement('div');
 	carBlock.setAttribute('class', 'cars__blocks');
@@ -63,7 +63,8 @@ const createContainerBlocks = ({ autoData: { autoId }, ...data }) => {
 	})
 	addImgToCarBlocks({ ...data, autoId });
 	addTitleAndPrice({ ...data, autoId });
-	addRaceAndYear({ ...data, autoId });
+	console.log('========================', { ...autodata, autoId });
+	addRaceAndYear({ ...autodata, autoId });
 	return carBlockElements;
 }
 const forEmptyResult = () => {

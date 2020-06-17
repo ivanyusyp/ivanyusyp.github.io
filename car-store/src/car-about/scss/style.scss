@@ -1,10 +1,14 @@
 #about-car {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	background-color: rgb(140, 170, 180);
+	background-color: grey;
 }
 .about-car {
 	&__container {
-		background-color: mintcream;
+		background-color: transparent;
+	}
+	&__header {
+		background-image: none;
+		height: auto;
 	}
 }
 .carousel-car-about,
@@ -18,15 +22,17 @@
 	margin-top: 50px;
 	&__title {
 		font-size: 25px;
+		color: white;
 	}
 	&__price {
 		font-size: 20px;
-		color: green;
+		color: pink;
 	}
 	&__attribute {
-		color: rgb(158, 151, 151);
+		color: white;
 	}
 	&__description {
+		color: lightgray;
 	}
 }
 

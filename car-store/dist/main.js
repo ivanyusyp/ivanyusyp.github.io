@@ -260,7 +260,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\r\nconst openBtn = document.querySelector('.icon-open-nav');\r\nconst closeBtn = document.querySelector('.closebtn');\r\nconsole.log(openBtn);\r\nopenBtn.addEventListener('click', openNav);\r\ncloseBtn.addEventListener('click', closeNav);\r\nfunction openNav() {\r\n\tdocument.getElementById(\"myNav\").style.width = \"100%\";\r\n\tconsole.log('dsaaaaaaaaaa');\r\n}\r\n\r\nfunction closeNav() {\r\n\tdocument.getElementById(\"myNav\").style.width = \"0%\";\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./js/index.js?");
+eval("\r\nconst openBtn = document.querySelector('.icon-open-nav');\r\nconst closeBtn = document.querySelector('.closebtn');\r\nconsole.log(openBtn);\r\nopenBtn.addEventListener('click', openNav);\r\ncloseBtn.addEventListener('click', closeNav);\r\nfunction openNav() {\r\n\tdocument.getElementById(\"myNav\").style.width = \"100%\";\r\n}\r\n\r\nfunction closeNav() {\r\n\tdocument.getElementById(\"myNav\").style.width = \"0%\";\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./js/index.js?");
 
 /***/ }),
 

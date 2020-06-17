@@ -1,0 +1,45 @@
+#about-car {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background-color: grey;
+}
+.about-car {
+	&__container {
+		background-color: transparent;
+	}
+	&__header {
+		background-image: none;
+		height: auto;
+	}
+}
+.carousel-car-about,
+.carousel-car-about-in {
+	height: 800px;
+	width: 100%;
+}
+#about-car-title {
+}
+.car-about {
+	margin-top: 50px;
+	&__title {
+		font-size: 25px;
+		color: white;
+	}
+	&__price {
+		font-size: 20px;
+		color: pink;
+	}
+	&__attribute {
+		color: white;
+	}
+	&__description {
+		color: lightgray;
+	}
+}
+
+.price {
+	&__EUR,
+	&__UAH {
+		font-size: 15px;
+		color: lightgray;
+	}
+}

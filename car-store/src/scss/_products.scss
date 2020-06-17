@@ -76,6 +76,9 @@
 	}
 }
 .subwoofer-item {
+	background: url("../img/subwoofer-item.png");
+	background-repeat: no-repeat;
+	background-size: 20%;
 }
 .sales-item {
 	&__rate {
@@ -84,10 +87,19 @@
 	}
 }
 .headlights-item {
+	background: url("../img/headlight-item.png");
+	background-repeat: no-repeat;
+	background-position: top;
 }
 .seats-item {
+	background: url("../img/seats.png");
+	background-repeat: no-repeat;
 }
 .audio-system-item {
+	background: url("../img/audiosystem-item.png");
+	background-repeat: no-repeat;
 }
 .disk-item {
+	background: url("../img/disk-item.png");
+	background-repeat: no-repeat;
 }

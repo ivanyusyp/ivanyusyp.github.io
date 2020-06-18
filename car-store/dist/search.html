@@ -8,6 +8,68 @@
 </head>
 
 <body id='searchPage'>
+	<header class="searchPage__heading" id='heading'>
+		<div class="search-contact-us-container">
+			<div class="search-container">
+				<a href="#" class="search-container__my-account option-search-container">
+					<span class="icon-avatar search-icons"></span> Мій аккаунт </a>
+				<a href="#" class="search-container__cart option-search-container">
+					<span class="icon-cart-plus search-icons"></span> Кошик </a>
+				<a href="#" class="search-container__checkout option-search-container">
+					<span class="icon-check-circle search-icons"></span> Перевіряти </a>
+				<a href="search.html" class="search-container__search">
+					<span class="icon-search"></span></a>
+			</div>
+			<div class="contact-choose-options-container">
+				<div class="contact-choose-options-container__logo">
+					<span class="logo__title">ModernСar</span>
+					<br>
+					<span class="logo__subtitle">best car seller</span>
+				</div>
+				<div class="work-hours-and-phone">
+					<p class="phone">
+						<span class="icon-mobile contact-icon"></span>
+						+123 456 7890
+					</p>
+					<p class="work-hours">
+						Пн-пт: 8:30 - 19:30; Сб-Нд: з 9:30 до 16:30
+					</p>
+				</div>
+				<div class="options-container">
+					<a href="#" class="contact-choose-options-container__wish-list">
+						<span class="icon-favorite option-icon"></span>
+						<br>
+						Список бажань</a>
+					<a href="#" class="contact-choose-options-container__compare">
+						<span class="icon-car option-icon"></span>
+						<br>
+						Порівняти</a>
+				</div>
+
+			</div>
+			<div class="nav">
+				<div class="nav__container">
+					<a href="./index.html" class="nav__link">головна</a>
+					<a href="#ourContacts" class="nav__link">послуги</a>
+					<a href="#ourContacts" class="nav__link">про нас</a>
+					<a href="#sales" class="nav__link">огляди</a>
+					<a href="#ourContacts" class="nav__link">наші контакти</a>
+				</div>
+				<div class="overlay" id="myNav">
+					<a href="javascript:void(0)" class="closebtn">&times;</a>
+					<div class="overlay-content">
+						<a href="./index.html" class="nav__link">головна</a>
+						<a href="#ourContacts" class="nav__link">послуги</a>
+						<a href="#ourContacts" class="nav__link">про нас</a>
+						<a href="#sales" class="nav__link">огляди</a>
+						<a href="#ourContacts" class="nav__link">наші контакти</a>
+					</div>
+				</div>
+				<span class="open-nav icon-open-nav">&#9776;</span>
+			</div>
+
+		</div>
+	</header>
 	<div class="sidebar-main-container">
 		<section class="sidebar">
 			<div class="form-group align-items-center">
@@ -35,32 +97,33 @@
 		<main class="output-container" id="searchOutput">
 		</main>
 	</div>
-	<footer class="contact-us">
+	<footer id='ourContacts' class="contact-us">
 		<div class="contact-us__container">
 			<div class="links-and-letter">
 				<div class="quick-links">
-					<h3 class="quick-links__title footer-title">quick links</h3>
+					<h3 class="quick-links__title footer-title">швидкі посилання</h3>
 					<ul class="links">
-						<li class="links__item">About Us</li>
-						<li class="links__item">Customer Service</li>
-						<li class="links__item">Privacy Policy</li>
-						<li class="links__item">Site Map</li>
-						<li class="links__item">Search Terms</li>
-						<li class="links__item">Advanced Search</li>
-						<li class="links__item">Order and Returns</li>
-						<li class="links__item">Contact Us</li>
+						<li class="links__item">Про нас</li>
+						<li class="links__item">Обслуговування клієнтів</li>
+						<li class="links__item">Політика конфіденційності</li>
+						<li class="links__item">Карта сайту</li>
+						<li class="links__item">Умови пошуку</li>
+						<li class="links__item">Розширений пошук</li>
+						<li class="links__item">Замовлення та повернення</li>
+						<li class="links__item">Зв'яжіться з нами</li>
 					</ul>
 				</div>
 				<div class="letter-and-socials">
 					<h3 class="letter-and-socials__title footer-title">
-						newsletter
+						ІНФОРМАЦІЙНИЙ БЮЛЕТЕНЬ
 					</h3>
 					<p class="letter-and-socials__desc">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta accusantium minus deleniti iusto sapiente!
+						Вкажіть свою електронну адресу, щоб ви завжди були в проінформовані про спеціальні пропозиції та усі діючі
+						акції.
 					</p>
 					<input type="email" name="mail" id="mail" class="letter-socials__mail-input">
 					<button class="letter-and-socials__submit-btn" type="submit">
-						submit
+						відправити
 					</button>
 					<p class="letter-and-socials__social">
 						<span class="socials-icons-footer icon-facebook"></span>
@@ -74,47 +137,49 @@
 			<div class="contact-us__about">
 				<div class="about-info">
 					<p class="about-info__title footer-title">
-						information
+						інформація
 					</p>
 					<p class="about-info__desc">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, neque enim. Totam doloremque soluta
-						tempora laudantium voluptate illum voluptatem maiores ut cumque, asperiores quod. Sunt delectus porro
-						blanditiis praesentium eligendi.
+						Купувати послуги Компанії з метою перепродажу третім особам, за винятком випадків укладення окремого
+						письмового договору, який передбачає таке право. У разі, якщо Компанія виявить факт перепродажу своїх послуг
+						Користувачем, без письмової згоди Компанії, Компанія має право призупинити надання послуг Користувачу шляхом
+						видалення Публікацій без права повернення сплаченої за них суми.
 
 					</p>
 				</div>
 				<div class="about-info">
 					<p class="about-info__title footer-title">
-						information
+						інформація
 					</p>
 					<p class="about-info__desc">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, neque enim. Totam doloremque soluta
-						tempora laudantium voluptate illum voluptatem maiores ut cumque, asperiores quod. Sunt delectus porro
-						blanditiis praesentium eligendi.
+						Також Компанія має право заблокувати телефони, що містяться в обліковому записі користувача, що виключає
+						подальше використання сервісу додавання публікацій. Доказом перепродажу послуг може бути інформація,
+						отримана від користувачів сайту Компанії, а також самостійне виявлення Компанією факту перепродажу
+						публікацій на сайтах третіх осіб.
 
 					</p>
 				</div>
 				<div class="our-contacts">
 					<p class="our-contacts__title footer-title">
-						contact
+						наші контакти
 					</p>
 					<p class="our-contacts__location contacts-desc">
-						<span class="icon-map-marker contact-icons"></span> 123, Main Road, Your City, NY 1234
+						<span class="icon-map-marker contact-icons"></span> 123, Головна Дорога, Ваше Місто, МК 1234
 					</p>
 					<p class="our-contacts__tel contacts-desc">
 						<span class="icon-phone contact-icons"></span> +123 456 7890
 					</p>
 					<p class="our-contacts__work-time contacts-desc">
-						<span class="icon-clock-o contact-icons"></span> 7 Days a week from 10:00 am to 6:00 pm
+						<span class="icon-clock-o contact-icons"></span> 7 днів на тиждень з 10:00 до to 6:00
 					</p>
 					<p class="our-contacts__mail contacts-desc">
-						<span class="icon-envelope contact-icons"></span> info@psdfreebies.com
+						<span class="icon-envelope contact-icons"></span> info@moderncar.com
 					</p>
 				</div>
 			</div>
 			<div class="copyright">
 				<p class="copyright__desc">
-					<span class="text-logo">ModernСar</span> © 2017 . All Rights Reserved.
+					<span class="text-logo">ModernСar</span> © 2020 . Всі права захищені.
 				</p>
 				<div class="payment-methods">
 					<?xml version="1.0" encoding="iso-8859-1"?>

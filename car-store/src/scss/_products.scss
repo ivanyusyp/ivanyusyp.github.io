@@ -48,18 +48,11 @@
 }
 .sales-item {
 	margin: 20px;
-	padding: 20px;
+	padding: 120px 20px 5px 20px;
 	max-width: 200px;
 	width: 100%;
-	background-color: $middlegray;
+	border: 1px solid $lightgray;
 	text-align: center;
-	&__img {
-		height: 200px;
-	}
-	&__img img {
-		width: 100%;
-		height: inherit;
-	}
 	&__desc {
 		font-size: 17px;
 		color: $pink;
@@ -78,7 +71,8 @@
 .subwoofer-item {
 	background: url("../img/subwoofer-item.png");
 	background-repeat: no-repeat;
-	background-size: 20%;
+	background-size: 80%;
+	background-position: center top;
 }
 .sales-item {
 	&__rate {
@@ -89,17 +83,24 @@
 .headlights-item {
 	background: url("../img/headlight-item.png");
 	background-repeat: no-repeat;
-	background-position: top;
+	background-size: 60%;
+	background-position: center top;
 }
 .seats-item {
 	background: url("../img/seats.png");
 	background-repeat: no-repeat;
+	background-size: 40%;
+	background-position: center top;
 }
 .audio-system-item {
 	background: url("../img/audiosystem-item.png");
 	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: center top;
 }
 .disk-item {
 	background: url("../img/disk-item.png");
 	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center top;
 }

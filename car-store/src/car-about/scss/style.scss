@@ -1,12 +1,13 @@
+@import "variables";
 #about-car {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	background-color: grey;
+	background-color: $middlegray;
 }
 .about-car {
 	&__container {
 		background-color: transparent;
 	}
-	&__header {
+	&__heading {
 		background-image: none;
 		height: auto;
 	}

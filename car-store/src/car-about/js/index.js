@@ -88,11 +88,12 @@ $(document).ready(function () {
 	const addedImgsForBlock = (item) => {
 		$('.carousel-inner').append(`
 		<div class="carousel-item">
+		<img src ="${item[1].formats[0]}" class="d-block w-100" alt="car">
 	</div>
 	`);
-		$('.carousel-item').append(`
-	<img src ="${item[1].formats[0]}" class="d-block w-100" alt="..." width = '100%' height = 'auto'>
-	`);
+		// 	$('.carousel-item').append(`
+		// <img src ="${item[1].formats[0]}" class="d-block w-100 carousel-images" alt="car">
+		// `);
 		$('.carousel-inner .carousel-item:first').addClass('active');
 	}
 });

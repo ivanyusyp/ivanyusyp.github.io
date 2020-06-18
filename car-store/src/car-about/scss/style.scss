@@ -11,16 +11,20 @@
 		background-image: none;
 		height: auto;
 	}
+	&__search-container {
+		padding: 10px 0px 10px 0px;
+	}
 }
-.carousel-car-about,
-.carousel-car-about-in {
-	height: 800px;
-	width: 100%;
+.carousel-images {
+	width: 80%;
+	margin: 0px auto;
+	height: 100%;
 }
 #about-car-title {
 }
 .car-about {
-	margin-top: 50px;
+	width: 80%;
+	margin: 30px auto;
 	&__title {
 		font-size: 25px;
 		color: white;

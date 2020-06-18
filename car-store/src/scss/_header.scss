@@ -1,4 +1,4 @@
-#header {
+header {
 	background-image: url("../img/tesla-with-smoke.webp");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -231,8 +231,8 @@
 	.nav {
 		background-color: $black;
 		text-transform: uppercase;
-		border-top: 3px solid $blue;
-		border-bottom: 3px solid $blue;
+		border-top: 3px solid $lightgray;
+		border-bottom: 3px solid $lightgray;
 
 		&__container {
 			max-width: 1200px;
@@ -243,7 +243,7 @@
 			margin: 0px auto;
 		}
 	}
-	.nav-items {
+	.nav__link {
 		text-decoration: none;
 		font-family: $mainfont;
 		font-size: 15px;
@@ -252,11 +252,12 @@
 		padding: 30px;
 		&:hover {
 			transform: scale(1.2);
-			color: $blue;
+			color: $pink;
+			text-decoration: none;
 		}
 	}
 	@media only screen and (max-width: $sm) {
-		.nav-items {
+		.nav__link {
 			display: none;
 		}
 	}

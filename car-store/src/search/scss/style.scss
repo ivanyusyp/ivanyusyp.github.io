@@ -4,9 +4,14 @@ body#searchPage {
 	margin: 0px;
 	background-color: $middlegray;
 }
-.searchPage__heading {
-	background-image: none;
-	height: auto;
+.searchPage {
+	&__heading {
+		background-image: none;
+		height: auto;
+	}
+	&__search-container {
+		padding: 10px 0px 10px 0px;
+	}
 }
 .sidebar-main-container {
 	display: flex;
@@ -23,6 +28,17 @@ body#searchPage {
 	margin: 0px auto;
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
+}
+@media only screen and (max-width: $md) {
+	.output-container {
+		justify-content: center;
+	}
+}
+.filter-icon {
+	width: 20px;
+	margin: 10px;
+	fill: $white;
 }
 p {
 	margin: 0px;
@@ -31,12 +47,18 @@ p {
 .cars {
 	&__blocks {
 		align-self: center;
-		max-width: 500px;
+		max-width: 400px;
 		width: 100%;
-		margin: 5px;
-		border: 1px solid $white;
+		margin: 15px;
+		// border: 1px solid $white;
 		border-radius: 5px;
-		background-color: transparent;
+		background-color: rgba(15, 14, 14, 0.438);
+		&:hover {
+			-webkit-box-shadow: 1px 7px 7px 6px $pink;
+			-moz-box-shadow: 1px 7px 7px 6px $pink;
+			box-shadow: 1px 7px 7px 6px $pink;
+			cursor: pointer;
+		}
 	}
 	&__img {
 		border-radius: 5px 5px 0px 0px;
@@ -62,14 +84,77 @@ p {
 }
 .sidebar {
 	position: sticky;
-	width: 400px;
+	width: 25%;
 	background-color: $darkgray;
 	padding: 10px;
 	text-align: center;
 	display: flex;
 	flex-flow: column wrap;
-	// position: fixed;
+	// position: sticky;
 }
+@media only screen and (max-width: $md) {
+	.sidebar {
+		display: none;
+	}
+}
+@media only screen and (max-width: $xlg) {
+	.sidebar {
+		width: 350px;
+	}
+}
+
+.filter-icon {
+	display: none;
+	&:hover {
+		cursor: pointer;
+	}
+}
+@media only screen and (max-width: $md) {
+	.filter-icon {
+		display: inline-block;
+	}
+}
+.unactive {
+	display: block;
+}
+@media only screen and (max-width: $md) {
+	.unactive {
+		display: none;
+	}
+}
+.side-bar-active {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: gray;
+	top: 0;
+	left: 0;
+}
+.close-btn {
+	font-size: 20px;
+	color: $white;
+	display: none;
+	padding: 10px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.close-btn-active {
+	display: inline-block;
+	position: absolute;
+	top: -10px;
+	left: 90%;
+	color: $white;
+	font-size: 25px;
+	z-index: 4;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
 /* Center the loader */
 #loader {
 	position: absolute;

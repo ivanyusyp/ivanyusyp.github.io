@@ -1,9 +1,10 @@
 .products {
 	background-color: $gray;
 	padding-bottom: 100px;
+	text-align: center;
 	&__title {
-		margin: 0px auto;
-		padding: 50px 0px;
+		margin: 20px 0px;
+		padding: 50px 0px 0px 0px;
 		text-align: center;
 		text-transform: uppercase;
 		color: $white;
@@ -11,35 +12,20 @@
 		font-weight: bold;
 		font-family: $mainfont;
 		position: relative;
-		&::after {
-			content: "";
-			width: 300px;
-			height: 4px;
-			background-color: $pink;
-			position: absolute;
-			top: 95px;
-			left: 41.5%;
-		}
+		display: inline-block;
+		border-bottom: 4px solid $pink;
 	}
-
 	@media only screen and (max-width: $sm) {
 		&__title {
-			&::after {
-				content: "";
-				display: none;
-			}
+			border: none;
+			font-size: 30px;
 		}
 	}
 
 	&__items {
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
 		justify-content: center;
-	}
-	@media only screen and (max-width: $sm) {
-		&__items {
-			flex-flow: row wrap;
-		}
 	}
 }
 .poducts {
@@ -47,8 +33,8 @@
 	}
 }
 .sales-item {
-	margin: 20px;
-	padding: 120px 20px 5px 20px;
+	margin: 10px;
+	padding: 120px 10px 5px 10px;
 	max-width: 200px;
 	width: 100%;
 	border: 1px solid $lightgray;
@@ -68,8 +54,9 @@
 		text-align: center;
 	}
 }
+
 .subwoofer-item {
-	background: url("../img/subwoofer-item.png");
+	background: url("../images/subwoofer-item.png");
 	background-repeat: no-repeat;
 	background-size: 80%;
 	background-position: center top;
@@ -81,25 +68,25 @@
 	}
 }
 .headlights-item {
-	background: url("../img/headlight-item.png");
+	background: url("../images/headlight-item.png");
 	background-repeat: no-repeat;
 	background-size: 60%;
 	background-position: center top;
 }
 .seats-item {
-	background: url("../img/seats.png");
+	background: url("../images/seats.png");
 	background-repeat: no-repeat;
 	background-size: 40%;
 	background-position: center top;
 }
 .audio-system-item {
-	background: url("../img/audiosystem-item.png");
+	background: url("../images/audiosystem-item.png");
 	background-repeat: no-repeat;
 	background-size: 80%;
 	background-position: center top;
 }
 .disk-item {
-	background: url("../img/disk-item.png");
+	background: url("../images/disk-item.png");
 	background-repeat: no-repeat;
 	background-size: 50%;
 	background-position: center top;

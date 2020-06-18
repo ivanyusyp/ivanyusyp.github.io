@@ -329,4 +329,25 @@ if (carBrands) carBrands.addEventListener('change', (e) => {
 	fetchForModels(categoriesTargetValue, marksTargetValue);
 	fetchOnChangeMarks(stringUrlParams);
 	return marksTargetValue;
-}) 
+})
+
+const filterIcon = document.querySelector('.filter-icon');
+const sideBar = document.querySelector('.sidebar');
+const closeBtn = document.querySelector('.close-btn');
+filterIcon.addEventListener('click', (e) => {
+	e.preventDefault();
+	closeBtn.setAttribute('class', 'close-btn-active');
+	if (sideBar.classList.contains('side-bar-active')) {
+		sideBar.removeAttribute('class', "side-bar-active");
+	} else {
+		sideBar.setAttribute('class', 'side-bar-active');
+	}
+})
+closeBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+	sideBar.removeAttribute('class', "side-bar-active");
+	sideBar.setAttribute('class', 'unactive');
+	sideBar.setAttribute('class', 'sidebar');
+	closeBtn.removeAttribute('class', "close-btn-active");
+	closeBtn.setAttribute('class', 'unactive');
+})

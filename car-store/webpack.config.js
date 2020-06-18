@@ -41,11 +41,31 @@ module.exports = {
 			},
 			{
 				test: /\.(ttf|woff|woff2|eot)$/,
-				use: ['file-loader']
+				use: [
+					{
+						loader: "file-loader",
+						options: {
+							esModule: false,
+							outputPath: "fonts",
+							publicPath: "fonts",
+							name: "[name].[ext]"
+						}
+					}
+				]
 			},
 			{
-				test: /\.(jpg|png|gif|webp|svg|ico)$/,
-				use: ['file-loader']
+				test: /\.(jpg|png|jpeg)$/,
+				use: [
+					{
+						loader: "file-loader",
+						options: {
+							esModule: false,
+							outputPath: "images",
+							publicPath: "images",
+							name: "[name].[ext]"
+						}
+					}
+				]
 			}
 		]
 	}

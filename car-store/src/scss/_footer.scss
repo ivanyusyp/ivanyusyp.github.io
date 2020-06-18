@@ -11,10 +11,10 @@
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
-		padding: 80px 0px;
+		padding: 80px 10px;
 		border-bottom: 3px solid $lightgray;
 	}
-	@media only screen and(max-width:$sm) {
+	@media only screen and(max-width:$lg) {
 		&__about {
 			flex-flow: column wrap;
 			justify-content: center;
@@ -27,10 +27,14 @@
 	flex-flow: row wrap;
 	justify-content: space-between;
 	border-bottom: 2px solid $lightgray;
+	padding: 10px;
 }
-@media only screen and(max-width:$sm) {
+@media only screen and(max-width:$md) {
 	.links-and-letter {
-		padding: 10px;
+		flex-flow: column wrap;
+		padding: 20px;
+		justify-content: center;
+		align-items: center;
 	}
 }
 .footer-title {
@@ -44,7 +48,7 @@
 	padding: 20px 0px;
 	&::after {
 		content: "";
-		width: 160px;
+		width: 100%;
 		height: 4px;
 		background-color: $pink;
 		position: absolute;
@@ -62,6 +66,7 @@
 	text-align: left;
 	padding: 0px;
 	margin: 20px 0px 0px 0px;
+	align-self: center;
 	&__item {
 		font-size: 20px;
 		color: $pink;
@@ -73,8 +78,14 @@
 .letter-and-socials {
 	max-width: 300px;
 	width: 100%;
+	padding: 10px;
+	align-self: center;
+
 	&__title {
 		padding: 20px 0px;
+		&::after {
+			content: none;
+		}
 	}
 
 	&__desc {
@@ -114,6 +125,10 @@
 	}
 }
 .socials-icons-footer {
+	&:hover {
+		color: $pink;
+		cursor: pointer;
+	}
 }
 .icon-facebook {
 }
@@ -132,6 +147,13 @@
 	text-align: left;
 	&__title {
 	}
+	@media only screen and (max-width: $xlg) {
+		&__title {
+			&::after {
+				width: 45%;
+			}
+		}
+	}
 
 	&__desc {
 		font-size: 15px;
@@ -141,6 +163,16 @@
 }
 .our-contacts {
 	&__title {
+		&::after {
+			width: 100%;
+		}
+	}
+	@media only screen and (max-width: $xlg) {
+		&__title {
+			&::after {
+				width: 70%;
+			}
+		}
 	}
 
 	&__location {
@@ -175,7 +207,7 @@
 		font-family: $mainfont;
 		color: $gray;
 	}
-	@media only screen and (max-width: $sm) {
+	@media only screen and (max-width: $md) {
 		&__desc {
 			margin: 0px auto;
 		}
@@ -188,7 +220,7 @@
 }
 .payment-methods {
 }
-@media only screen and (max-width: $sm) {
+@media only screen and (max-width: $md) {
 	.payment-methods {
 		margin: 5px auto;
 	}

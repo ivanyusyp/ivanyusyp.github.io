@@ -10,50 +10,83 @@
 		}
 		@media only screen and (max-width: $sm) {
 			&__title {
+				font-size: 30px;
+			}
+		}
+		@media only screen and (max-width: $md) {
+			&__title {
 				padding-top: 0px;
 			}
 		}
+		@media only screen and (max-width: $lg) {
+			&__title {
+			}
+		}
 		&__subtitle {
-			margin-top: -30px;
+			margin-top: 0px;
 			font-size: 20px;
 			font-weight: 500;
 			color: $lightgray;
+		}
+		@media only screen and (max-width: $lg) {
+			&__subtitle {
+			}
 		}
 	}
 	.accesories {
 		&__item {
 			border: 1px solid $lightgray;
-			padding: 100px;
+			padding: 150px 30px 0px 30px;
 			flex-basis: 50%;
 			box-sizing: border-box;
 		}
-		@media only screen and (max-width: $sm) {
+		@media only screen and (max-width: $md) {
 			&__item {
 				flex-basis: 100%;
 				padding: 200px 20px 0px 20px;
 			}
 		}
+		@media only screen and (max-width: $lg) {
+			&__item {
+				flex-basis: 100%;
+				padding: 200px 20px 10px 20px;
+			}
+		}
+		@media only screen and (max-width: $xlg) {
+			&__item {
+				padding: 250px 20px 10px 20px;
+			}
+		}
 	}
 	.item-headlights {
-		background-image: url("../img/headlights.png");
+		background-image: url("../images/headlights.png");
 		background-repeat: no-repeat;
 		background-position: right;
+		background-size: contain;
 		background-color: $gray;
 	}
+
 	.item-brake-systems {
-		background-image: url("../img/Breack-systems.png");
+		background-image: url("../images/Breack-systems.png");
 		background-repeat: no-repeat;
-		background-position: right;
+		background-size: contain;
+		background-position: right top;
 		background-color: $darkgray;
 	}
+	@media only screen and (max-width: $sm) {
+		.item-brake-systems {
+			background-position: top;
+			background-size: 50%;
+		}
+	}
 	.item-disks {
-		background-image: url("../img/disks.png");
+		background-image: url("../images/disk-item.png");
 		background-repeat: no-repeat;
 		background-position: right;
 		background-color: $darkgray;
 	}
 	.item-seats {
-		background-image: url("../img/seats.png");
+		background-image: url("../images/seats.png");
 		background-repeat: no-repeat;
 		background-position: right;
 		background-color: $gray;

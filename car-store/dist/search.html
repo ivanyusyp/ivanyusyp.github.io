@@ -4,21 +4,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 	<title>Search</title>
 </head>
 
 <body id='searchPage'>
 	<header class="searchPage__heading" id='heading'>
 		<div class="search-contact-us-container">
-			<div class="search-container">
+			<div class="search-container searchPage__search-container">
 				<a href="#" class="search-container__my-account option-search-container">
 					<span class="icon-avatar search-icons"></span> Мій аккаунт </a>
 				<a href="#" class="search-container__cart option-search-container">
 					<span class="icon-cart-plus search-icons"></span> Кошик </a>
 				<a href="#" class="search-container__checkout option-search-container">
 					<span class="icon-check-circle search-icons"></span> Перевіряти </a>
-				<a href="search.html" class="search-container__search">
-					<span class="icon-search"></span></a>
 			</div>
 			<div class="contact-choose-options-container">
 				<div class="contact-choose-options-container__logo">
@@ -72,6 +71,7 @@
 	</header>
 	<div class="sidebar-main-container">
 		<section class="sidebar">
+			<span class="close-btn">x</span>
 			<div class="form-group align-items-center">
 				<div class="col-auto my-1">
 					<label class="mr-sm-2" for="categories">Типи транспорту</label>
@@ -95,6 +95,23 @@
 		</section>
 		<div id="loader"></div>
 		<main class="output-container" id="searchOutput">
+			<div>
+				<svg class="filter-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
+				<g>
+					<g>
+						<g>
+							<path d="M207,200c0-11.046-8.954-20-20-20h-80c-11.046,0-20,8.954-20,20v35.878H0v40h87V310c0,11.046,8.954,20,20,20h80
+				c11.046,0,20-8.954,20-20v-34.122h305v-40H207V200z M167,290h-40v-70h40V290z" />
+							<path d="M431,382c0-11.046-8.954-20-20-20h-80c-11.046,0-20,8.954-20,20v35H0v40h311v35c0,11.046,8.954,20,20,20h80
+				c11.046,0,20-8.954,20-20v-35h81v-40h-81V382z M391,472h-40v-70h40V472z" />
+							<path d="M433,56V20c0-11.046-8.954-20-20-20h-80c-11.046,0-20,8.954-20,20v36H0v40h313v34c0,11.046,8.954,20,20,20h80
+				c11.046,0,20-8.954,20-20V96h79V56H433z M393,110h-40V40h40V110z" />
+						</g>
+					</g>
+				</g>
+			</svg>
+			</div>
 		</main>
 	</div>
 	<footer id='ourContacts' class="contact-us">

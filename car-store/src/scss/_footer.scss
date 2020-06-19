@@ -73,6 +73,9 @@
 		font-weight: bold;
 		padding: 10px 0px;
 		font-family: $mainfont;
+		&:hover {
+			color: $white;
+		}
 	}
 }
 .letter-and-socials {
@@ -105,6 +108,12 @@
 		color: $white;
 		text-transform: uppercase;
 		font-family: $mainfont;
+		&:hover {
+			-webkit-box-shadow: 2px 4px 4px 2px $white;
+			-moz-box-shadow: 2px 4px 4px 2px $white;
+			box-shadow: 2px 4px 4px 2px $white;
+			cursor: pointer;
+		}
 	}
 
 	&__social {
@@ -122,8 +131,21 @@
 		background-color: $gray;
 		border: none;
 		min-height: 40px;
+		padding: 5px 0px 5px 15px;
+		color: $white;
+		&:focus {
+			background-color: $lightgray;
+		}
+		&::placeholder {
+			padding: 5px;
+			color: $pink;
+			&:focus {
+				color: $lightgray;
+			}
+		}
 	}
 }
+
 .socials-icons-footer {
 	&:hover {
 		color: $pink;

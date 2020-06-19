@@ -11,6 +11,12 @@ header {
 		display: none;
 	}
 }
+.option-search-container {
+	&:hover {
+		color: $white;
+		text-decoration: none;
+	}
+}
 .search-contact-us-container {
 	width: 100%;
 	margin: 0px auto;
@@ -35,6 +41,16 @@ header {
 	justify-content: flex-end;
 	align-items: center;
 	border-bottom: 1px solid $lightgray;
+	&__search {
+		&:hover {
+			color: $pink;
+			text-decoration: none;
+		}
+		&:active {
+			text-decoration: none;
+			transform: scale(1.2);
+		}
+	}
 
 	.search-icons {
 		padding: 4px;
@@ -105,7 +121,16 @@ header {
 		font-weight: bold;
 		text-transform: uppercase;
 		height: 80%;
+		&:hover .option-icon {
+			color: $white;
+			text-decoration: none;
+		}
+		&:hover {
+			color: $pink;
+			text-decoration: none;
+		}
 	}
+
 	@media only screen and (max-width: $md) {
 		&__wish-list,
 		&__compare {
@@ -169,6 +194,9 @@ header {
 .option-icon {
 	font-size: 25px;
 	color: $pink;
+	&:hover {
+		color: $white;
+	}
 }
 .work-hours-and-phone {
 	text-align: right;

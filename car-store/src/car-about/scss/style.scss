@@ -29,13 +29,13 @@
 	}
 	&__price {
 		font-size: 20px;
-		color: pink;
+		color: $pink;
 	}
 	&__attribute {
-		color: white;
+		color: $white;
 	}
 	&__description {
-		color: lightgray;
+		color: $lightgray;
 	}
 }
 
@@ -43,6 +43,6 @@
 	&__EUR,
 	&__UAH {
 		font-size: 15px;
-		color: lightgray;
+		color: $lightgray;
 	}
 }

@@ -73,6 +73,7 @@
 		font-weight: bold;
 		padding: 10px 0px;
 		font-family: $mainfont;
+		transition: 1.5s all;
 		&:hover {
 			color: $white;
 			cursor: pointer;
@@ -109,6 +110,7 @@
 		color: $white;
 		text-transform: uppercase;
 		font-family: $mainfont;
+		transition: 1.5s all;
 		&:hover {
 			-webkit-box-shadow: 2px 4px 4px 2px $white;
 			-moz-box-shadow: 2px 4px 4px 2px $white;
@@ -134,6 +136,7 @@
 		min-height: 40px;
 		padding: 5px 0px 5px 15px;
 		color: $white;
+		transition: 1.5s all;
 		&:hover {
 			cursor: pointer;
 		}
@@ -151,6 +154,7 @@
 }
 
 .socials-icons-footer {
+	transition: 1.5s all;
 	&:hover {
 		color: $pink;
 		cursor: pointer;

@@ -12,6 +12,7 @@ header {
 	}
 }
 .option-search-container {
+	transition: 1.5s all;
 	&:hover {
 		color: $white;
 		text-decoration: none;
@@ -42,6 +43,7 @@ header {
 	align-items: center;
 	border-bottom: 1px solid $lightgray;
 	&__search {
+		transition: 1.5s all;
 		&:hover {
 			color: $pink;
 			text-decoration: none;
@@ -121,6 +123,7 @@ header {
 		font-weight: bold;
 		text-transform: uppercase;
 		height: 80%;
+		transition: 1.5s all;
 		&:hover .option-icon {
 			color: $white;
 			text-decoration: none;
@@ -229,6 +232,7 @@ header {
 }
 .icon-open-nav {
 	cursor: pointer;
+	transition: 1.5s all;
 }
 .open-nav {
 	display: none;
@@ -328,6 +332,7 @@ header {
 	font-weight: bold;
 	color: $white;
 	padding: 30px;
+	transition: 1.5s all;
 	&:hover {
 		transform: scale(1.2);
 		color: $pink;

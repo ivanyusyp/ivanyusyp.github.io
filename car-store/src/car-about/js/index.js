@@ -57,7 +57,7 @@ $(document).ready(function () {
 		<p>Коробка передач:</p>
 		<p>Пробіг:</p>
 		<p>Рік випуску:</p>
-    <p>Коментар власника:</p>
+    
 		`);
 		$('.car-about__description').append(`
 		<p>${fuelName}</p>
@@ -65,7 +65,11 @@ $(document).ready(function () {
 		<p>${gearboxName}</p>
 		<p>${race}</p>
 		<p>${year}</p>
-		<p>${description}</p>
+		
+				`);
+		$('.car-about__owners-comment').append(`
+				<p class='car-about__attribute'>Коментар власника:</p>
+				<p class='car-about__description'>${description}</p>
 				`);
 	}
 	const fetchForCarPhotos = () => {

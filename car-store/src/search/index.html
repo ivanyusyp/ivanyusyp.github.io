@@ -74,43 +74,44 @@
 			<span class="close-btn">x</span>
 			<div class="form-group align-items-center">
 				<div class="col-auto my-1">
-					<label class="mr-sm-2" for="categories">Типи транспорту</label>
+					<label class="mr-sm-2 search-parametrs" for="categories">Типи транспорту</label>
 					<select id="categories" class="custom-select mr-sm-2">
 						<option selected value="">Всі типи транспорту</option>
 					</select>
-					<label class="mr-sm-2" for="bodystyles">Типи кузову</label>
+					<label class="mr-sm-2 search-parametrs" for="bodystyles">Типи кузову</label>
 					<select id="bodystyles" class="custom-select mr-sm-2">
 						<option selected value="">Оберіть</option>
 					</select>
-					<label class="mr-sm-2" for="marks">Марка</label>
+					<label class="mr-sm-2 search-parametrs" for="marks">Марка</label>
 					<select id="marks" class="custom-select mr-sm-2">
 						<option selected value="">Оберіть</option>
 					</select>
-					<label class="mr-sm-2" for="marks">Модель</label>
+					<label class="mr-sm-2 search-parametrs" for="marks">Модель</label>
 					<select id="models" class="custom-select mr-sm-2">
 						<option selected value="">Оберіть</option>
 					</select>
 				</div>
 			</div>
 		</section>
-		<div id="loader"></div>
+
 		<main class="output-container" id="searchOutput">
+			<div id="loader"></div>
 			<div>
 				<svg class="filter-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
-				<g>
+					xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
 					<g>
 						<g>
-							<path d="M207,200c0-11.046-8.954-20-20-20h-80c-11.046,0-20,8.954-20,20v35.878H0v40h87V310c0,11.046,8.954,20,20,20h80
+							<g>
+								<path d="M207,200c0-11.046-8.954-20-20-20h-80c-11.046,0-20,8.954-20,20v35.878H0v40h87V310c0,11.046,8.954,20,20,20h80
 				c11.046,0,20-8.954,20-20v-34.122h305v-40H207V200z M167,290h-40v-70h40V290z" />
-							<path d="M431,382c0-11.046-8.954-20-20-20h-80c-11.046,0-20,8.954-20,20v35H0v40h311v35c0,11.046,8.954,20,20,20h80
+								<path d="M431,382c0-11.046-8.954-20-20-20h-80c-11.046,0-20,8.954-20,20v35H0v40h311v35c0,11.046,8.954,20,20,20h80
 				c11.046,0,20-8.954,20-20v-35h81v-40h-81V382z M391,472h-40v-70h40V472z" />
-							<path d="M433,56V20c0-11.046-8.954-20-20-20h-80c-11.046,0-20,8.954-20,20v36H0v40h313v34c0,11.046,8.954,20,20,20h80
+								<path d="M433,56V20c0-11.046-8.954-20-20-20h-80c-11.046,0-20,8.954-20,20v36H0v40h313v34c0,11.046,8.954,20,20,20h80
 				c11.046,0,20-8.954,20-20V96h79V56H433z M393,110h-40V40h40V110z" />
+							</g>
 						</g>
 					</g>
-				</g>
-			</svg>
+				</svg>
 			</div>
 		</main>
 	</div>
@@ -138,7 +139,7 @@
 						Вкажіть свою електронну адресу, щоб ви завжди були в проінформовані про спеціальні пропозиції та усі діючі
 						акції.
 					</p>
-					<input type="email" name="mail" id="mail" class="letter-socials__mail-input">
+					<input type="email" name="mail" placeholder="Введіть ваш email" id="mail" class="letter-socials__mail-input">
 					<button class="letter-and-socials__submit-btn" type="submit">
 						відправити
 					</button>

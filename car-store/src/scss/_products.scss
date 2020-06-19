@@ -39,6 +39,15 @@
 	width: 100%;
 	border: 1px solid $lightgray;
 	text-align: center;
+	transition: 1.5s all;
+	&:hover {
+		-webkit-box-shadow: 1px 4px 4px 3px $pink;
+		-moz-box-shadow: 1px 4px 4px 3px $pink;
+		box-shadow: 1px 4px 4px 3px $pink;
+		cursor: pointer;
+		transform: scale(1.1);
+		transition: 1.5s all;
+	}
 	&__desc {
 		font-size: 17px;
 		color: $pink;

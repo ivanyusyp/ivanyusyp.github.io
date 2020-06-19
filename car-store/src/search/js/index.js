@@ -291,15 +291,31 @@ if (categoriesSelect) categoriesSelect.addEventListener('change', (e) => {
 		carBrands.innerHTML = '';
 		const emptyOptionMark = document.createElement('option');
 		emptyOptionMark.innerText = 'Оберіть тип транспорту';
+		emptyOptionMark.setAttribute('value', '');
 		carBrands.appendChild(emptyOptionMark);
 	} else {
 		carBrands.innerHTML = '';
 		const emptyOptionMarks = document.createElement('option');
 		emptyOptionMarks.innerText = 'Оберіть';
+		emptyOptionMarks.setAttribute('value', '');
 		carBrands.appendChild(emptyOptionMarks);
 		fetchForMarks(e.target.value);
 	}
-
+	//CHANGE FOR MODELS
+	if (e.target.value === '') {
+		carModels.innerHTML = '';
+		const emptyOptionBodyStyle = document.createElement('option');
+		emptyOptionBodyStyle.innerText = 'Оберіть тип транспорту';
+		emptyOptionBodyStyle.setAttribute('value', '');
+		carModels.appendChild(emptyOptionBodyStyle);
+	} else {
+		carModels.innerHTML = '';
+		const emptyOptionBodyStyles = document.createElement('option');
+		emptyOptionBodyStyles.innerText = 'Оберіть';
+		emptyOptionBodyStyles.setAttribute('value', '');
+		carModels.appendChild(emptyOptionBodyStyles);
+		fetchForModels(categoriesTargetValue, e.target.value);
+	}
 	return categoriesTargetValue;
 })
 if (bodyStyles) bodyStyles.addEventListener('change', (e) => {
@@ -326,6 +342,7 @@ if (carBrands) carBrands.addEventListener('change', (e) => {
 	// urlParams.delete('bodystyle');
 	urlParams.set('marka_id', marksTargetValue);
 	const stringUrlParams = urlParams.toString();
+	history.pushState({}, '', '?' + stringUrlParams);
 	console.log(stringUrlParams, '=================URL PARAMS===================');
 	fetchForModels(categoriesTargetValue, marksTargetValue);
 	fetchOnChangeMarks(stringUrlParams);
@@ -337,6 +354,7 @@ if (carModels) carModels.addEventListener('change', (e) => {
 	output.innerHTML = '';
 	urlParams.set('model_id', e.target.value);
 	const stringUrlParams = urlParams.toString();
+	history.pushState({}, '', '?' + stringUrlParams);
 	fetchOnChangeModels(stringUrlParams);
 })
 
@@ -360,3 +378,28 @@ closeBtn.addEventListener('click', (e) => {
 	closeBtn.removeAttribute('class', "close-btn-active");
 	closeBtn.setAttribute('class', 'unactive');
 })
+
+// const minAmount = document.querySelector('#min-amount');
+// const maxAmount = document.querySelector('#max-amount');
+
+// minAmount.addEventListener('change', (e) => {
+// 	e.preventDefault();
+// 	preloader.style.display = "block";
+// 	output.innerHTML = '';
+// 	urlParams.set('price__ot', e.target.value);
+// 	const stringUrlParams = urlParams.toString();
+// 	history.pushState({}, '', '?' + stringUrlParams);
+// 	fetchOnChangeModels(stringUrlParams);
+// 	console.log(e.target.value);
+// })
+// maxAmount.addEventListener('change', (e) => {
+// 	e.preventDefault();
+// 	preloader.style.display = "block";
+// 	output.innerHTML = '';
+// 	urlParams.set('price__do', e.target.value);
+// 	// urlParams.set('currency', '1');
+// 	const stringUrlParams = urlParams.toString();
+// 	history.pushState({}, '', '?' + stringUrlParams);
+// 	fetchOnChangeModels(stringUrlParams);
+// 	console.log(e.target.value);
+// })

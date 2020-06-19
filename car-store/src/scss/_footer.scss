@@ -75,6 +75,7 @@
 		font-family: $mainfont;
 		&:hover {
 			color: $white;
+			cursor: pointer;
 		}
 	}
 }
@@ -93,7 +94,7 @@
 
 	&__desc {
 		font-size: 15px;
-		color: $gray;
+		color: $white;
 		font-family: $mainfont;
 	}
 
@@ -133,6 +134,9 @@
 		min-height: 40px;
 		padding: 5px 0px 5px 15px;
 		color: $white;
+		&:hover {
+			cursor: pointer;
+		}
 		&:focus {
 			background-color: $lightgray;
 		}
@@ -179,7 +183,7 @@
 
 	&__desc {
 		font-size: 15px;
-		color: $gray;
+		color: $white;
 		font-family: $mainfont;
 	}
 }
@@ -215,7 +219,7 @@
 }
 .contacts-desc {
 	font-size: 15px;
-	color: $gray;
+	color: $white;
 	font-family: $mainfont;
 }
 .copyright {
@@ -227,7 +231,7 @@
 	&__desc {
 		font-size: 15px;
 		font-family: $mainfont;
-		color: $gray;
+		color: $white;
 	}
 	@media only screen and (max-width: $md) {
 		&__desc {
@@ -236,9 +240,9 @@
 	}
 }
 .text-logo {
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
-	color: $white;
+	color: $pink;
 }
 .payment-methods {
 }

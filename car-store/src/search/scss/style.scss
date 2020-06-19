@@ -4,6 +4,10 @@ body#searchPage {
 	margin: 0px;
 	background-color: $middlegray;
 }
+.search-parametrs {
+	color: $white;
+	margin-top: 10px;
+}
 .searchPage {
 	&__heading {
 		background-image: none;

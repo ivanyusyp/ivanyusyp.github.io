@@ -2,6 +2,7 @@ const output = document.getElementById("searchOutput");
 const categoriesSelect = document.getElementById('categories');
 const bodyStyles = document.querySelector('#bodystyles');
 const carBrands = document.querySelector('#marks');
+const carModels = document.querySelector('#models');
 const API_KEY = 'wF83X8QPO0vZqpQ50l8OfCcdjGSNU74TbPOTADl3';
 const BASE_URL = 'https://developers.ria.com/auto/';
 const preloader = document.querySelector('#loader');
@@ -329,6 +330,14 @@ if (carBrands) carBrands.addEventListener('change', (e) => {
 	fetchForModels(categoriesTargetValue, marksTargetValue);
 	fetchOnChangeMarks(stringUrlParams);
 	return marksTargetValue;
+})
+if (carModels) carModels.addEventListener('change', (e) => {
+	e.preventDefault();
+	preloader.style.display = "block";
+	output.innerHTML = '';
+	urlParams.set('model_id', e.target.value);
+	const stringUrlParams = urlParams.toString();
+	fetchOnChangeModels(stringUrlParams);
 })
 
 const filterIcon = document.querySelector('.filter-icon');

@@ -1,10 +1,55 @@
-const quantityAndAmountOfGoods = document.querySelector('.top-cart-info__item');
-const productAddButton = document.querySelector('.product-box__btn');
-productAddButton.addEventListener('click', () => {
-	e.preventDefault();
-	console.log(quantityAndAmountOfGoods);
-})
+const basket = {
+	// '1': {
+	// 	amount: 1,
+	// 	price: 1
+	// }
+}
+const productAddButton = document.querySelectorAll('.product-box__btn');
+const productAddButtonArray = Array.from(productAddButton);
+productAddButtonArray.forEach(item =>
+	item.addEventListener('click', (e) => {
+		e.preventDefault();
+		const quantityAndAmountOfGoods = document.querySelector('.top-cart-info__item');
+		const quantityOfGoods = quantityAndAmountOfGoods.firstElementChild;
+		const priceOfCurrentElement = e.path[2].dataset.dishPrice;
+		quantityOfGoods.innerHTML = '';
+		quantityOfGoods.innerHTML = priceOfCurrentElement;
+		const name = e.path[2].id;
+		const price = e.path[2].dataset.dishPrice;
+		const amountOfElement = document.querySelector(`#${name} input`);
 
+		console.log(amountOfElement.value, '=========================amount===========');
+		basket[name] = {
+			amount: +amountOfElement.value || 0,
+			price: +price
+		}
+		console.log(e);
+		console.log(basket, '============BASKET=========');
+		console.log(quantityOfGoods, 'quantityOfGoods');
+		console.log(priceOfCurrentElement);
+		// const urlParams = new URLSearchParams(window.location.search);
+		// urlParams.set('product_price', priceOfCurrentElement);
+		// const stringUrlParams = urlParams.toString();
+		// history.pushState({}, '', '?' + stringUrlParams);
+	}))
+const numberOfProducts = document.querySelectorAll('.qty__item');
+const numberOfProductsArray = Array.from(numberOfProducts);
+numberOfProducts.forEach(item =>
+	item.addEventListener('click', (e) => {
+		e.preventDefault();
+		const quantityAndAmountOfGoods = document.querySelector('.top-cart-info__item');
+		const quantityOfGoods = quantityAndAmountOfGoods.firstElementChild;
+		quantityOfGoods.innerHTML = '';
+		quantityOfGoods.innerHTML = e.target.value;
+		console.log(e);
+		console.log(quantityOfGoods, 'quantityOfGoods');
+		// const urlParams = new URLSearchParams(window.location.search);
+		// urlParams.set('product_amount', e.target.value);
+		// urlParams.set('product_sum',e.target.value)
+		// const stringUrlParams = urlParams.toString();
+		// history.pushState({}, '', '?' + stringUrlParams);
+	})
+)
 
 
 
@@ -33,8 +78,6 @@ const inputElementsArray = Array.from(inputElements);
 inputElementsArray.forEach(item => {
 	item.min = 0;
 });
-
-
 function filteredByPrice(a, filteredTypes, isInitialCall) {
 	const priceItems = filteredTypes || document.querySelectorAll("[data-dish-price]");
 	const priceItemsArray = Array.from(priceItems);

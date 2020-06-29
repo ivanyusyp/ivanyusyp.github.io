@@ -1,68 +1,105 @@
+const quantityAndAmountOfGoods = document.querySelector('.top-cart-info__item');
+const productAddButton = document.querySelector('.product-box__btn');
+productAddButton.addEventListener('click', () => {
+	e.preventDefault();
+	console.log(quantityAndAmountOfGoods);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const productBox = document.querySelector('.products-box');
 const inputElements = document.getElementsByClassName('qty__item');
 const inputElementsArray = Array.from(inputElements);
 inputElementsArray.forEach(item => {
 	item.min = 0;
 });
-let priceTargetValue,
-	categoryTargetValue;
 
-const categorySelect = document.querySelector('#category-select');
-const priceSelect = document.querySelector('#price-select');
-console.log(priceSelect);
-const filteredByPrice = (priceTargetValue) => {
-	const priceItems = document.querySelectorAll("[data-dish-price]");
+
+function filteredByPrice(a, filteredTypes, isInitialCall) {
+	const priceItems = filteredTypes || document.querySelectorAll("[data-dish-price]");
 	const priceItemsArray = Array.from(priceItems);
-	if (priceTargetValue != 0) {
+	const typeSelect = document.querySelector('#category-select').value;
+	if (a != 0) {
 		priceItemsArray.forEach(item =>
 			item.style.display = 'none'
 		)
-		const filtered = priceItemsArray.filter(element => +(element.dataset.dishPrice) <= priceTargetValue);
+		const filtered = priceItemsArray.filter(element => +(element.dataset.dishPrice) <= a);
 		console.log(filtered);
 		filtered.forEach(item =>
 			item.style.display = 'flex'
 		)
+		if (typeSelect && isInitialCall) {
+			filteredByType(typeSelect, filtered);
+		}
 	}
 	else {
 		priceItemsArray.forEach(item =>
 			item.style.display = 'flex'
 		)
+		if (typeSelect && isInitialCall) {
+			filteredByType(typeSelect);
+		}
 		console.log(priceItemsArray);
 	}
+
 };
-const filteredByType = (categoryTargetValue) => {
-	const typeItems = document.querySelectorAll("[data-dish-type]");
+function filteredByType(a, filtered, isInitialCall) {
+	const typeItems = filtered || document.querySelectorAll("[data-dish-type]");
 	const typeItemsArray = Array.from(typeItems);
-	if (categoryTargetValue != 0) {
+	const priceSelect = document.querySelector('#price-select').value;
+	if (a != 0) {
 		typeItemsArray.forEach(item =>
 			item.style.display = 'none'
 		)
-		const filtered = typeItemsArray.filter(element => +(element.dataset.dishType) == categoryTargetValue);
-		console.log(filtered);
-		filtered.forEach(item =>
+		const filteredByType = typeItemsArray.filter(element => +(element.dataset.dishType) == a);
+		console.log(filteredByType);
+		filteredByType.forEach(item =>
 			item.style.display = 'flex'
 		)
+		if (priceSelect && isInitialCall) {
+			filteredByPrice(priceSelect, filteredByType);
+		}
 	}
 	else {
 		typeItemsArray.forEach(item =>
 			item.style.display = 'flex'
 		)
-		console.log(typeItemsArray);
-	}
+		if (priceSelect && isInitialCall) {
+			filteredByPrice(priceSelect);
+		}
+	};
 };
-if (priceSelect) priceSelect.addEventListener('change', (e) => {
+const priceSelect = document.querySelector('#price-select');
+priceSelect.addEventListener('change', (e) => {
 	e.preventDefault();
 	console.log(e.target.value);
-	priceTargetValue = e.target.value;
-	filteredByPrice(priceTargetValue);
-	return priceTargetValue;
+	filteredByPrice(e.target.value, null, true);
 })
-if (categorySelect) categorySelect.addEventListener('change', (e) => {
+const categorySelect = document.querySelector('#category-select');
+categorySelect.addEventListener('change', (e) => {
 	e.preventDefault();
 	console.log(e.target.value);
-	categoryTargetValue = e.target.value;
-	filteredByType(categoryTargetValue);
-	return categoryTargetValue;
+	filteredByType(e.target.value, null, true);
 })
 console.log(inputElements);
 console.log(inputElementsArray);

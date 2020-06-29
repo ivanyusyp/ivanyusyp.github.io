@@ -1,8 +1,4 @@
 const basket = {
-	// '1': {
-	// 	amount: 1,
-	// 	price: 1
-	// }
 }
 const productAddButton = document.querySelectorAll('.product-box__btn');
 const productAddButtonArray = Array.from(productAddButton);
@@ -11,38 +7,43 @@ productAddButtonArray.forEach(item =>
 		e.preventDefault();
 		const quantityAndAmountOfGoods = document.querySelector('.top-cart-info__item');
 		const quantityOfGoods = quantityAndAmountOfGoods.firstElementChild;
+		const priceOfGoods = quantityAndAmountOfGoods.lastElementChild;
 		const priceOfCurrentElement = e.path[2].dataset.dishPrice;
-		quantityOfGoods.innerHTML = '';
-		quantityOfGoods.innerHTML = priceOfCurrentElement;
 		const name = e.path[2].id;
 		const price = e.path[2].dataset.dishPrice;
 		const amountOfElement = document.querySelector(`#${name} input`);
-
-		console.log(amountOfElement.value, '=========================amount===========');
 		basket[name] = {
 			amount: +amountOfElement.value || 0,
 			price: +price
 		}
-		console.log(e);
-		console.log(basket, '============BASKET=========');
-		console.log(quantityOfGoods, 'quantityOfGoods');
-		console.log(priceOfCurrentElement);
-		// const urlParams = new URLSearchParams(window.location.search);
-		// urlParams.set('product_price', priceOfCurrentElement);
-		// const stringUrlParams = urlParams.toString();
-		// history.pushState({}, '', '?' + stringUrlParams);
+		const basketArray = Object.values(basket);
+		const amountOfPurchases = basketArray.reduce((total, current) => {
+			return (current.amount * current.price) + total;
+		},
+			0
+		);
+		const sumOfNumbers = basketArray.reduce((total, current) => {
+			return total + current.amount;
+		},
+			0
+		)
+		quantityOfGoods.innerHTML = '';
+		quantityOfGoods.innerHTML = sumOfNumbers;
+		priceOfGoods.innerHTML = '';
+		priceOfGoods.innerHTML = amountOfPurchases;
+		console.log(amountOfPurchases, '=============SUM==============');
 	}))
 const numberOfProducts = document.querySelectorAll('.qty__item');
 const numberOfProductsArray = Array.from(numberOfProducts);
 numberOfProducts.forEach(item =>
 	item.addEventListener('click', (e) => {
 		e.preventDefault();
-		const quantityAndAmountOfGoods = document.querySelector('.top-cart-info__item');
-		const quantityOfGoods = quantityAndAmountOfGoods.firstElementChild;
-		quantityOfGoods.innerHTML = '';
-		quantityOfGoods.innerHTML = e.target.value;
-		console.log(e);
-		console.log(quantityOfGoods, 'quantityOfGoods');
+		// const quantityAndAmountOfGoods = document.querySelector('.top-cart-info__item');
+		// const quantityOfGoods = quantityAndAmountOfGoods.firstElementChild;
+		// quantityOfGoods.innerHTML = '';
+		// quantityOfGoods.innerHTML = e.target.value;
+		// console.log(e);
+		// console.log(quantityOfGoods, 'quantityOfGoods');
 		// const urlParams = new URLSearchParams(window.location.search);
 		// urlParams.set('product_amount', e.target.value);
 		// urlParams.set('product_sum',e.target.value)

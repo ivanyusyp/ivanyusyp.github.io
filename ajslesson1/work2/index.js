@@ -52,6 +52,13 @@ function setAgeValueForSelect(users) {
 		usersSelect.appendChild(option);
 		console.log(users[i].age, 'arr');
 	}
+	const options = []
+
+	document.querySelectorAll('#users-select > option').forEach((option) => {
+		if (options.includes(option.value)) option.remove()
+		else options.push(option.value)
+	})
+
 };
 function sortUsersByAge(e) {
 	if (e == -1) {
@@ -72,6 +79,7 @@ function sortUsersByAge(e) {
 
 usersSelect.addEventListener('change', (e) => {
 	e.preventDefault();
+	res.innerHTML = '';
 	sortUsersByAge(e.target.value);
 	console.log(e.target.value);
 

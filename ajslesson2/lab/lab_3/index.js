@@ -7,12 +7,12 @@
 function substract(a, b) {
 	return a - b;
 }
-
 function reverse(fn) {
-	// Your code here
+	return function add(a, b) {
+		return b - a;
+	}
 }
-
 console.log(substract(10, 5)); // return  5
 
-const subtractReverse = reverse(subtract);
+const subtractReverse = reverse(substract);
 console.log(subtractReverse(10, 5)); // return  -5

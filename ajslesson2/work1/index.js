@@ -13,9 +13,9 @@ li получали его номер (let НЕ ИСПОЛЬЗОВАТЬ)
 const list = document.getElementById("list"),
 	els = list.getElementsByTagName("li");
 
-for (var i = 0, len = els.length; i < len; i++) {
+for (let i = 0, len = els.length; i < len; ++i) {
 	els[i].onclick = function () {
-		console.log(i);
+		console.log(i + 1);
 	};
 }
 

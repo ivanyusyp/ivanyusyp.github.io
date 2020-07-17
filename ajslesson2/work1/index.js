@@ -15,7 +15,7 @@ const list = document.getElementById("list"),
 
 for (let i = 0, len = els.length; i < len; ++i) {
 	els[i].onclick = function () {
-		console.log(i + 1);
+		alert(i + 1);
 	};
 }
 

@@ -1,8 +1,7 @@
 /* 
-Код работает, но не защищен - клментский код может удалить элементы массива  из-вне
+Код работает, но не защищен - клиентский код может удалить элементы массива  из-вне
 Исправить этот недостаток 
 */
-
 function getUsers() {
 	const users = ["Bill"];
 	return {
@@ -11,7 +10,7 @@ function getUsers() {
 			return users;
 		},
 		getUsers: function () {
-			return users;
+			return [...users];
 		}
 	};
 }

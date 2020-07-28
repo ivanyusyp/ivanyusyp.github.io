@@ -1,7 +1,3 @@
-// function PlayList() {
-// 	this.songs = []
-// 	this.currentIndex = 0;
-// }
 class PlayList {
 	constructor() {
 		this.songs = [];
@@ -9,61 +5,18 @@ class PlayList {
 	}
 	add(song) {
 		this.songs.push(song)
+		console.log(this.songs)
 	}
-	render(list) {
-		list.innerHtml = '';
-		return this.songs.forEach(song => {
-			list.innerHtml += song.toHtml()
-		});
+	play() {
+		let song = this.song[this.currentIndex];
+		song.play();
 	}
-
-}
-// PlayList.prototype.add = function (song) {
-// 	this.songs.push(song);
-// }
-// class Add extends PlayList {
-// 	constructor() {
-// 		super();
-// 	}
-// 	add() {
-// 		this.songs.push(song)
-// 	}
-// }
-// PlayList.prototype.play = function () {
-// 	let song = this.songs[this.currentIndex];
-// 	song.play();
-// }
-class Play extends PlayList {
-	constructor() {
-		super();
-		let song = this.songs[this.currentIndex];
-		song.Play();
+	stop() {
+		let song = this.song[this.currentIndex];
+		song.stop();
 	}
-}
-// PlayList.prototype.stop = function () {
-// 	let song = this.songs[this.currentIndex];
-// 	song.stop();
-// }
-class Stop extends PlayList {
-	constructor() {
-		super();
-		let song = this.songs[this.currentIndex];
-		song.Stop();
-	}
-}
-// PlayList.prototype.next = function () {
-// 	this.stop();
-// 	this.currentIndex++;
-// 	if (this.currentIndex === this.songs.length) {
-// 		this.currentIndex = 0;
-// 	}
-// 	let song = this.songs[this.currentIndex];
-// 	song.play();
-// }
-class Next extends PlayList {
-	constructor() {
-		super();
-		this.Stop();
+	next() {
+		this.stop();
 		this.currentIndex++;
 		if (this.currentIndex === this.songs.length) {
 			this.currentIndex = 0;
@@ -71,7 +24,37 @@ class Next extends PlayList {
 		let song = this.songs[this.currentIndex];
 		song.play();
 	}
+	render(list) {
+		list.innerHTML = '';
+		return this.songs.forEach(song => {
+			list.innerHTML += song.toHtml()
+		})
+	}
 }
+// function PlayList() {
+// 	this.songs = []
+// 	this.currentIndex = 0;
+// }
+// PlayList.prototype.add = function (song) {
+// 	this.songs.push(song);
+// }
+// PlayList.prototype.play = function () {
+// 	let song = this.songs[this.currentIndex];
+// 	song.play();
+// }
+// PlayList.prototype.stop = function () {
+// 	let song = this.songs[this.currentIndex];
+// 	song.stop();
+// }
+// PlayList.prototype.next = function () {
+// 	this.stop();
+// 	this.currentIndex++;
+// if (this.currentIndex === this.songs.length) {
+// 	this.currentIndex = 0;
+// }
+// let song = this.songs[this.currentIndex];
+// song.play();
+// }
 
 // PlayList.prototype.render = function (list) {
 // 	list.innerHTML = '';
@@ -79,14 +62,5 @@ class Next extends PlayList {
 // 		list.innerHTML += song.toHtml()
 // 	})
 // }
-class Render extends PlayList {
-	constructor(list) {
-		super();
-		list.innerHtml = '';
-		return this.songs.forEach(song => {
-			list.innerHtml += song.toHtml()
-		});
-	}
-}
 
 export default PlayList;

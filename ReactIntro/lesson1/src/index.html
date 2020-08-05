@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Lab</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+	<div id="root"></div>
+	​
+	<script crossorigin src="https://unpkg.com/react@16.8.6/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js"></script>
+	<script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+	<script crossorigin src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+	<script type="text/babel">
+		const root = document.getElementById("root");
+		const BASEURL = 'https://jsonplaceholder.typicode.com/users';
+		function App(props) {
+			const FetchForUsers = () => {
+				fetch(`${BASEURL}`)
+					.then(response => response.json())
+					.then(response => { this.setState({ data: response }) })
+			}
+			const { data } = this.state;
+			return (
+				<ul>
+					{
+						data.map(user => (
+							<li key={user.id} >
+								Name: {user.name} username:{user.username} mail: {user.email}
+							</li>
+						))
+					}
+				</ul>
+			)
+		}
+		// class App extends React.Component {
+		// 	constructor(props) {
+		// 		super(props);
+		// 		this.state = {
+		// 			data: []
+		// 		}
+		// 	};
+		// 	componentDidMount() {
+		// 		fetch(`${BASEURL}`)
+		// 			.then(response => response.json())
+		// 			.then(response => { this.setState({ data: response }) })
+		// 	}
+		// 	render() {
+		// 		const { data } = this.state;
+		// 		return (
+		// 			<ul>
+		// 				{
+		// 					data.map(user => (
+		// 						<li key={user.id} >
+		// 							Name: {user.name} username:{user.username} mail: {user.email}
+		// 						</li>
+		// 					))
+		// 				}
+		// 			</ul>
+		// 		)
+		// 	}
+		// }
+		ReactDOM.render(<App />, root);
+	</script>
+</body>
+
+</html>

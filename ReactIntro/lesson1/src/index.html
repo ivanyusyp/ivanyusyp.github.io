@@ -16,54 +16,132 @@
 	<script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
 	<script crossorigin src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
 	<script type="text/babel">
+
+
 		const root = document.getElementById("root");
 		const BASEURL = 'https://jsonplaceholder.typicode.com/users';
-		function App(props) {
-			const FetchForUsers = () => {
+		//IT WORKS
+		// class App extends React.Component {
+		// 			constructor(props) {
+		// 				super(props);
+		// 				this.state = {
+		// 					data: [],
+		// 				}
+		// 			};
+		// 			// works with it 
+		// 			componentDidMount() {
+		// 				fetch(`${BASEURL}`)
+		// 					.then(response => response.json())
+		// 					.then(response => { this.setState({ data: response }) })
+		// 			}
+		// 			// works with it
+
+		// 			render() {
+		// 				const { data } = this.state;
+		// 				return (
+		// 					<ul>
+		// 						{
+		// 							data.map(user => (
+		// 								<li key={user.id} >
+		// 									Name: {user.name} username:{user.username} mail: {user.email}
+		// 								</li>
+		// 							))
+		// 						}
+		// 					</ul>
+		// 				)
+		// 			}
+		// 		}
+		// IT WORKS
+
+		// doesn't work 
+
+		// async function GetUsersInfo() {
+		// const BASEURL = 'https://jsonplaceholder.typicode.com/users';
+		// 	const response = await fetch(BASEURL, {});
+		// 	const data = await response.json();
+		// 	console.log(data);
+		// }
+
+		// ? doesn't work
+
+		// const BASEURL = 'https://jsonplaceholder.typicode.com/users';
+		// fetch(BASEURL)
+		// 	.then(function (result) {
+		// 		return result.json();
+		// 	})
+		// 	.then(
+		// 		function (json) {
+		// 			data = json;
+		// 		}
+		// 	)
+
+		// ? doesn't work
+
+
+		const User = ({ profile }) => (
+			<li>
+				<p>{profile.name}</p>
+				<p>{profile.username}</p>
+				<p>{profile.email}</p>
+			</li>
+		)
+		const UsersList = ({ data }) => (
+			<ul>
+				{
+					data.map(profile => (
+						<User key={profile.id} profile={profile} />
+					))
+				}
+			</ul>
+		)
+		class FilterUsersForm extends React.Component {
+			state = {
+				value: ""
+			};
+			update = event => this.setState({ value: event.target.value });
+			render() {
+				return (
+					<form>
+						<input
+							type={"text"}
+							value={this.state.value}
+							onChange={this.update}
+						/>
+						<button>
+							Filter users
+					</button>
+					</form>
+				)
+			}
+		}
+		class App extends React.Component {
+			constructor(props) {
+				super(props);
+				this.state = {
+					data: [],
+				}
+			};
+
+
+			// works with it
+			componentDidMount() {
 				fetch(`${BASEURL}`)
 					.then(response => response.json())
 					.then(response => { this.setState({ data: response }) })
 			}
-			const { data } = this.state;
-			return (
-				<ul>
-					{
-						data.map(user => (
-							<li key={user.id} >
-								Name: {user.name} username:{user.username} mail: {user.email}
-							</li>
-						))
-					}
-				</ul>
-			)
+			// works with it
+			render() {
+				return (
+
+					<div>
+						<FilterUsersForm /> 	{/* Як у цій формі прив'язати як значення для пошуку її target.value, яке б порівнювалось із значенням із масиву data, а саме значенням  поля username для кожного з юзерів при виконанні методу із цього класу і як мені перезаписати відфільтрований масив у state замість старого? */}
+						<UsersList data={this.state.data} />
+
+					</div>
+
+				)
+			}
 		}
-		// class App extends React.Component {
-		// 	constructor(props) {
-		// 		super(props);
-		// 		this.state = {
-		// 			data: []
-		// 		}
-		// 	};
-		// 	componentDidMount() {
-		// 		fetch(`${BASEURL}`)
-		// 			.then(response => response.json())
-		// 			.then(response => { this.setState({ data: response }) })
-		// 	}
-		// 	render() {
-		// 		const { data } = this.state;
-		// 		return (
-		// 			<ul>
-		// 				{
-		// 					data.map(user => (
-		// 						<li key={user.id} >
-		// 							Name: {user.name} username:{user.username} mail: {user.email}
-		// 						</li>
-		// 					))
-		// 				}
-		// 			</ul>
-		// 		)
-		// 	}
-		// }
 		ReactDOM.render(<App />, root);
 	</script>
 </body>

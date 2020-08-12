@@ -28,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@testing-library/react": "^9.5.0"
+    "@testing-library/react": "^9.5.0",
+    "eslint-plugin-react-hooks": "^4.0.8"
   }
 }

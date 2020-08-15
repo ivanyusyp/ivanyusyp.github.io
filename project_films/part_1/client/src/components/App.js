@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { films } from "../data"
 import FilmsList from "./films"
 import { orderBy } from 'lodash';
+import FilmsForm from './films/FilmsForm';
+import TopNavigator from './films/TopNavigator';
 
 const AppContext = React.createContext()
 export { AppContext }
@@ -61,8 +63,10 @@ class App extends Component {
 				}}
 			>
 				<div className="ui container mt-3">
+					<FilmsForm />
 					<FilmsList films={films} />
 				</div>
+
 			</AppContext.Provider>
 		)
 	}

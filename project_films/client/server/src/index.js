@@ -29,7 +29,9 @@ app.use("/api/authfilms", authfilms);
 const port = process.env.PORT || 4000;
 const mongoUrl = `${process.env.DB_CONNECTION}`;
 
-mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true })
+
+
+mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true, })
 	.then(client => {
 		const db = client.db(process.env.DB_NAME);
 
@@ -39,10 +41,10 @@ mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true })
 			res.sendFile(path.join(__dirname, "./index.html"));
 		});
 
-		app.get("/api/dev_films(completed)", (req, res) => {
+		app.get("/api/test", (req, res) => {
 			res.json({ mes: "Hello from express" });
 		});
 
-		app.listen(port, () => console.log(`Running on localhost:${port}`));
+		app.listen(port, () => console.log(`Running on localhost: ${port} `));
 	})
 	.catch(err => console.log("Error connect"));

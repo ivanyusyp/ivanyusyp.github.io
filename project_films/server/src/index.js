@@ -9,9 +9,8 @@ import auth from "./routes/auth";
 import films from "./routes/films";
 import authfilms from "./routes/authfilms";
 
-
-
 const app = express();
+
 dotenv.config({
 	path: path.join(__dirname, ".env")
 });
@@ -29,9 +28,7 @@ app.use("/api/authfilms", authfilms);
 const port = process.env.PORT || 4000;
 const mongoUrl = `${process.env.DB_CONNECTION}`;
 
-
-
-mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true, })
+mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(client => {
 		const db = client.db(process.env.DB_NAME);
 
@@ -41,10 +38,10 @@ mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopolog
 			res.sendFile(path.join(__dirname, "./index.html"));
 		});
 
-		app.get("/api/test", (req, res) => {
+		app.get("/api/dev_films(completed)", (req, res) => {
 			res.json({ mes: "Hello from express" });
 		});
 
-		app.listen(port, () => console.log(`Running on localhost: ${port} `));
+		app.listen(port, () => console.log(`Running on localhost:${port}`));
 	})
 	.catch(err => console.log("Error connect"));

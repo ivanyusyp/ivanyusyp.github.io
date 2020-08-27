@@ -1,101 +1,92 @@
-import React, { Component } from "react"
-import FilmsPage from './forms/FilmsPage'
+import React from "react"
+import {Route} from "react-router-dom"
+import jwtDecode from 'jwt-decode'
+import Film from "./films/Film"
 import TopNavigation from "./TopNavigation"
-import { orderBy, find } from 'lodash'
-import RegistrationForm from "./forms/RegistrationForm"
-import LoginForm from './forms/LoginForm'
-import axios from "axios";
-import api from '../api'
-import { Route } from "react-router-dom"
-import HomePage from './forms/HomePage'
+import {Async, lazyImport} from './Async'
+import {setAuthorizationHeader} from '../utils'
 
 const AppContext = React.createContext()
-export { AppContext }
+export {AppContext}
 
-class App extends Component {
-	state = {
-		films: [],
-		showAddForm: false,
-		selectedFilm: {},
-		isLoading: true,
-	}
+const HomePage = Async(lazyImport('./HomePage'));
+const FilmsPage = Async(lazyImport('./FilmsPage'));
+const SignupPage = Async(lazyImport('./SignupPage'));
+const LoginPage = Async(lazyImport('./LoginPage'));
 
-	componentDidMount() {
-		api.films.fetchAll()
-			.then(films =>
-				this.setState({
-					films: this.sortFilms(films),
-					isLoading: false,
-				}),
-			)
-	}
+class App extends React.Component {
+    state = {
+        user: {
+            token: null,
+            role: 'user'
+        },
+        message: '',
+    }
 
+    componentDidMount() {
+        if(localStorage.filmsToken) {
+            this.setState({
+                user: {
+                    token: localStorage.filmsToken,
+                    role: jwtDecode(localStorage.filmsToken).user.role
+                }})
+            setAuthorizationHeader(localStorage.filmsToken)
+        }
+    }
 
-	showAddForm = e => this.setState({
-		showAddForm: true,
-		selectedFilm: {}
-	})
+    login = token => {
+        this.setState({user: {
+                token,
+                role: jwtDecode(token).user.role
+            }})
+        localStorage.filmsToken = token
+        setAuthorizationHeader(token)
+    }
 
-	hideAddForm = e => this.setState({
-		showAddForm: false,
-		selectedFilm: {}
-	})
+    logout = () => {
+        this.setState({user: {token: null, role: 'user'}})
+        setAuthorizationHeader()
+        delete localStorage.filmsToken
+    }
 
-	sortFilms = films => orderBy(films, ["featured", "title"], ["desc", "asc"])
+    setMessage = message => this.setState({message})
 
-	toggleFeatured = id => {
-		const film = find(this.state.films, { _id: id })
-		return this.updateFilm({ ...film, featured: !film.featured })
-	}
+    render() {
+        const {user, message} = this.state;
+        const isUserAdmin = this.state.user.role === 'admin';
 
+        return (
+            <div className="ui container">
+                <TopNavigation logout={this.logout} isAuth={user.token} isAdmin={isUserAdmin} />
 
-	saveFilm = film => (film._id ? this.updateFilm(film) : this.addFilm(film))
+                {message && (
+                    <div className={'ui info message'}>
+                        <i className={'close icon'} onClick={() => this.setMessage("")} />
+                        {message}
+                    </div>
+                )}
 
-
-	addFilm = filmData =>
-		api.films.create(filmData).then(film =>
-			this.setState(({ films }) => ({
-				films: this.sortFilms([...films, { ...film }]),
-				showAddForm: false,
-			})))
-
-	selectFilmForEdit = selectedFilm => {
-		this.setState({
-			selectedFilm,
-			showAddForm: true,
-		})
-	}
-
-
-	updateFilm = filmData =>
-		api.films.update(filmData).then(film =>
-			this.setState(({ films, showAddForm }) => ({
-				films: this.sortFilms(
-					films.map(item => (item._id === film._id ? film : item)),
-				),
-			})))
-
-
-	deleteFilm = film =>
-		api.films.delete(film).then(() =>
-			this.setState(({ films }) => ({
-				films: this.sortFilms(films.filter(item => item._id !== film._id)),
-			})),
-		)
-
-
-	render() {
-		const { films, showAddForm, selectedFilm } = this.state
-		const numCol = showAddForm ? "ten" : "sixteen"
-
-		return (
-			<div className={'ui container'} >
-				<TopNavigation />
-				<Route exact path="/" component={HomePage} />
-				<Route path="/films" component={FilmsPage} />
-			</div>
-		)
-	}
+                <Route exact path="/" component={HomePage} />
+                <Route
+                    path="/films"
+                    render={props => (
+                        <FilmsPage {...props} user={this.state.user}/>
+                    )}
+                />
+                <Route path="/film/:_id" exact component={Film} />
+                <Route
+                    path="/signup"
+                    render={props => (
+                        <SignupPage {...props} setMessage={this.setMessage} />
+                    )}
+                />
+                <Route
+                    path="/login"
+                    render={props => <LoginPage {...props} login={this.login} />}
+                />
+            </div>
+        )
+    }
 }
 
 export default App

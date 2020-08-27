@@ -1,24 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import React from "react"
+import {NavLink} from "react-router-dom"
 
-const TopNavigation = () => (
-	<div className='ui secondary pointng menu'>
-		<NavLink exact to='/' className="item">
-			Home
-		</NavLink>
-		<NavLink exact to='/films' className='item'>
-			Films
-		</NavLink>
-		<NavLink exact to="/films/new" classname='item'>
-			<i className="icon plus" />
-				Add new film
-		</NavLink>
-	</div>
+const TopNavigation = ({logout, isAuth, isAdmin}) => (
+    <div className="ui secondary pointing menu">
+        <NavLink exact to="/" className="item">
+            Home
+        </NavLink>
+        <NavLink exact to="/films" className="item">
+            Films
+        </NavLink>
+        {isAdmin && (
+            <NavLink exact to="/films/new" className="item">
+                <i className="icon plus" />
+                Add new film
+            </NavLink>
+        )}
+        {isAuth ? (
+            <div className={'right menu'}>
+                <span onClick={logout} className={'item'}>
+                    Logout
+                </span>
+            </div>
+        ) : (
+            <div className={'right menu'}>
+                <NavLink to='/signup' className={'item'}>
+                    Sign up
+                </NavLink>
+                <NavLink to='/login' className={'item'}>
+                    Login
+                </NavLink>
+            </div>
+        )}
+    </div>
 )
-
-TopNavigation.propTypes = {
-	showAddForm: PropTypes.func.isRequired,
-}
 
 export default TopNavigation

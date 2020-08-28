@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Todo from './Todo';
 import Filter from './Filter';
+import { findByText } from '@testing-library/react';
 
 class TodoList extends Component {
 	state = {
@@ -26,6 +27,11 @@ class TodoList extends Component {
 				/>
 			))
 	}
+	search = ({ target }) => {
+		this.setState({
+			searchTerm: target.value
+		})
+	}
 
 	render() {
 		const { title } = this.props;
@@ -33,7 +39,7 @@ class TodoList extends Component {
 		return (
 			<section>
 				<h3 className={"mb-3"}>{title}</h3>
-
+				<Filter onChange={this.search} />
 				<ul className={"list-group mb-3"}>{this.getBody}</ul>
 			</section>
 		)

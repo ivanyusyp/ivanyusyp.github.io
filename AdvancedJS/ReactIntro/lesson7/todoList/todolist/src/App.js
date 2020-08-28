@@ -2,10 +2,14 @@ import React from 'react';
 import TodoList from "./TodoList";
 import NewTodo from "./NewTodo";
 import { defaultState } from './data';
+import Filter from './Filter';
+
 
 class App extends React.Component {
 	state = {
 		todos: defaultState,
+		input: '',
+		findedTodos: this.findTodo,
 	}
 
 	addTodo = newTodo => this.setState(({ todos }) => ({
@@ -30,6 +34,18 @@ class App extends React.Component {
 		todos: todos.map(todo => ({ ...todo, completed: false }))
 	}))
 
+
+	// findTodo = e => {
+	// 	const filteredTodos = this.state.todos
+	// 		.filter(todo => todo.value.toLowerCase().includes(e.target.value.toLowerCase()))
+	// 	this.setState({
+	// 		input: e.target.value,
+	// 		todos: this.state.todos ? this.state.todos
+	// 			.filter(todo => todo.value.toLowerCase().includes(e.target.value.toLowerCase())) : this.state.todos
+	// 	})
+	// 	console.log('this.finded.todos - ', this.state.findedTodos, 'const filtered todos - ', filteredTodos)
+	// }
+
 	render() {
 		const { todos } = this.state;
 		const completedTodos = todos.filter(todo => todo.completed)
@@ -43,6 +59,16 @@ class App extends React.Component {
 
 				<div className={"row"}>
 					<div className={"col-md-5"}>
+{/* 
+						<div className={"mb-3"}>
+							<input
+								type="text"
+								className={"form-control"}
+								onChange={this.findTodo}
+								value={this.state.input}
+							/>
+						</div> */}
+
 						<TodoList
 							title={"Active todos"}
 							todos={activeTodos}

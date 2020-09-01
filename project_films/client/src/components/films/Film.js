@@ -1,6 +1,8 @@
 import React, {Component} from "react"
 import api from "../../api"
 
+const FilmContext = React.createContext()
+export { FilmContext }
 class Film extends Component {
     state = {
         film: {},

@@ -47,7 +47,7 @@ const SignupForm = props => {
 	return (
 		<form className={cls} onSubmit={handleSubmit}>
 			<div className={errors.email ? "error field" : "field"}>
-				<label>Email</label>
+				<label htmlFor="email">Email</label>
 				<input
 					type="email"
 					name="email"
@@ -60,7 +60,7 @@ const SignupForm = props => {
 			</div>
 
 			<div className={errors.password ? "error field" : "field"}>
-				<label>Password</label>
+				<label htmlFor="password">Password</label>
 				<input
 					type="text"
 					name="password"
@@ -73,7 +73,7 @@ const SignupForm = props => {
 			</div>
 
 			<div className={errors.passwordConfirmation ? "error field" : "field"}>
-				<label>Password Confirmation</label>
+				<label htmlFor="passwordConfirmation">Password Confirmation</label>
 				<input
 					type="text"
 					name="passwordConfirmation"
@@ -87,7 +87,6 @@ const SignupForm = props => {
 
 			<div className="ui fluid buttons">
 				<button className="ui button primary">Sing Up</button>
-
 				<div className="or" />
 
 				<Link to="/" className="ui button">

@@ -1,4 +1,4 @@
-// import React, { useState, useEffect,useContext } from "react"
+// import React, { useState, useEffect } from "react"
 // import { Route, Redirect } from 'react-router-dom'
 // import api from "../api"
 // import FilmsList from "./films"
@@ -8,6 +8,8 @@
 
 // const initialData = {
 // 	films: [],
+// 	showAddForm: false,
+// 	selctedFilm: '',
 // }
 
 // const isLoading = {
@@ -22,8 +24,8 @@
 // 		api.films
 // 			.fetchAll()
 // 			.then(films =>
-// 				setFilms(films), setLoading(!loading)
-// 			)
+// 				setFilms(films), setLoading(false)
+// 			), [props.films]
 // 	)
 
 
@@ -64,6 +66,12 @@
 // 				films: sortFilms(films.filter(item => item._id !== film._id)),
 // 			})),
 // 		)
+
+// 	const selectFilmForEdit = selectedFilm => () =>
+// 		setFilms({
+// 			selectedFilm: selectedFilm,
+// 			showAddForm: true,
+// 		})
 
 // 	const numCol = props.location.pathname === "/films" ? "sixteen" : "ten"
 
@@ -185,6 +193,12 @@ class FilmsPage extends Component {
 			})),
 		)
 
+	selectFilmForEdit = selectedFilm => () =>
+		this.setState({
+			selectedFilm,
+			showAddForm: true,
+		})
+
 	render() {
 		const { films } = this.state
 		const numCol = this.props.location.pathname === "/films" ? "sixteen" : "ten"
@@ -236,8 +250,8 @@ class FilmsPage extends Component {
 									</div>
 								</div>
 							) : (
-									<FilmsList films={this.state.films} editFilm={this.selectFilmForEdit,console.log(this)} deleteFilm={this.deleteFilm} />
-									
+									<FilmsList films={this.state.films} editFilm={this.selectFilmForEdit, console.log(this)} deleteFilm={this.deleteFilm} />
+
 								)
 						}
 					</div>

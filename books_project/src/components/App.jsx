@@ -1,17 +1,17 @@
 import React from "react"
-import BookList from "./books/BooksList";
+import {Route} from 'react-router-dom'
+import Menu from './Menu'
+import { AsyncLoad, lazyLoad } from './AsyncLoad'
+
+const BookPage = AsyncLoad(lazyLoad('./books/BooksPage'));
+const BookForm = AsyncLoad(lazyLoad('./books/BookForm'));
 
 const App = props => (
     <div className={'container'}>
-        <h1>Books</h1>
+        <Menu />
         <div className={'row'}>
-            <div className={'col-sm-3'}>
-                <h2>Categories</h2>
-            </div>
-
-            <div className={'col-sm-9'}>
-                <BookList />
-            </div>
+            <Route exact path="/" component={BookPage}/>
+            <Route path="/add-book" component={BookForm}/>
         </div>
     </div>
 )

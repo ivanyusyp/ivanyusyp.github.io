@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import Book from './Book'
+import {bookSelector} from "../../selectors/booksSelector";
 
 const BookList = ({books}) => (
     <ul className={'list-group'}>
@@ -16,8 +17,12 @@ BookList.propTypes = {
 }
 
 function mapStateToProps(state) {
+    const { categoriesBooks, books} = state;
+    
     return {
-        books: state.books
+        books: categoriesBooks.selectedCategory
+            ? books.filter(book => book.categoryId === categoriesBooks.selectedCategory)
+            : bookSelector(state)
     }
 }
 

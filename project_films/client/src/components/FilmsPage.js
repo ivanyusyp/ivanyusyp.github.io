@@ -250,7 +250,7 @@ class FilmsPage extends Component {
 									</div>
 								</div>
 							) : (
-									<FilmsList films={this.state.films} editFilm={this.selectFilmForEdit, console.log(this)} deleteFilm={this.deleteFilm} />
+									<FilmsList films={this.state.films} editFilm={this.selectFilmForEdit} deleteFilm={this.deleteFilm} />
 
 								)
 						}
